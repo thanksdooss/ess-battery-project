@@ -1,0 +1,81 @@
+{
+  "정의": {
+    "작성": "테스트(2026-10-01) 뒤 원본 시간 기록 점검용으로 작성. 공백 검출·용량 변화·정점 비교는 라벨 값을 쓰지 않음(사후_오차와의_관계 블록만 저장된 Test 오차 사용)",
+    "창": "cycle 10→100 (ΔQ 창)",
+    "긴 공백": "사이클 길이 > 24시간",
+    "용량 변화": "공백 뒤 6사이클 QD 중앙값 − 공백 앞 6사이클 QD 중앙값 (떨어지면 음수, 공백 사이클 제외, clean_summary)",
+    "떨어짐": "용량 변화 ≤ -3 mAh",
+    "다시 오름": "cycle 98~100 QD 중앙값 > 공백 뒤 6사이클 QD 중앙값",
+    "정점": "diagnostic_features.csv 의 cc_breakin_peak_cycle(CC 끝점, 주)·qd_breakin_peak_cycle(요약 QD, 보조)"
+  },
+  "라벨 셀 요약": {
+    "batch1": {
+      "n_labeled": 36,
+      "n_single_long_gap_in_window": 0,
+      "n_time_record_anomaly": 1,
+      "anomaly_cells": [
+        "batch1-18"
+      ]
+    },
+    "batch2": {
+      "n_labeled": 39,
+      "n_single_long_gap_in_window": 39,
+      "n_time_record_anomaly": 0,
+      "anomaly_cells": [],
+      "gap_hours_range": [
+        66.0,
+        66.8
+      ],
+      "median_cycle_hours": 1.12,
+      "qd_change_mAh_median": -4.9,
+      "n_qd_change_le_-3mAh": 29,
+      "n_recovered_by_cycle100": 33,
+      "by_group": {
+        "fastcharge": {
+          "n": 30,
+          "gap_cycle_range": [
+            46,
+            53
+          ],
+          "qd_change_mAh_median": -4.7,
+          "n_qd_peak_after_gap": 20,
+          "n_cc_peak_after_gap": 4
+        },
+        "newstructure": {
+          "n": 9,
+          "gap_cycle_range": [
+            68,
+            77
+          ],
+          "qd_change_mAh_median": -5.0,
+          "n_qd_peak_after_gap": 1,
+          "n_cc_peak_after_gap": 1
+        }
+      }
+    },
+    "batch3": {
+      "n_labeled": 44,
+      "n_single_long_gap_in_window": 0,
+      "n_time_record_anomaly": 0,
+      "anomaly_cells": []
+    }
+  },
+  "사후_오차와의_관계": {
+    "주의": "저장된 Test 예측만 읽은 사후 분석이다. 상관은 인과가 아니며, 모든 Batch 2 셀에 공백이 있어 비교군이 없다.",
+    "batch2 전체": {
+      "n": 39,
+      "spearman_rho": 0.34,
+      "p": 0.033
+    },
+    "batch2 fastcharge": {
+      "n": 30,
+      "spearman_rho": 0.31,
+      "p": 0.094
+    },
+    "batch2 newstructure": {
+      "n": 9,
+      "spearman_rho": 0.15,
+      "p": 0.7
+    }
+  }
+}

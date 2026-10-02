@@ -1,0 +1,10 @@
+구분,,MAPE (%),비고
+Train (Batch 1 CV),,9.97,"M0 OLS; 정책 단위 GroupKFold(5)×20회 nested 평균, fold SD 3.01 (SE 1.33); 학습 적합 8.75; 상수 예측 19.44; 최단 2셀 CV 오차 #20 +8.9%·#21 +2.8%"
+Valid (Batch 1 Hold-out),,6.31,"Hold-out 9셀·5정책 고정 분할, 95% CI [3.87, 8.97]"
+Test (Batch 2),,28.56,39셀 1회(Batch 1 36셀 재학습); 그룹 MAPE fastcharge 31.87 / newstructure 17.53; 평균 부호오차 +28.1%; 과대예측 38/39; 범위 안/밖·초기 용량 이동·break-in 점검은 model_performance_test_detail.csv
+,Gap (Train-Valid),-3.65,(+) : 과적합 의심
+,Gap (Valid-Test),+22.25,(+) : 배치간 일반화 저하 의심
+,Gap (Target-Test),+19.46,Target : 원논문 9.1%
+Test (Batch 3),,12.81,44셀 1회(Batch 1 36셀 재학습); 원저자 공개 코드 제거 4셀(#02·#37·#42·#43) 제외 시 11.75; 그룹 MAPE newstructure 12.81; 평균 부호오차 +1.6%; 과대예측 25/44; 범위 안/밖·초기 용량 이동·break-in 점검은 model_performance_test_detail.csv
+,Gap (Batch2-Batch3),-15.75,Test 성능 간 비교
+,Gap (Target-Test),+3.71,"Batch 3 기준, 원논문 성능 비교"

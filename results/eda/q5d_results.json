@@ -1,0 +1,737 @@
+{
+  "settings": {
+    "n_batch1": 36,
+    "qcc_window": [
+      2,
+      6
+    ],
+    "qcc_sensitivity": [
+      8,
+      12
+    ],
+    "breakin_smooth": 9,
+    "n_boot": 3000,
+    "random_state": 42,
+    "partial": "Pearson, 통제변수 OLS 잔차끼리, log10(cycle_life), df=n−2−k"
+  },
+  "partial_correlations": {
+    "Qcc_init": {
+      "spearman_alone": 0.15446003474588657,
+      "p_alone": 0.3684034669173853,
+      "n": 36,
+      "partial_logvar": 0.6757303167449038,
+      "p_partial_logvar": 8.417910950870452e-06,
+      "spearman_with_logvar": 0.19536679536679535
+    },
+    "QD_2": {
+      "spearman_alone": 0.16102458622258672,
+      "p_alone": 0.34814549650357396,
+      "n": 36,
+      "partial_logvar": 0.6873143037743493,
+      "p_partial_logvar": 5.096922084380289e-06,
+      "partial_logvar_qcc": 0.20026381798848047,
+      "p_partial_logvar_qcc": 0.2561235181124288,
+      "spearman_with_logvar": 0.19510939510939512
+    },
+    "cc_breakin": {
+      "spearman_alone": 0.2961771166252375,
+      "p_alone": 0.07944083694263349,
+      "n": 36,
+      "partial_logvar": -0.6212453084659925,
+      "p_partial_logvar": 6.81658559607415e-05,
+      "partial_logvar_qcc": -0.349451146954497,
+      "p_partial_logvar_qcc": 0.042786639551334125,
+      "spearman_with_logvar": -0.5747747747747748
+    },
+    "QD_max_minus_2": {
+      "spearman_alone": 0.35808984721921366,
+      "p_alone": 0.032001336799026954,
+      "n": 36,
+      "partial_logvar": -0.694827748217538,
+      "p_partial_logvar": 3.6360616203795876e-06,
+      "partial_logvar_qcc": -0.5589100207608632,
+      "p_partial_logvar_qcc": 0.0005908198039355408,
+      "spearman_with_logvar": -0.6635778635778636
+    },
+    "dQ_logabsmin": {
+      "spearman_alone": -0.7867164436390489,
+      "p_alone": 1.2801478238926468e-08,
+      "n": 36,
+      "partial_logvar": 0.42972559545078287,
+      "p_partial_logvar": 0.009985061037299013,
+      "partial_logvar_qcc": 0.05085588515606176,
+      "p_partial_logvar_qcc": 0.7751605837136735,
+      "spearman_with_logvar": 0.9876447876447877
+    },
+    "dQ_skew": {
+      "spearman_alone": -0.42090359468254085,
+      "p_alone": 0.010579686356181858,
+      "n": 36,
+      "partial_logvar": 0.2959164332403086,
+      "p_partial_logvar": 0.08435108214309588,
+      "partial_logvar_qcc": 0.1327145727649127,
+      "p_partial_logvar_qcc": 0.45432380647570386,
+      "spearman_with_logvar": 0.5881595881595881
+    },
+    "dQ_kurt": {
+      "spearman_alone": 0.2369674366393143,
+      "p_alone": 0.16406212893787353,
+      "n": 36,
+      "partial_logvar": -0.05066632451573749,
+      "p_partial_logvar": 0.7725464153867392,
+      "partial_logvar_qcc": -0.25066861843283283,
+      "p_partial_logvar_qcc": 0.15274251266996947,
+      "spearman_with_logvar": -0.31480051480051485
+    },
+    "fade_slope_2_100": {
+      "spearman_alone": 0.4725189896267913,
+      "p_alone": 0.0036145403874186326,
+      "n": 36,
+      "partial_logvar": -0.07409480103674944,
+      "p_partial_logvar": 0.6722855215708352,
+      "partial_logvar_qcc": -0.12683125928299396,
+      "p_partial_logvar_qcc": 0.47474546658786265,
+      "spearman_with_logvar": -0.7238095238095239
+    },
+    "fade_slope_91_100": {
+      "spearman_alone": 0.3207620054889578,
+      "p_alone": 0.05646952903405903,
+      "n": 36,
+      "partial_logvar": 0.045785380595095376,
+      "p_partial_logvar": 0.7939617418031657,
+      "partial_logvar_qcc": -0.03764012236294995,
+      "p_partial_logvar_qcc": 0.832619594831404,
+      "spearman_with_logvar": -0.5176319176319176
+    },
+    "chargetime_avg5": {
+      "spearman_alone": 0.4322306638972392,
+      "p_alone": 0.00847340747216983,
+      "n": 36,
+      "partial_logvar": 0.12113472258745137,
+      "p_partial_logvar": 0.4881995051981655,
+      "partial_logvar_qcc": 0.263754435142861,
+      "p_partial_logvar_qcc": 0.13174711848657056,
+      "spearman_with_logvar": -0.5500643500643502
+    },
+    "avgC_80": {
+      "spearman_alone": -0.4359950079618398,
+      "p_alone": 0.007857880728193893,
+      "n": 36,
+      "partial_logvar": -0.12572850308183925,
+      "p_partial_logvar": 0.4717283549784806,
+      "partial_logvar_qcc": -0.2434255087615787,
+      "p_partial_logvar_qcc": 0.1653559291658532,
+      "spearman_with_logvar": 0.5532646954128427
+    },
+    "I_qw80": {
+      "spearman_alone": -0.7814752832131823,
+      "p_alone": 1.8512501952493305e-08,
+      "n": 36,
+      "partial_logvar": -0.24111178177556847,
+      "p_partial_logvar": 0.16292032621377575,
+      "partial_logvar_qcc": -0.35785137478859175,
+      "p_partial_logvar_qcc": 0.03771497356218427,
+      "spearman_with_logvar": 0.9011455860466265
+    },
+    "dT_chg": {
+      "spearman_alone": -0.5483331233478973,
+      "p_alone": 0.0005356421011251288,
+      "n": 36,
+      "partial_logvar": -0.3218700738762341,
+      "p_partial_logvar": 0.05935170056166591,
+      "partial_logvar_qcc": -0.24721364430582646,
+      "p_partial_logvar_qcc": 0.15866920734509296,
+      "spearman_with_logvar": 0.5194337194337195
+    },
+    "Tavg_mean": {
+      "spearman_alone": -0.11635989284190121,
+      "p_alone": 0.4991540095965721,
+      "n": 36,
+      "partial_logvar": -0.07240007705495081,
+      "p_partial_logvar": 0.6793778966681766,
+      "partial_logvar_qcc": 0.013427320448136947,
+      "p_partial_logvar_qcc": 0.9399212830696633,
+      "spearman_with_logvar": 0.11042471042471043
+    },
+    "IR_min": {
+      "spearman_alone": 0.23748230342180057,
+      "p_alone": 0.16312088044208126,
+      "n": 36,
+      "partial_logvar": 0.12349609404484808,
+      "p_partial_logvar": 0.4796960064951916,
+      "partial_logvar_qcc": -0.09916429165949278,
+      "p_partial_logvar_qcc": 0.5768631309365662,
+      "spearman_with_logvar": -0.2857142857142857
+    },
+    "IR_diff": {
+      "spearman_alone": -0.22512550064212966,
+      "p_alone": 0.1868006044759682,
+      "n": 36,
+      "partial_logvar": 0.11904671563160331,
+      "p_partial_logvar": 0.49578266039421676,
+      "partial_logvar_qcc": -0.19404830114251975,
+      "p_partial_logvar_qcc": 0.27148140065087484,
+      "spearman_with_logvar": 0.3083655083655084
+    }
+  },
+  "bonferroni": {
+    "m_logvar": 16,
+    "m_logvar_qcc": 15,
+    "rcrit_logvar": 0.4853233286573969,
+    "rcrit_logvar_qcc": 0.4890704635335596,
+    "rcrit_nominal_logvar": 0.3338446189168871,
+    "pass_logvar": [
+      "Qcc_init",
+      "QD_2",
+      "cc_breakin",
+      "QD_max_minus_2"
+    ],
+    "pass_logvar_qcc": [
+      "QD_max_minus_2"
+    ],
+    "nominal_logvar_qcc": [
+      "cc_breakin",
+      "QD_max_minus_2",
+      "I_qw80"
+    ]
+  },
+  "qcc_robustness": {
+    "loo_min": 0.6018349239659438,
+    "loo_max": 0.7199581361578392,
+    "boot_ci95": [
+      0.4153396418037949,
+      0.8284215909498955
+    ],
+    "sens_8_12_r_with_2_6": 0.9988051906016272,
+    "sens_8_12_partial_logvar": 0.6623063774144058,
+    "r_qcc_logvar": 0.2358019679747438,
+    "vif_2feat": 1.058876238141544,
+    "r_qcc_qd2": 0.995009323751066,
+    "r_qcc_qdinit_2_6": 0.9960238638724722
+  },
+  "descriptive_fits": {
+    "M0": {
+      "coef": [
+        1.7624083299063995,
+        -0.2972479033937623
+      ],
+      "rmse_log10": 0.043451479656350774,
+      "mape_in_sample": 8.248223154251697
+    },
+    "M1": {
+      "coef": [
+        -1.8668005150824567,
+        -0.32828152594196364,
+        3.2994466158023075
+      ],
+      "rmse_log10": 0.03203021155969366,
+      "mape_in_sample": 5.788471512253883,
+      "qcc_coef_per_Ah": 3.2994466158023075,
+      "plus10mAh_life_factor": 1.0789329742250269
+    },
+    "M1_summaryQD2": {
+      "coef": [
+        -2.410109587987988,
+        -0.3293095399839258,
+        3.7580677090877486
+      ],
+      "rmse_log10": 0.031561422692246516,
+      "qd2_coef_per_Ah": 3.7580677090877486
+    },
+    "note": "Batch 1 labeled 36셀 in-sample 기술 회귀. 모델 선택 근거 아님(DAY 2 그룹 CV 1-SE 규칙으로 결정).",
+    "censored_lower_bound_check_all10": {
+      "M0": {
+        "n_violations_of_10": 2,
+        "cells": [
+          {
+            "cell": "batch1-03",
+            "pred": 1211.0,
+            "lower_bound": 1226.0,
+            "rel": -0.012640315443209982
+          },
+          {
+            "cell": "batch1-22",
+            "pred": 865.0,
+            "lower_bound": 891.0,
+            "rel": -0.028809302840455686
+          }
+        ]
+      },
+      "M1": {
+        "n_violations_of_10": 2,
+        "cells": [
+          {
+            "cell": "batch1-10",
+            "pred": 894.0,
+            "lower_bound": 906.0,
+            "rel": -0.012951724622008332
+          },
+          {
+            "cell": "batch1-22",
+            "pred": 887.0,
+            "lower_bound": 891.0,
+            "rel": -0.004973421623504781
+          }
+        ]
+      },
+      "M1+summary_breakin": {
+        "n_violations_of_10": 1,
+        "cells": [
+          {
+            "cell": "batch1-10",
+            "pred": 757.0,
+            "lower_bound": 906.0,
+            "rel": -0.16476346408720888
+          }
+        ]
+      },
+      "M1+cc_breakin": {
+        "n_violations_of_10": 1,
+        "cells": [
+          {
+            "cell": "batch1-10",
+            "pred": 791.0,
+            "lower_bound": 906.0,
+            "rel": -0.126857690889995
+          }
+        ]
+      }
+    },
+    "censored_00_04": {
+      "lower_bound": [
+        1190.0,
+        1179.0,
+        1177.0,
+        1226.0,
+        1227.0
+      ],
+      "pred_M0": [
+        1791.0,
+        1790.0,
+        1481.0,
+        1211.0,
+        1393.0
+      ],
+      "pred_M1": [
+        1839.0,
+        1941.0,
+        1614.0,
+        1287.0,
+        1486.0
+      ],
+      "M0_meets_lb": 4,
+      "M1_meets_lb": 5
+    }
+  },
+  "replicate_pairs": {
+    "dQ_logvar": {
+      "policy_mean_r": -0.8813699270140245,
+      "n_policies": 20,
+      "policy_mean_p": 2.851594525671145e-07,
+      "within_policy_r": -0.10328523142982508,
+      "within_policy_p": 0.573753708940195,
+      "n_cells_in_pairs": 32,
+      "pairs_expected_direction": 8,
+      "n_pairs": 16,
+      "sign_test_p": 1.0,
+      "between_policy_var_share": 0.9881885202099299
+    },
+    "Qcc_init": {
+      "policy_mean_r": 0.03730237018750552,
+      "n_policies": 20,
+      "policy_mean_p": 0.8759278804162025,
+      "within_policy_r": 0.7025599253795053,
+      "within_policy_p": 7.372206573990118e-06,
+      "n_cells_in_pairs": 32,
+      "pairs_expected_direction": 14,
+      "n_pairs": 16,
+      "sign_test_p": 0.004180908203125,
+      "between_policy_var_share": 0.650413349125345
+    },
+    "log10_life_between_policy_var_share": 0.8945052462559335,
+    "median_abs_pair_d_life": 53.5,
+    "median_abs_pair_d_qcc_mAh": 9.6510648727417
+  },
+  "pairs_table": [
+    {
+      "policy": "4.8C(80%)-4.8C",
+      "long": "batch1-07",
+      "short": "batch1-06",
+      "d_ly": 0.1361,
+      "d_life": 234.0,
+      "d_logvar": -0.0446,
+      "d_qcc_mAh": 17.6136
+    },
+    {
+      "policy": "5.4C(60%)-3.6C",
+      "long": "batch1-16",
+      "short": "batch1-17",
+      "d_ly": 0.0025,
+      "d_life": 5.0,
+      "d_logvar": -0.1293,
+      "d_qcc_mAh": 9.8009
+    },
+    {
+      "policy": "5.4C(60%)-3C",
+      "long": "batch1-14",
+      "short": "batch1-15",
+      "d_ly": 0.0878,
+      "d_life": 161.0,
+      "d_logvar": -0.0281,
+      "d_qcc_mAh": 9.1549
+    },
+    {
+      "policy": "5.4C(70%)-3C",
+      "long": "batch1-19",
+      "short": "batch1-18",
+      "d_ly": 0.057,
+      "d_life": 97.0,
+      "d_logvar": 0.0302,
+      "d_qcc_mAh": 21.8127
+    },
+    {
+      "policy": "5.4C(80%)-5.4C",
+      "long": "batch1-21",
+      "short": "batch1-20",
+      "d_ly": 0.0199,
+      "d_life": 25.0,
+      "d_logvar": 0.0169,
+      "d_qcc_mAh": 11.382
+    },
+    {
+      "policy": "6C(40%)-3.6C",
+      "long": "batch1-26",
+      "short": "batch1-27",
+      "d_ly": 0.0142,
+      "d_life": 28.0,
+      "d_logvar": 0.0585,
+      "d_qcc_mAh": 9.5012
+    },
+    {
+      "policy": "6C(40%)-3C",
+      "long": "batch1-24",
+      "short": "batch1-25",
+      "d_ly": 0.0759,
+      "d_life": 163.0,
+      "d_logvar": 0.0892,
+      "d_qcc_mAh": -1.8955
+    },
+    {
+      "policy": "6C(50%)-3.6C",
+      "long": "batch1-31",
+      "short": "batch1-30",
+      "d_ly": 0.0919,
+      "d_life": 167.0,
+      "d_logvar": -0.033,
+      "d_qcc_mAh": 16.881
+    },
+    {
+      "policy": "6C(50%)-3C",
+      "long": "batch1-29",
+      "short": "batch1-28",
+      "d_ly": 0.0279,
+      "d_life": 57.0,
+      "d_logvar": 0.0064,
+      "d_qcc_mAh": 1.6549
+    },
+    {
+      "policy": "6C(60%)-3C",
+      "long": "batch1-33",
+      "short": "batch1-32",
+      "d_ly": 0.0152,
+      "d_life": 26.0,
+      "d_logvar": -0.0206,
+      "d_qcc_mAh": 16.104
+    },
+    {
+      "policy": "7C(30%)-3.6C",
+      "long": "batch1-34",
+      "short": "batch1-35",
+      "d_ly": 0.0234,
+      "d_life": 39.0,
+      "d_logvar": -0.076,
+      "d_qcc_mAh": 2.1753
+    },
+    {
+      "policy": "7C(40%)-3.6C",
+      "long": "batch1-39",
+      "short": "batch1-38",
+      "d_ly": 0.0056,
+      "d_life": 8.0,
+      "d_logvar": -0.0715,
+      "d_qcc_mAh": 10.4605
+    },
+    {
+      "policy": "7C(40%)-3C",
+      "long": "batch1-36",
+      "short": "batch1-37",
+      "d_ly": 0.036,
+      "d_life": 56.0,
+      "d_logvar": 0.0044,
+      "d_qcc_mAh": 5.1196
+    },
+    {
+      "policy": "8C(15%)-3.6C",
+      "long": "batch1-41",
+      "short": "batch1-40",
+      "d_ly": 0.0366,
+      "d_life": 85.0,
+      "d_logvar": -0.0163,
+      "d_qcc_mAh": -3.5415
+    },
+    {
+      "policy": "8C(25%)-3.6C",
+      "long": "batch1-42",
+      "short": "batch1-43",
+      "d_ly": 0.0328,
+      "d_life": 51.0,
+      "d_logvar": 0.0019,
+      "d_qcc_mAh": 14.7825
+    },
+    {
+      "policy": "8C(35%)-3.6C",
+      "long": "batch1-44",
+      "short": "batch1-45",
+      "d_ly": 0.0122,
+      "d_life": 17.0,
+      "d_logvar": 0.0046,
+      "d_qcc_mAh": 1.6756
+    }
+  ],
+  "batch_offsets_label_free": {
+    "Qcc_init": {
+      "b1_median_all46_Ah": 1.0654239058494568,
+      "b1_labeled_sd_mAh": 9.287026775329421,
+      "coef_per_Ah": 3.2994466158023075,
+      "note": "pred_factor = 10**(M1 Qcc 계수 × 이동량); pred_factor_own_coef = 해당 피처로 적합한 2-피처 계수 사용",
+      "batch2_fastcharge": {
+        "n": 30,
+        "shift_mAh": -5.317270755767822,
+        "shift_sd": -0.5725482314633699,
+        "out_of_b1_range": 2,
+        "pred_factor": 0.9604083980919589,
+        "pred_factor_own_coef": 0.9604083980919589
+      },
+      "batch2_newstructure": {
+        "n": 9,
+        "shift_mAh": -8.72725248336792,
+        "shift_sd": -0.939725134264874,
+        "out_of_b1_range": 0,
+        "pred_factor": 0.9358470944635442,
+        "pred_factor_own_coef": 0.9358470944635442
+      },
+      "batch3_newstructure": {
+        "n": 46,
+        "shift_mAh": -14.52338695526123,
+        "shift_sd": -1.5638360162632428,
+        "out_of_b1_range": 5,
+        "pred_factor": 0.8955314865014627,
+        "pred_factor_own_coef": 0.8955314865014627
+      }
+    },
+    "QD_2": {
+      "b1_median_all46_Ah": 1.07868905,
+      "b1_labeled_sd_mAh": 8.300748862183449,
+      "coef_per_Ah": 3.2994466158023075,
+      "note": "pred_factor = 10**(M1 Qcc 계수 × 이동량); pred_factor_own_coef = 해당 피처로 적합한 2-피처 계수 사용",
+      "batch2_fastcharge": {
+        "n": 30,
+        "shift_mAh": 17.247800000000257,
+        "shift_sd": 2.077860719118703,
+        "out_of_b1_range": 17,
+        "pred_factor": 1.1400087778659356,
+        "pred_factor_own_coef": 1.160963056885138
+      },
+      "batch2_newstructure": {
+        "n": 9,
+        "shift_mAh": 11.943849999999978,
+        "shift_sd": 1.4388882495185187,
+        "out_of_b1_range": 4,
+        "pred_factor": 1.0949848123304642,
+        "pred_factor_own_coef": 1.1088831826597667
+      },
+      "batch3_newstructure": {
+        "n": 46,
+        "shift_mAh": -12.832350000000048,
+        "shift_sd": -1.5459267848063285,
+        "out_of_b1_range": 6,
+        "pred_factor": 0.907110817888938,
+        "pred_factor_own_coef": 0.8949013429894582
+      }
+    }
+  },
+  "cv_discharge_cycle2_6_mAh": {
+    "batch1_fastcharge": {
+      "median_mAh": 15.37128688735967,
+      "n": 46
+    },
+    "batch2_fastcharge": {
+      "median_mAh": 39.58050098037724,
+      "n": 30
+    },
+    "batch2_newstructure": {
+      "median_mAh": 38.69758749999996,
+      "n": 9
+    },
+    "batch3_newstructure": {
+      "median_mAh": 15.61221784286493,
+      "n": 46
+    }
+  },
+  "qdlin_endpoint_invalid_values_cycle2_100": {
+    "batch1": 4,
+    "batch2": 8,
+    "batch3": 0
+  },
+  "holdout": {
+    "policy_mean_life_sorted": {
+      "5.4C(80%)-5.4C": 546.5,
+      "8C(35%)-3.6C": 607.5,
+      "7C(40%)-3.6C": 621.0,
+      "7C(40%)-3C": 676.0,
+      "8C(25%)-3.6C": 676.5,
+      "7C(30%)-3.6C": 722.5,
+      "5.4C(70%)-3C": 739.5,
+      "6C(60%)-3C": 744.0,
+      "4.8C(80%)-4.8C": 753.0,
+      "5.4C(50%)-3C": 788.0,
+      "6C(50%)-3.6C": 792.5,
+      "5.4C(60%)-3C": 799.5,
+      "6C(40%)-3.6C": 856.0,
+      "5.4C(60%)-3.6C": 859.5,
+      "6C(50%)-3C": 888.5,
+      "6C(40%)-3C": 935.5,
+      "8C(15%)-3.6C": 1008.5,
+      "6C(30%)-3.6C": 1014.0,
+      "5.4C(40%)-3.6C": 1054.0,
+      "4.4C(80%)-4.4C": 1074.0
+    },
+    "excluded_extremes": [
+      "5.4C(80%)-5.4C",
+      "4.4C(80%)-4.4C"
+    ],
+    "strata": [
+      {
+        "stratum": 1,
+        "policies": [
+          "5.4C(80%)-5.4C",
+          "8C(35%)-3.6C",
+          "7C(40%)-3.6C",
+          "7C(40%)-3C"
+        ],
+        "candidates": [
+          "8C(35%)-3.6C",
+          "7C(40%)-3.6C",
+          "7C(40%)-3C"
+        ],
+        "picked": "8C(35%)-3.6C"
+      },
+      {
+        "stratum": 2,
+        "policies": [
+          "8C(25%)-3.6C",
+          "7C(30%)-3.6C",
+          "5.4C(70%)-3C",
+          "6C(60%)-3C"
+        ],
+        "candidates": [
+          "8C(25%)-3.6C",
+          "7C(30%)-3.6C",
+          "5.4C(70%)-3C",
+          "6C(60%)-3C"
+        ],
+        "picked": "6C(60%)-3C"
+      },
+      {
+        "stratum": 3,
+        "policies": [
+          "4.8C(80%)-4.8C",
+          "5.4C(50%)-3C",
+          "6C(50%)-3.6C",
+          "5.4C(60%)-3C"
+        ],
+        "candidates": [
+          "4.8C(80%)-4.8C",
+          "5.4C(50%)-3C",
+          "6C(50%)-3.6C",
+          "5.4C(60%)-3C"
+        ],
+        "picked": "6C(50%)-3.6C"
+      },
+      {
+        "stratum": 4,
+        "policies": [
+          "6C(40%)-3.6C",
+          "5.4C(60%)-3.6C",
+          "6C(50%)-3C",
+          "6C(40%)-3C"
+        ],
+        "candidates": [
+          "6C(40%)-3.6C",
+          "5.4C(60%)-3.6C",
+          "6C(50%)-3C",
+          "6C(40%)-3C"
+        ],
+        "picked": "5.4C(60%)-3.6C"
+      },
+      {
+        "stratum": 5,
+        "policies": [
+          "8C(15%)-3.6C",
+          "6C(30%)-3.6C",
+          "5.4C(40%)-3.6C",
+          "4.4C(80%)-4.4C"
+        ],
+        "candidates": [
+          "8C(15%)-3.6C",
+          "6C(30%)-3.6C",
+          "5.4C(40%)-3.6C"
+        ],
+        "picked": "6C(30%)-3.6C"
+      }
+    ],
+    "holdout_policies": [
+      "8C(35%)-3.6C",
+      "6C(60%)-3C",
+      "6C(50%)-3.6C",
+      "5.4C(60%)-3.6C",
+      "6C(30%)-3.6C"
+    ],
+    "holdout_idx": [
+      16,
+      17,
+      23,
+      30,
+      31,
+      32,
+      33,
+      44,
+      45
+    ],
+    "matches_preregistered": true,
+    "holdout_n": 9,
+    "holdout_life": [
+      599.0,
+      1014.0,
+      757.0
+    ],
+    "train_n": 27,
+    "train_policies": 15,
+    "train_life": [
+      534.0,
+      1074.0,
+      788.0
+    ],
+    "holdout_out_of_train_feature_range": [
+      {
+        "cell": "batch1-31",
+        "feature": "Qcc_init",
+        "value": 1.0833351612091064,
+        "train_range": [
+          1.0362597703933716,
+          1.0808337926864624
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+2026-10-01T15:16:38	select	start force=False
+2026-10-01T15:18:30	select	selected=M1 params={'model__alpha': 0.0001} sha=9be434b83b31 runtime=111s
+2026-10-01T15:18:52	valid	start force=False
+2026-10-01T15:18:52	valid	selected=M1 valid_mape=6.310 M0=6.313 selection_sha=9be434b83b31
+2026-10-01T15:19:08	report	start force=False
+2026-10-01T15:19:08	report	wrote ['model_performance.csv', 'model_performance_M0.csv']
+2026-10-01T15:20:56	valid	start force=False
+2026-10-01T15:20:56	valid	selected=M1 valid_mape=6.310 M0=6.313 selection_sha=9be434b83b31
+2026-10-01T15:20:57	report	start force=False
+2026-10-01T15:20:57	report	wrote ['model_performance.csv', 'model_performance_M0.csv', 'model_candidates.csv']
+2026-10-01T15:35:10	select	start force=False
+2026-10-01T15:37:12	select	selected=M1 params={'model__alpha': 0.0001} sha=0987c11fa34c runtime=122s
+2026-10-01T15:37:25	valid	start force=False
+2026-10-01T15:37:25	valid	selected=M1 valid_mape=6.310 M0=6.313 selection_sha=0987c11fa34c
+2026-10-01T15:38:06	valid	start force=False
+2026-10-01T15:38:07	valid	selected=M1 valid_mape=6.310 M0=6.313 selection_sha=0987c11fa34c
+2026-10-01T15:38:13	report	start force=False
+2026-10-01T15:38:13	report	wrote ['model_performance.csv', 'model_performance_M0.csv', 'model_candidates.csv']
+2026-10-01T16:04:30	test	start force=False
+2026-10-01T16:04:30	test	selected=M1 test_mape=20.480 M0=28.559 forced=False
+2026-10-01T16:04:41	batch3	start force=False
+2026-10-01T16:04:42	batch3	selected=M1 b3_mape=11.357 excl4=10.336 forced=False
+2026-10-01T16:04:43	report	start force=False
+2026-10-01T16:04:43	report	wrote ['model_performance.csv', 'model_performance_M0.csv', 'model_candidates.csv', 'model_performance_batch3.csv', 'model_performance_batch3_M0.csv', 'model_performance_test_detail.csv']
+2026-10-01T16:57:05	report	start force=False
+2026-10-01T16:57:05	report	wrote ['model_performance.csv', 'model_performance_M0.csv', 'model_candidates.csv', 'model_performance_batch3.csv', 'model_performance_batch3_M0.csv', 'model_performance_test_detail.csv']
+2026-10-02T09:34:22	report	start force=False
+2026-10-02T09:34:22	correction	B3 원저자 제거 셀 #38·#39→#42·#43 정정, 저장 예측으로 제외 지표 재계산(재적합·batch3 재실행 없음): M1 10.336→10.767, M0 11.497→11.747
+2026-10-02T09:34:22	report	wrote ['model_performance.csv', 'model_performance_M0.csv', 'model_candidates.csv', 'model_performance_batch3.csv', 'model_performance_batch3_M0.csv', 'model_performance_test_detail.csv', 'batch3_excl_corrected.json']

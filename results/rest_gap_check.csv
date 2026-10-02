@@ -1,0 +1,140 @@
+cell_key,batch,group,labeled,gap_cycle,gap_hours,median_cycle_hours,n_cycles_over_24h_in_window,kind,qd_before_mAh,qd_after_mAh,qd_change_mAh,qd_cycle98_100_mAh,recovered_by_cycle100,cc_peak_cycle,qd_peak_cycle
+batch1-00,batch1,fastcharge,False,12,10.713,0.906,0,없음,1074.433,1074.442,0.008,1075.911,True,33,60
+batch1-01,batch1,fastcharge,False,12,7.683,0.906,0,없음,1079.485,1081.975,2.49,1080.649,False,23,24
+batch1-02,batch1,fastcharge,False,12,7.686,0.906,0,없음,1083.699,1085.597,1.898,1084.954,False,24,44
+batch1-03,batch1,fastcharge,False,12,7.68,0.884,0,없음,1083.914,1083.668,-0.246,1084.765,True,24,65
+batch1-04,batch1,fastcharge,False,12,7.68,0.883,0,없음,1081.648,1081.658,0.01,1082.631,True,31,65
+batch1-05,batch1,fastcharge,True,13,7.664,0.866,0,없음,1080.08,1079.575,-0.504,1079.788,True,66,66
+batch1-06,batch1,fastcharge,True,13,7.661,0.851,0,없음,1081.006,1080.626,-0.38,1079.325,False,26,26
+batch1-07,batch1,fastcharge,True,13,7.661,0.851,0,없음,1097.543,1096.586,-0.957,1095.874,False,8,30
+batch1-08,batch1,fastcharge,False,10,0.87,0.869,0,없음,1093.208,1094.663,1.456,1094.165,False,25,52
+batch1-09,batch1,fastcharge,True,10,0.87,0.869,0,없음,1085.513,1087.151,1.638,1087.665,True,21,52
+batch1-10,batch1,fastcharge,False,12,7.637,0.877,0,없음,1079.097,1080.856,1.759,1081.704,True,28,66
+batch1-11,batch1,fastcharge,True,12,7.638,0.877,0,없음,1057.825,1059.343,1.517,1059.964,True,28,66
+batch1-12,batch1,fastcharge,False,44,0.86,0.86,0,없음,1082.692,1082.712,0.02,1081.953,False,20,53
+batch1-13,batch1,fastcharge,False,36,0.86,0.86,0,없음,1084.752,1084.872,0.12,1083.663,False,19,52
+batch1-14,batch1,fastcharge,True,13,7.679,0.862,0,없음,1075.126,1074.834,-0.292,1076.214,True,32,67
+batch1-15,batch1,fastcharge,True,13,7.679,0.862,0,없음,1066.466,1066.356,-0.11,1067.75,True,67,67
+batch1-16,batch1,fastcharge,True,13,7.675,0.85,0,없음,1085.679,1085.089,-0.59,1086.321,True,26,67
+batch1-17,batch1,fastcharge,True,18,0.851,0.851,0,없음,1076.464,1077.054,0.589,1077.007,False,53,53
+batch1-18,batch1,fastcharge,True,10,62.599,0.847,44,시각 기록 이상(여러 사이클),1068.618,1069.804,1.186,1064.611,False,14,19
+batch1-19,batch1,fastcharge,True,15,0.847,0.847,0,없음,1088.783,1089.025,0.242,1087.164,False,13,20
+batch1-20,batch1,fastcharge,True,13,7.645,0.832,0,없음,1075.665,1074.131,-1.534,1061.485,False,8,8
+batch1-21,batch1,fastcharge,True,13,7.645,0.832,0,없음,1085.712,1084.403,-1.308,1076.906,False,8,8
+batch1-22,batch1,fastcharge,False,24,0.873,0.873,0,없음,1083.544,1083.71,0.167,1082.073,False,15,51
+batch1-23,batch1,fastcharge,True,62,0.873,0.873,0,없음,1082.681,1082.465,-0.216,1081.72,False,16,51
+batch1-24,batch1,fastcharge,True,20,0.884,0.881,0,없음,1078.154,1078.292,0.138,1077.631,False,20,41
+batch1-25,batch1,fastcharge,True,18,0.884,0.884,0,없음,1078.946,1079.238,0.292,1078.084,False,23,37
+batch1-26,batch1,fastcharge,True,61,0.863,0.862,0,없음,1091.015,1090.784,-0.23,1089.371,False,12,37
+batch1-27,batch1,fastcharge,True,67,0.862,0.862,0,없음,1082.216,1081.864,-0.352,1081.054,False,13,35
+batch1-28,batch1,fastcharge,True,27,0.867,0.867,0,없음,1081.18,1081.185,0.005,1079.722,False,12,51
+batch1-29,batch1,fastcharge,True,30,0.867,0.865,0,없음,1083.311,1083.257,-0.054,1081.872,False,14,51
+batch1-30,batch1,fastcharge,True,45,0.851,0.851,0,없음,1083.527,1083.328,-0.2,1081.429,False,17,18
+batch1-31,batch1,fastcharge,True,12,0.851,0.847,0,없음,1097.998,1098.302,0.304,1095.395,False,12,17
+batch1-32,batch1,fastcharge,True,65,0.851,0.851,0,없음,1080.791,1080.559,-0.232,1079.412,False,11,20
+batch1-33,batch1,fastcharge,True,54,0.851,0.851,0,없음,1095.977,1095.773,-0.204,1093.78,False,11,16
+batch1-34,batch1,fastcharge,True,11,0.866,0.862,0,없음,1079.231,1080.287,1.056,1079.419,False,18,51
+batch1-35,batch1,fastcharge,True,10,0.866,0.866,0,없음,1073.571,1074.384,0.813,1073.994,False,13,51
+batch1-36,batch1,fastcharge,True,17,0.875,0.875,0,없음,1081.7,1081.846,0.146,1080.241,False,11,51
+batch1-37,batch1,fastcharge,True,79,0.875,0.875,0,없음,1077.767,1077.508,-0.259,1076.837,False,21,51
+batch1-38,batch1,fastcharge,True,98,0.853,0.852,0,없음,1074.986,1074.844,-0.142,1074.975,True,11,19
+batch1-39,batch1,fastcharge,True,22,0.852,0.852,0,없음,1085.978,1086.12,0.142,1084.827,False,10,37
+batch1-40,batch1,fastcharge,True,75,0.883,0.883,0,없음,1086.837,1086.581,-0.256,1085.799,False,12,32
+batch1-41,batch1,fastcharge,True,20,0.883,0.883,0,없음,1083.047,1083.117,0.07,1082.2,False,15,35
+batch1-42,batch1,fastcharge,True,44,0.868,0.868,0,없음,1084.268,1084.17,-0.098,1083.265,False,12,51
+batch1-43,batch1,fastcharge,True,57,0.868,0.868,0,없음,1071.242,1070.531,-0.711,1068.843,False,11,15
+batch1-44,batch1,fastcharge,True,23,0.853,0.853,0,없음,1088.252,1087.987,-0.265,1084.729,False,9,14
+batch1-45,batch1,fastcharge,True,55,0.852,0.849,0,없음,1087.843,1087.384,-0.459,1085.869,False,11,52
+batch2-00,batch2,fastcharge,True,48,66.561,1.161,1,단일 긴 공백,1108.154,1098.481,-9.673,1104.786,True,12,83
+batch2-01,batch2,fastcharge,True,52,66.65,1.057,1,단일 긴 공백,1108.207,1098.101,-10.106,1103.8,True,5,46
+batch2-02,batch2,fastcharge,True,47,66.78,1.18,1,단일 긴 공백,1079.723,1068.917,-10.806,1073.459,True,22,41
+batch2-03,batch2,fastcharge,True,47,66.452,1.169,1,단일 긴 공백,1100.8,1101.012,0.211,1100.134,False,52,76
+batch2-04,batch2,fastcharge,True,48,66.727,1.153,1,단일 긴 공백,1088.616,1080.607,-8.009,1081.772,True,2,2
+batch2-05,batch2,fastcharge,True,48,66.666,1.151,1,단일 긴 공백,1092.282,1081.239,-11.043,1078.324,False,2,2
+batch2-06,batch2,fastcharge,True,47,66.536,1.178,1,단일 긴 공백,1092.264,1093.692,1.428,1090.406,False,50,73
+batch2-07,batch2,newstructure,True,70,66.156,0.794,1,단일 긴 공백,1092.059,1095.184,3.126,1096.465,True,77,81
+batch2-08,batch2,newstructure,True,68,66.172,0.811,1,단일 긴 공백,1093.256,1088.666,-4.59,1090.934,True,21,62
+batch2-09,batch2,newstructure,True,69,66.202,0.803,1,단일 긴 공백,1098.324,1092.716,-5.608,1097.562,True,18,33
+batch2-10,batch2,fastcharge,True,47,66.715,1.157,1,단일 긴 공백,1113.329,1107.138,-6.191,1116.634,True,10,100
+batch2-11,batch2,fastcharge,True,46,66.507,1.192,1,단일 긴 공백,1102.121,1100.874,-1.247,1108.694,True,8,98
+batch2-12,batch2,fastcharge,True,49,66.51,1.136,1,단일 긴 공백,1105.381,1100.507,-4.874,1107.115,True,4,99
+batch2-13,batch2,fastcharge,True,48,66.561,1.157,1,단일 긴 공백,1095.35,1092.266,-3.084,1095.143,True,2,12
+batch2-14,batch2,fastcharge,True,50,66.44,1.112,1,단일 긴 공백,1080.884,1074.678,-6.206,1077.634,True,2,2
+batch2-15,batch2,fastcharge,True,47,66.54,1.18,1,단일 긴 공백,1072.178,1077.383,5.205,1077.573,True,51,60
+batch2-16,batch2,fastcharge,True,47,66.528,1.171,1,단일 긴 공백,1100.752,1093.755,-6.997,1095.361,True,12,42
+batch2-17,batch2,fastcharge,True,53,66.406,1.056,1,단일 긴 공백,1093.666,1094.786,1.12,1093.76,False,5,74
+batch2-18,batch2,fastcharge,True,51,66.448,1.081,1,단일 긴 공백,1081.876,1085.21,3.334,1085.046,False,55,76
+batch2-19,batch2,fastcharge,True,49,66.553,1.139,1,단일 긴 공백,1098.721,1089.872,-8.849,1094.567,True,6,44
+batch2-20,batch2,fastcharge,True,50,66.476,1.115,1,단일 긴 공백,1101.953,1096.21,-5.743,1103.865,True,19,99
+batch2-21,batch2,fastcharge,True,48,66.501,1.117,1,단일 긴 공백,1104.921,1098.879,-6.042,1102.607,True,8,43
+batch2-22,batch2,varcharge,False,70,175.513,0.971,3,시각 기록 이상(여러 사이클),1092.59,1092.456,-0.135,1086.542,False,14,30
+batch2-23,batch2,varcharge,False,99,213.114,0.68,2,시각 기록 이상(여러 사이클),1084.912,1077.184,-7.728,1079.869,True,13,9
+batch2-24,batch2,fastcharge,True,49,66.656,1.144,1,단일 긴 공백,1096.629,1092.61,-4.018,1100.736,True,9,96
+batch2-25,batch2,fastcharge,True,50,66.654,1.109,1,단일 긴 공백,1103.308,1098.865,-4.442,1106.37,True,7,100
+batch2-26,batch2,fastcharge,True,51,66.505,1.112,1,단일 긴 공백,1104.772,1100.172,-4.6,1106.408,True,2,100
+batch2-27,batch2,fastcharge,True,49,66.711,1.127,1,단일 긴 공백,1098.614,1097.301,-1.313,1104.132,True,13,100
+batch2-28,batch2,fastcharge,True,49,66.435,1.14,1,단일 긴 공백,1096.486,1092.094,-4.392,1099.527,True,11,99
+batch2-29,batch2,fastcharge,True,48,66.693,1.154,1,단일 긴 공백,1110.372,1108.414,-1.958,1115.981,True,6,94
+batch2-30,batch2,fastcharge,True,52,66.509,1.069,1,단일 긴 공백,1094.514,1088.481,-6.032,1092.545,True,2,10
+batch2-31,batch2,fastcharge,True,51,66.48,1.116,1,단일 긴 공백,1098.287,1101.475,3.188,1101.082,False,2,100
+batch2-32,batch2,newstructure,True,71,66.061,0.786,1,단일 긴 공백,1091.261,1082.279,-8.982,1088.285,True,17,36
+batch2-33,batch2,newstructure,True,75,66.128,0.742,1,단일 긴 공백,1072.707,1064.701,-8.005,1068.677,True,9,15
+batch2-34,batch2,newstructure,True,77,66.008,0.727,1,단일 긴 공백,1067.444,1062.929,-4.515,1064.455,True,16,16
+batch2-35,batch2,varcharge,False,99,200.892,0.574,2,시각 기록 이상(여러 사이클),1032.372,1030.212,-2.159,1030.768,True,2,2
+batch2-36,batch2,varcharge,False,99,197.726,0.547,2,시각 기록 이상(여러 사이클),1005.567,1004.068,-1.499,1004.021,False,2,2
+batch2-37,batch2,slowcycle,False,100,134.455,1.16,2,시각 기록 이상(여러 사이클),1084.847,,,1084.841,False,37,42
+batch2-38,batch2,slowcycle,False,100,136.977,1.136,2,시각 기록 이상(여러 사이클),1082.181,,,1082.092,False,3,40
+batch2-39,batch2,slowcycle,False,51,66.422,1.089,1,단일 긴 공백,1073.16,1068.001,-5.159,1068.4,True,7,15
+batch2-40,batch2,slowcycle,False,49,66.453,1.14,1,단일 긴 공백,1087.344,1082.828,-4.516,1085.399,True,7,38
+batch2-41,batch2,fastcharge,True,51,66.527,1.104,1,단일 긴 공백,1107.023,1102.6,-4.423,1108.752,True,2,97
+batch2-42,batch2,fastcharge,True,47,66.651,1.187,1,단일 긴 공백,1109.057,1101.955,-7.101,1113.36,True,6,100
+batch2-43,batch2,newstructure,True,70,66.177,0.796,1,단일 긴 공백,1100.221,1091.589,-8.633,1096.975,True,21,12
+batch2-44,batch2,newstructure,True,70,66.09,0.798,1,단일 긴 공백,1098.357,1095.251,-3.106,1097.118,True,13,17
+batch2-45,batch2,newstructure,True,69,66.159,0.799,1,단일 긴 공백,1103.41,1098.418,-4.993,1099.546,True,16,20
+batch2-46,batch2,fastcharge,True,48,66.471,1.153,1,단일 긴 공백,1104.757,1098.278,-6.479,1102.126,True,12,82
+batch3-00,batch3,newstructure,True,29,0.776,0.763,0,없음,1070.853,1071.214,0.362,1069.509,False,15,29
+batch3-01,batch3,newstructure,True,10,0.766,0.749,0,없음,1067.679,1068.327,0.647,1066.512,False,17,30
+batch3-02,batch3,newstructure,True,29,0.759,0.742,0,없음,1062.72,1062.9,0.181,1060.782,False,18,18
+batch3-03,batch3,newstructure,True,29,0.756,0.742,0,없음,1065.107,1065.457,0.349,1063.556,False,20,30
+batch3-04,batch3,newstructure,True,10,0.79,0.774,0,없음,1074.229,1074.675,0.447,1073.851,False,32,29
+batch3-05,batch3,newstructure,True,10,0.763,0.747,0,없음,1053.404,1053.729,0.324,1051.884,False,19,31
+batch3-06,batch3,newstructure,True,11,0.764,0.736,0,없음,1062.908,1061.396,-1.513,1043.916,False,2,2
+batch3-07,batch3,newstructure,True,10,0.822,0.804,0,없음,1069.213,1070.601,1.388,1069.79,False,20,26
+batch3-08,batch3,newstructure,True,10,0.798,0.787,0,없음,1067.081,1068.152,1.071,1067.125,False,18,33
+batch3-09,batch3,newstructure,True,10,0.811,0.793,0,없음,1071.985,1073.052,1.067,1072.446,False,16,29
+batch3-10,batch3,newstructure,True,12,0.801,0.792,0,없음,1064.071,1064.643,0.572,1063.716,False,19,42
+batch3-11,batch3,newstructure,True,11,0.805,0.793,0,없음,1069.882,1070.559,0.677,1068.436,False,11,17
+batch3-12,batch3,newstructure,True,10,0.806,0.792,0,없음,1075.928,1076.624,0.696,1075.583,False,16,30
+batch3-13,batch3,newstructure,True,10,0.806,0.789,0,없음,1068.078,1069.272,1.194,1067.337,False,30,20
+batch3-14,batch3,newstructure,True,13,0.813,0.805,0,없음,1076.286,1077.174,0.887,1076.428,False,17,50
+batch3-15,batch3,newstructure,True,10,0.806,0.79,0,없음,1070.254,1071.031,0.777,1069.359,False,14,32
+batch3-16,batch3,newstructure,True,18,0.766,0.756,0,없음,1063.823,1064.224,0.401,1062.533,False,17,31
+batch3-17,batch3,newstructure,True,16,22.046,0.736,0,없음,1068.963,1064.867,-4.096,1066.539,True,11,11
+batch3-18,batch3,newstructure,True,10,0.768,0.754,0,없음,1069.648,1070.066,0.418,1067.108,False,15,14
+batch3-19,batch3,newstructure,True,10,0.772,0.76,0,없음,1073.551,1073.848,0.297,1070.93,False,14,12
+batch3-20,batch3,newstructure,True,10,0.796,0.783,0,없음,1066.966,1067.673,0.707,1066.559,False,18,31
+batch3-21,batch3,newstructure,True,10,0.757,0.729,0,없음,1068.48,1068.187,-0.293,1054.091,False,3,7
+batch3-22,batch3,newstructure,True,14,0.749,0.737,0,없음,1058.555,1059.062,0.507,1057.032,False,15,18
+batch3-23,batch3,newstructure,False,12,0.799,0.779,0,없음,1068.402,1068.537,0.135,1067.068,False,19,37
+batch3-24,batch3,newstructure,True,10,0.763,0.755,0,없음,1049.148,1050.109,0.961,1050.089,False,34,39
+batch3-25,batch3,newstructure,True,41,0.781,0.776,0,없음,1065.372,1065.312,-0.059,1064.366,False,16,34
+batch3-26,batch3,newstructure,True,11,0.794,0.785,0,없음,1074.642,1075.309,0.667,1074.435,False,19,35
+batch3-27,batch3,newstructure,True,10,0.78,0.77,0,없음,1062.977,1063.902,0.926,1062.757,False,19,36
+batch3-28,batch3,newstructure,True,10,0.778,0.755,0,없음,1052.668,1051.847,-0.821,1034.198,False,2,4
+batch3-29,batch3,newstructure,True,10,0.803,0.796,0,없음,1069.103,1070.294,1.191,1069.635,False,18,37
+batch3-30,batch3,newstructure,True,10,0.795,0.779,0,없음,1071.033,1071.949,0.916,1071.011,False,19,31
+batch3-31,batch3,newstructure,True,13,0.796,0.789,0,없음,1070.794,1071.261,0.467,1069.815,False,15,34
+batch3-32,batch3,newstructure,False,10,0.777,0.757,0,없음,1074.559,1074.898,0.339,1073.445,False,19,19
+batch3-33,batch3,newstructure,True,13,0.745,0.73,0,없음,1062.452,1062.712,0.26,1060.974,False,19,34
+batch3-34,batch3,newstructure,True,10,0.751,0.735,0,없음,1063.584,1064.066,0.482,1061.586,False,18,19
+batch3-35,batch3,newstructure,True,11,0.759,0.74,0,없음,1064.835,1065.296,0.461,1063.233,False,29,20
+batch3-36,batch3,newstructure,True,15,0.748,0.736,0,없음,1060.134,1060.451,0.317,1057.847,False,19,19
+batch3-37,batch3,newstructure,True,54,1.309,0.736,0,없음,1049.879,1050.284,0.404,1048.364,False,58,58
+batch3-38,batch3,newstructure,True,10,0.763,0.74,0,없음,1071.839,1072.328,0.489,1071.137,False,14,18
+batch3-39,batch3,newstructure,True,10,0.726,0.708,0,없음,1049.518,1050.766,1.248,1049.562,False,22,33
+batch3-40,batch3,newstructure,True,10,0.805,0.782,0,없음,1062.154,1063.439,1.285,1061.857,False,30,30
+batch3-41,batch3,newstructure,True,10,0.762,0.75,0,없음,1053.022,1053.933,0.91,1054.153,True,32,51
+batch3-42,batch3,newstructure,True,11,0.819,0.801,0,없음,1068.904,1069.413,0.509,1069.031,False,30,29
+batch3-43,batch3,newstructure,True,11,0.802,0.784,0,없음,1072.343,1073.042,0.699,1072.469,False,14,44
+batch3-44,batch3,newstructure,True,11,0.797,0.784,0,없음,1072.307,1073.298,0.99,1072.925,False,20,35
+batch3-45,batch3,newstructure,True,10,0.804,0.784,0,없음,1070.962,1071.434,0.472,1071.034,False,30,29

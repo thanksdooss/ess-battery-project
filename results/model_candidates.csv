@@ -1,0 +1,10 @@
+model,역할,설명,features,final_params,Train CV MAPE,SD,SE,1SE 이내,게이트 위반(#00~04),게이트 통과,in-sample MAPE,Valid MAPE,Test MAPE (부록),Batch3 MAPE (부록),선택
+M0,후보,OLS log10(life) ~ dQ_logvar (원논문 variance model),dQ_logvar,M0 OLS,9.967,3.014,1.326,False,1/5,True,8.75,6.313,28.559,12.814,False
+M1,후보,StandardScaler → Ridge (dQ_logvar + Qcc_init),dQ_logvar+Qcc_init,M1 Ridge(alpha=0.0001),6.851,1.975,0.922,True,0/5,True,5.98,6.31,20.48,11.357,True
+M2,후보,SimpleImputer(median) → StandardScaler → ElasticNet (10개 풀),10개 풀,"M2 ElasticNet(alpha=0.00329, l1_ratio=0.3)",9.407,2.924,1.284,False,1/5,True,4.84,5.654,19.498,16.405,False
+M3,후보,StandardScaler → GPR(C·DotProduct + C·RBF + White) (M1 입력),dQ_logvar+Qcc_init,M3 GPR,7.036,1.913,0.894,True,0/5,True,1.46,6.225,21.262,11.235,False
+M4_RF,후보,RandomForest 500 trees (M1 입력),dQ_logvar+Qcc_init,"M4_RF RF(max_depth=3, min_samples_leaf=3)",10.628,3.647,1.725,False,5/5,False,5.99,7.123,29.375,18.134,False
+M4_GBR,후보,GradientBoosting lr 0.05·depth 2 (M1 입력),dQ_logvar+Qcc_init,M4_GBR GBR(n_estimators=100),9.488,3.485,1.622,False,5/5,False,3.85,6.095,27.029,18.974,False
+C0,참고,상수 예측 = 학습 fold 중앙값(log10 척도),dQ_logvar,C0 상수,19.445,6.247,2.939,,5/5,False,16.99,14.609,58.705,24.524,False
+M1_huber,참고,StandardScaler → HuberRegressor(epsilon=1.35) (M1 입력),dQ_logvar+Qcc_init,M1_huber Huber,6.875,2.115,0.993,,0/5,True,5.94,6.217,19.601,11.392,False
+M2_discharge,참고,M2 discharge 하위 풀 5개 ElasticNet,5개 풀,"M2_discharge ElasticNet(alpha=0.00329, l1_ratio=1)",7.602,2.506,1.109,,0/5,True,5.61,5.636,23.367,12.696,False

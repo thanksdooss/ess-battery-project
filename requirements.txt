@@ -1,0 +1,22 @@
+# Python 3.11.15
+# 분석·모델 (src/)
+numpy==2.4.6
+pandas==3.0.6
+scipy==1.17.1
+scikit-learn==1.9.1
+joblib==1.6.0              # src/train.py 병렬 CV에서 직접 import
+threadpoolctl==3.7.0       # scikit-learn 의존성 (결과 재현용 고정)
+statsmodels==0.15.0
+matplotlib==3.11.2
+h5py==3.16.0               # src/preprocess.py (.mat 읽기)
+pyarrow==25.0.1            # pandas 3 기본 문자열 dtype
+kagglehub==1.0.2           # data/README.md 원본 받기
+
+# 노트북 실행 (notebooks/*.ipynb, 커널 'ess-venv')
+ipykernel==7.4.0
+ipython==9.17.1
+nbformat==5.11.1
+nbconvert==7.17.1          # jupyter nbconvert --execute 로 다시 실행할 때
+
+# 보고서 빌드 전용 (reports/build_report.py)
+markdown-it-py==4.2.0

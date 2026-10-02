@@ -1,0 +1,243 @@
+{
+  "created": "2026-10-02T09:34:22",
+  "what": "Batch 3 '원저자 공개 코드가 뺀 셀' 제외 결과 (정정본). 보고 성능 표의 'Test (Batch 3)' 비고에 쓴다.",
+  "removed_labeled_cells": [
+    "batch3-02",
+    "batch3-37",
+    "batch3-42",
+    "batch3-43"
+  ],
+  "removed_all_cells": [
+    "batch3-02",
+    "batch3-37",
+    "batch3-42",
+    "batch3-43",
+    "batch3-23",
+    "batch3-32"
+  ],
+  "evidence": "원저자 공개 코드 Load Data.ipynb: del batch3['b3c37','b3c2','b3c23','b3c32','b3c42','b3c43']; BuildPkl_Batch3 의 키 'b3c'+str(i) 의 i = 2018-04-12 .mat 순서 = 이 저장소 idx. LoadData.m(batch3(38)=[] → endcap>0.885 → nind=[3,40:41])도 같은 6셀. #23·#32 = EOL 미도달(라벨 없음).",
+  "wrong_list_used_2026_10_01": [
+    "batch3-02",
+    "batch3-37",
+    "batch3-38",
+    "batch3-39"
+  ],
+  "previous_wrong_values": {
+    "selected_mape": 10.335912512101384,
+    "M0_mape": 11.496622261649645
+  },
+  "method": "results/batch3_predictions.csv(1회 실행의 셀별 예측)에서 부분집합 지표만 다시 계산. 재적합·batch3 단계 재실행 없음. 잘못된 목록으로 같은 계산을 하면 batch3.json['excluding_paper_removed']가 그대로 재현됨을 assert 로 확인.",
+  "check_old_list_reproduces_batch3_json": true,
+  "inputs_sha256": {
+    "batch3_predictions.csv": "2e2fd869bdd513bf297f8c53ebbd50e6f4823b0c0a9c1b1c336e288db34f7262",
+    "batch3.json": "1adb3cd739e67375a7353bab67dd9f34336cded2d04098f2f3dec7905f754bfd",
+    "features.csv": "7231e908393f6140fb5ce7a23b5fa300aecf2519ecfea8208ff0bedc10caa715",
+    "diagnostic_features.csv": "bfe207f66fb14c20bfdc681a6064ff2bcda7396c650c32035f29be4d7fd82d6f",
+    "selection.json": "0987c11fa34c10b9b25e58b12334fce93ceab9fae8494b7c03053e8f1f226a20"
+  },
+  "n": 40,
+  "selected_id": "M1",
+  "selected": {
+    "n": 40,
+    "mape": 10.766963343606095,
+    "ci95": [
+      7.861405651255271,
+      13.974540765066992
+    ],
+    "rmse_cycles": 217.95911894889724,
+    "signed_mean_pct": -7.758639488261667,
+    "over_ratio": 0.3,
+    "n_over": 12,
+    "n_out_of_range": 17,
+    "mape_in_range": 8.106474202490714,
+    "mape_out_of_range": 14.366448652173961,
+    "n_pred_outside_150_2300": 0,
+    "train_dQ_logvar_range": [
+      -4.178878029021015,
+      -3.350338008121214
+    ],
+    "pi_coverage_10_90": 0.525,
+    "pi_cv_resid_10_90": {
+      "nominal": 0.8,
+      "coverage": 0.525,
+      "n_covered": 21,
+      "mean_width_cycles": 155.9291386068657,
+      "mean_rel_width": 0.17368207786013384,
+      "in_range": {
+        "n": 23,
+        "coverage": 0.6956521739130435,
+        "mean_rel_width": 0.2071147226766259
+      },
+      "out_of_range": {
+        "n": 17,
+        "coverage": 0.29411764705882354,
+        "mean_rel_width": 0.12844967604958574
+      }
+    },
+    "by_group": {
+      "newstructure": {
+        "n": 40,
+        "mape": 10.766963343606095,
+        "signed_mean_pct": -7.758639488261667,
+        "over_ratio": 0.3,
+        "n_over": 12,
+        "n_out_of_range": 17,
+        "mape_in_range": 8.106474202490714,
+        "mape_out_of_range": 14.366448652173961
+      }
+    },
+    "coefs_raw_fit36": {
+      "intercept": -1.8667801049810517,
+      "dQ_logvar": -0.3282804690836298,
+      "Qcc_init": 3.299431203014319,
+      "n_nonzero": 2
+    },
+    "qcc_shift_decomposition": {
+      "b1_all46_median_Ah": 1.0654239058494568,
+      "b1_labeled36_sd_mAh": 9.287026775329421,
+      "coef_log10_per_Ah": 3.299431203014319,
+      "groups": {
+        "newstructure": {
+          "n_all_cells": 40,
+          "n_labeled_eval": 40,
+          "shift_mAh": -15.02758264541626,
+          "shift_in_b1_sd": -1.6181263399968193,
+          "n_out_of_b1_labeled_range": 4,
+          "qcc_part_log10": -0.04958247508616287,
+          "pred_factor": 0.892108186888556,
+          "observed_mean_log_resid": -0.03923620527431191,
+          "observed_factor": 0.9136162062292915,
+          "remainder_log10": 0.01034626981185096
+        }
+      },
+      "how": "이동량은 그룹 전체 셀(라벨 미사용) 기준. 관측 잔차만 라벨 셀(평가 셀)에서 계산"
+    },
+    "breakin_check": {
+      "spearman_logresid_vs_cc_breakin": 0.22402551739078422,
+      "p": 0.16462941461819916,
+      "n": 40,
+      "spearman_logresid_vs_peak_cycle": 0.28387284078201835,
+      "p_peak_cycle": 0.07587172568284285,
+      "overall": {
+        "n": 40,
+        "rho_cc_breakin": 0.22402551739078422,
+        "p_cc_breakin": 0.16462941461819916,
+        "rho_cc_breakin_peak_cycle": 0.28387284078201835,
+        "p_cc_breakin_peak_cycle": 0.07587172568284285,
+        "rho_qd_breakin_peak_cycle": 0.520935041408004,
+        "p_qd_breakin_peak_cycle": 0.0005681643198686907,
+        "median_cc_breakin_peak_cycle": 18.0,
+        "n_ge96_cc_breakin_peak_cycle": 0,
+        "median_qd_breakin_peak_cycle": 30.0,
+        "n_ge96_qd_breakin_peak_cycle": 0
+      },
+      "by_group": {
+        "newstructure": {
+          "n": 40,
+          "rho_cc_breakin": 0.22402551739078422,
+          "p_cc_breakin": 0.16462941461819916,
+          "rho_cc_breakin_peak_cycle": 0.28387284078201835,
+          "p_cc_breakin_peak_cycle": 0.07587172568284285,
+          "rho_qd_breakin_peak_cycle": 0.520935041408004,
+          "p_qd_breakin_peak_cycle": 0.0005681643198686907,
+          "median_cc_breakin_peak_cycle": 18.0,
+          "n_ge96_cc_breakin_peak_cycle": 0,
+          "median_qd_breakin_peak_cycle": 30.0,
+          "n_ge96_qd_breakin_peak_cycle": 0
+        }
+      },
+      "how": "Spearman(로그 잔차, x). x = cc_breakin(상승폭, mAh) · cc_breakin_peak_cycle(주: CC 끝점 9-사이클 이동중앙값 최댓값 사이클) · qd_breakin_peak_cycle(보조: DAY 1 q2 요약 QD 정점 정의를 cycle 2~100 으로 자름). 정점은 results/diagnostic_features.csv (라벨 없음). n_ge96_* = 창 끝 절단 가능 셀 수."
+    }
+  },
+  "M0": {
+    "n": 40,
+    "mape": 11.747150855696773,
+    "ci95": [
+      8.567664879044688,
+      14.851424956567628
+    ],
+    "rmse_cycles": 209.14394181721326,
+    "signed_mean_pct": 0.9409114241029519,
+    "over_ratio": 0.55,
+    "n_over": 22,
+    "n_out_of_range": 17,
+    "mape_in_range": 9.294940835019078,
+    "mape_out_of_range": 15.064846766025415,
+    "n_pred_outside_150_2300": 0,
+    "train_dQ_logvar_range": [
+      -4.178878029021015,
+      -3.350338008121214
+    ],
+    "pi_coverage_10_90": 0.725,
+    "pi_cv_resid_10_90": {
+      "nominal": 0.8,
+      "coverage": 0.725,
+      "n_covered": 29,
+      "mean_width_cycles": 264.543669422353,
+      "mean_rel_width": 0.27194525093483274,
+      "in_range": {
+        "n": 23,
+        "coverage": 0.9130434782608695,
+        "mean_rel_width": 0.3327983038792384
+      },
+      "out_of_range": {
+        "n": 17,
+        "coverage": 0.47058823529411764,
+        "mean_rel_width": 0.18961464989240162
+      }
+    },
+    "by_group": {
+      "newstructure": {
+        "n": 40,
+        "mape": 11.747150855696773,
+        "signed_mean_pct": 0.9409114241029519,
+        "over_ratio": 0.55,
+        "n_over": 22,
+        "n_out_of_range": 17,
+        "mape_in_range": 9.294940835019078,
+        "mape_out_of_range": 15.064846766025415
+      }
+    },
+    "coefs_raw_fit36": {
+      "intercept": 1.7624083299063986,
+      "dQ_logvar": -0.29724790339376217
+    },
+    "qcc_shift_decomposition": null,
+    "breakin_check": {
+      "spearman_logresid_vs_cc_breakin": 0.11745391447791534,
+      "p": 0.47042215496282336,
+      "n": 40,
+      "spearman_logresid_vs_peak_cycle": 0.31921557494312625,
+      "p_peak_cycle": 0.044670141075734915,
+      "overall": {
+        "n": 40,
+        "rho_cc_breakin": 0.11745391447791534,
+        "p_cc_breakin": 0.47042215496282336,
+        "rho_cc_breakin_peak_cycle": 0.31921557494312625,
+        "p_cc_breakin_peak_cycle": 0.044670141075734915,
+        "rho_qd_breakin_peak_cycle": 0.4449986327019482,
+        "p_qd_breakin_peak_cycle": 0.0040125554538659155,
+        "median_cc_breakin_peak_cycle": 18.0,
+        "n_ge96_cc_breakin_peak_cycle": 0,
+        "median_qd_breakin_peak_cycle": 30.0,
+        "n_ge96_qd_breakin_peak_cycle": 0
+      },
+      "by_group": {
+        "newstructure": {
+          "n": 40,
+          "rho_cc_breakin": 0.11745391447791534,
+          "p_cc_breakin": 0.47042215496282336,
+          "rho_cc_breakin_peak_cycle": 0.31921557494312625,
+          "p_cc_breakin_peak_cycle": 0.044670141075734915,
+          "rho_qd_breakin_peak_cycle": 0.4449986327019482,
+          "p_qd_breakin_peak_cycle": 0.0040125554538659155,
+          "median_cc_breakin_peak_cycle": 18.0,
+          "n_ge96_cc_breakin_peak_cycle": 0,
+          "median_qd_breakin_peak_cycle": 30.0,
+          "n_ge96_qd_breakin_peak_cycle": 0
+        }
+      },
+      "how": "Spearman(로그 잔차, x). x = cc_breakin(상승폭, mAh) · cc_breakin_peak_cycle(주: CC 끝점 9-사이클 이동중앙값 최댓값 사이클) · qd_breakin_peak_cycle(보조: DAY 1 q2 요약 QD 정점 정의를 cycle 2~100 으로 자름). 정점은 results/diagnostic_features.csv (라벨 없음). n_ge96_* = 창 끝 절단 가능 셀 수."
+    }
+  }
+}

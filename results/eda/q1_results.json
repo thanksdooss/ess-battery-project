@@ -1,0 +1,2773 @@
+{
+  "definitions": {
+    "labeled": "cycle_life 존재 & 중도절단 아님 (data.cell_table 'labeled')",
+    "censored_lower_bound": "Batch 1 중도절단 10개 = cycle_life(하한), Batch 3 23·32 = n_cycles(하한, EOL 미도달)",
+    "excluded": "Batch 2 VarCharge 4 + SLOWCYCLE 4 (수명 시험 아님, 라벨 NaN)",
+    "hist_bins": "np.arange(150, 2300+1, 50) → 43 bins",
+    "skewness": "scipy.stats.skew(x, bias=False) (보정된 Fisher-Pearson G1, 양수 = 오른쪽 긴 꼬리)",
+    "std": "표본표준편차 ddof=1"
+  },
+  "a_descriptive": {
+    "batch1": {
+      "all_labeled": {
+        "n": 36,
+        "mean": 788.416667,
+        "median": 772.5,
+        "std": 148.695734,
+        "skew": 0.300053,
+        "skew_log10": -0.012104,
+        "min": 534.0,
+        "q1": 681.0,
+        "q3": 871.5,
+        "max": 1074.0,
+        "cv": 0.1886
+      },
+      "fastcharge": {
+        "n": 36,
+        "mean": 788.416667,
+        "median": 772.5,
+        "std": 148.695734,
+        "skew": 0.300053,
+        "skew_log10": -0.012104,
+        "min": 534.0,
+        "q1": 681.0,
+        "q3": 871.5,
+        "max": 1074.0,
+        "cv": 0.1886
+      },
+      "n_lower_bound_only": 10,
+      "lower_bounds": [
+        879.0,
+        891.0,
+        897.0,
+        902.0,
+        906.0,
+        1177.0,
+        1179.0,
+        1190.0,
+        1226.0,
+        1227.0
+      ],
+      "km_median_incl_censored": 860.0
+    },
+    "batch2": {
+      "all_labeled": {
+        "n": 39,
+        "mean": 565.74359,
+        "median": 472.0,
+        "std": 222.201629,
+        "skew": 1.63683,
+        "skew_log10": 1.356662,
+        "min": 392.0,
+        "q1": 439.5,
+        "q3": 508.5,
+        "max": 1186.0,
+        "cv": 0.39276
+      },
+      "fastcharge": {
+        "n": 30,
+        "mean": 453.0,
+        "median": 451.0,
+        "std": 34.76919,
+        "skew": -0.16654,
+        "skew_log10": -0.284841,
+        "min": 392.0,
+        "q1": 425.25,
+        "q3": 476.25,
+        "max": 514.0,
+        "cv": 0.076753
+      },
+      "newstructure": {
+        "n": 9,
+        "mean": 941.555556,
+        "median": 904.0,
+        "std": 153.57906,
+        "skew": 0.532081,
+        "skew_log10": 0.388381,
+        "min": 777.0,
+        "q1": 809.0,
+        "q3": 1029.0,
+        "max": 1186.0,
+        "cv": 0.163112
+      },
+      "n_lower_bound_only": 0,
+      "lower_bounds": [],
+      "km_median_incl_censored": 472.0
+    },
+    "batch3": {
+      "all_labeled": {
+        "n": 44,
+        "mean": 1059.659091,
+        "median": 1005.5,
+        "std": 313.869692,
+        "skew": 1.255079,
+        "skew_log10": 0.518234,
+        "min": 541.0,
+        "q1": 828.0,
+        "q3": 1155.25,
+        "max": 1935.0,
+        "cv": 0.296199
+      },
+      "newstructure": {
+        "n": 44,
+        "mean": 1059.659091,
+        "median": 1005.5,
+        "std": 313.869692,
+        "skew": 1.255079,
+        "skew_log10": 0.518234,
+        "min": 541.0,
+        "q1": 828.0,
+        "q3": 1155.25,
+        "max": 1935.0,
+        "cv": 0.296199
+      },
+      "n_lower_bound_only": 2,
+      "lower_bounds": [
+        2189.0,
+        2237.0
+      ],
+      "km_median_incl_censored": 1028.0
+    },
+    "pooled_labeled": {
+      "n": 119,
+      "mean": 815.731092,
+      "median": 813.0,
+      "std": 318.475226,
+      "skew": 1.048926,
+      "skew_log10": 0.034079,
+      "min": 392.0,
+      "q1": 524.0,
+      "q3": 1005.5,
+      "max": 1935.0,
+      "cv": 0.390417
+    }
+  },
+  "a_batch1_censoring": {
+    "cells": [
+      {
+        "cell_key": "batch1-08",
+        "lower_bound": 879.0,
+        "QD_last_Ah": 0.969025,
+        "n_labeled_longer_than_lb": 8
+      },
+      {
+        "cell_key": "batch1-22",
+        "lower_bound": 891.0,
+        "QD_last_Ah": 0.963279,
+        "n_labeled_longer_than_lb": 7
+      },
+      {
+        "cell_key": "batch1-13",
+        "lower_bound": 897.0,
+        "QD_last_Ah": 0.923136,
+        "n_labeled_longer_than_lb": 7
+      },
+      {
+        "cell_key": "batch1-12",
+        "lower_bound": 902.0,
+        "QD_last_Ah": 0.913119,
+        "n_labeled_longer_than_lb": 7
+      },
+      {
+        "cell_key": "batch1-10",
+        "lower_bound": 906.0,
+        "QD_last_Ah": 0.961019,
+        "n_labeled_longer_than_lb": 7
+      },
+      {
+        "cell_key": "batch1-02",
+        "lower_bound": 1177.0,
+        "QD_last_Ah": 1.043279,
+        "n_labeled_longer_than_lb": 0
+      },
+      {
+        "cell_key": "batch1-01",
+        "lower_bound": 1179.0,
+        "QD_last_Ah": 1.038225,
+        "n_labeled_longer_than_lb": 0
+      },
+      {
+        "cell_key": "batch1-00",
+        "lower_bound": 1190.0,
+        "QD_last_Ah": 1.02621,
+        "n_labeled_longer_than_lb": 0
+      },
+      {
+        "cell_key": "batch1-03",
+        "lower_bound": 1226.0,
+        "QD_last_Ah": 0.970921,
+        "n_labeled_longer_than_lb": 0
+      },
+      {
+        "cell_key": "batch1-04",
+        "lower_bound": 1227.0,
+        "QD_last_Ah": 1.02196,
+        "n_labeled_longer_than_lb": 0
+      }
+    ],
+    "confirmed_longest": [
+      "batch1-02",
+      "batch1-01",
+      "batch1-00",
+      "batch1-03",
+      "batch1-04"
+    ],
+    "undetermined": [
+      "batch1-08",
+      "batch1-22",
+      "batch1-13",
+      "batch1-12",
+      "batch1-10"
+    ],
+    "labeled_max": 1074.0,
+    "note": "하한 ≥1,177인 00~04만 '라벨 셀 전부보다 김'이 확정. 08·10·12·13·22(하한 879~906)는 하한보다 긴 라벨 셀 7~8개(880~1,074)보다 짧을 수도 있음(12·13은 기록 종료 시 QD 0.913·0.923 Ah로 이미 EOL에 근접)"
+  },
+  "a_observed_range": {
+    "labeled_min": 392.0,
+    "labeled_max": 1935.0,
+    "n_labeled_below_392": 0,
+    "max_lower_bound": 2237.0,
+    "note": "노션/원논문 범위 150~2,300 중 본 파일 라벨 셀은 392~1,935; 150~391 구간 셀 0개"
+  },
+  "b_ratios": {
+    "batch1": {
+      "n_life_test": 46,
+      "n_labeled": 36,
+      "labeled_long_gt1000": 5,
+      "labeled_short_lt500": 0,
+      "labeled_mid_500_1000": 31,
+      "labeled_long_ratio": 0.138889,
+      "labeled_short_ratio": 0.0,
+      "labeled_lt550": 1,
+      "labeled_ge550": 35,
+      "labeled_lt550_ratio": 0.027778,
+      "all_counts_by_category": {
+        "<500 (단수명)": 0,
+        "500~549": 1,
+        "550~1,000": 30,
+        ">1,000 (장수명)": 10,
+        "≥550 확정·구간 미정": 5
+      },
+      "all_long_ratio": 0.217391,
+      "all_short_ratio": 0.0,
+      "all_lt550": 1,
+      "all_lt550_ratio": 0.021739
+    },
+    "batch2": {
+      "n_life_test": 39,
+      "n_labeled": 39,
+      "labeled_long_gt1000": 3,
+      "labeled_short_lt500": 28,
+      "labeled_mid_500_1000": 8,
+      "labeled_long_ratio": 0.076923,
+      "labeled_short_ratio": 0.717949,
+      "labeled_lt550": 30,
+      "labeled_ge550": 9,
+      "labeled_lt550_ratio": 0.769231,
+      "all_counts_by_category": {
+        "<500 (단수명)": 28,
+        "500~549": 2,
+        "550~1,000": 6,
+        ">1,000 (장수명)": 3,
+        "≥550 확정·구간 미정": 0
+      },
+      "all_long_ratio": 0.076923,
+      "all_short_ratio": 0.717949,
+      "all_lt550": 30,
+      "all_lt550_ratio": 0.769231
+    },
+    "batch2_fastcharge": {
+      "n_life_test": 30,
+      "n_labeled": 30,
+      "labeled_long_gt1000": 0,
+      "labeled_short_lt500": 28,
+      "labeled_mid_500_1000": 2,
+      "labeled_long_ratio": 0.0,
+      "labeled_short_ratio": 0.933333,
+      "labeled_lt550": 30,
+      "labeled_ge550": 0,
+      "labeled_lt550_ratio": 1.0,
+      "all_counts_by_category": {
+        "<500 (단수명)": 28,
+        "500~549": 2,
+        "550~1,000": 0,
+        ">1,000 (장수명)": 0,
+        "≥550 확정·구간 미정": 0
+      },
+      "all_long_ratio": 0.0,
+      "all_short_ratio": 0.933333,
+      "all_lt550": 30,
+      "all_lt550_ratio": 1.0
+    },
+    "batch2_newstructure": {
+      "n_life_test": 9,
+      "n_labeled": 9,
+      "labeled_long_gt1000": 3,
+      "labeled_short_lt500": 0,
+      "labeled_mid_500_1000": 6,
+      "labeled_long_ratio": 0.333333,
+      "labeled_short_ratio": 0.0,
+      "labeled_lt550": 0,
+      "labeled_ge550": 9,
+      "labeled_lt550_ratio": 0.0,
+      "all_counts_by_category": {
+        "<500 (단수명)": 0,
+        "500~549": 0,
+        "550~1,000": 6,
+        ">1,000 (장수명)": 3,
+        "≥550 확정·구간 미정": 0
+      },
+      "all_long_ratio": 0.333333,
+      "all_short_ratio": 0.0,
+      "all_lt550": 0,
+      "all_lt550_ratio": 0.0
+    },
+    "batch3": {
+      "n_life_test": 46,
+      "n_labeled": 44,
+      "labeled_long_gt1000": 23,
+      "labeled_short_lt500": 0,
+      "labeled_mid_500_1000": 21,
+      "labeled_long_ratio": 0.522727,
+      "labeled_short_ratio": 0.0,
+      "labeled_lt550": 1,
+      "labeled_ge550": 43,
+      "labeled_lt550_ratio": 0.022727,
+      "all_counts_by_category": {
+        "<500 (단수명)": 0,
+        "500~549": 1,
+        "550~1,000": 20,
+        ">1,000 (장수명)": 25,
+        "≥550 확정·구간 미정": 0
+      },
+      "all_long_ratio": 0.543478,
+      "all_short_ratio": 0.0,
+      "all_lt550": 1,
+      "all_lt550_ratio": 0.021739
+    }
+  },
+  "notion_claim_test": {
+    "same_protocol_median_ratio_all_pairs": {
+      "4.8C(80%)-4.8C: batch1_fastcharge/batch2_fastcharge": {
+        "ratio": 1.530488,
+        "median_hi": 753.0,
+        "median_lo": 492.0,
+        "n_hi": 2,
+        "n_lo": 5,
+        "same_structure": true
+      },
+      "4.8C(80%)-4.8C: batch2_newstructure/batch2_fastcharge": {
+        "ratio": 1.644309,
+        "median_hi": 809.0,
+        "median_lo": 492.0,
+        "n_hi": 3,
+        "n_lo": 5,
+        "same_structure": false
+      },
+      "4.8C(80%)-4.8C: batch3_newstructure/batch2_fastcharge": {
+        "ratio": 3.333333,
+        "median_hi": 1640.0,
+        "median_lo": 492.0,
+        "n_hi": 6,
+        "n_lo": 5,
+        "same_structure": false
+      },
+      "4.8C(80%)-4.8C: batch2_newstructure/batch1_fastcharge": {
+        "ratio": 1.074369,
+        "median_hi": 809.0,
+        "median_lo": 753.0,
+        "n_hi": 3,
+        "n_lo": 2,
+        "same_structure": false
+      },
+      "4.8C(80%)-4.8C: batch3_newstructure/batch1_fastcharge": {
+        "ratio": 2.177955,
+        "median_hi": 1640.0,
+        "median_lo": 753.0,
+        "n_hi": 6,
+        "n_lo": 2,
+        "same_structure": false
+      },
+      "4.8C(80%)-4.8C: batch3_newstructure/batch2_newstructure": {
+        "ratio": 2.027194,
+        "median_hi": 1640.0,
+        "median_lo": 809.0,
+        "n_hi": 6,
+        "n_lo": 3,
+        "same_structure": true
+      },
+      "5.2C(58%)-4C: batch2_newstructure/batch2_fastcharge": {
+        "ratio": 1.871636,
+        "median_hi": 904.0,
+        "median_lo": 483.0,
+        "n_hi": 3,
+        "n_lo": 4,
+        "same_structure": false
+      },
+      "5.6C(26%)-4.5C: batch2_newstructure/batch2_fastcharge": {
+        "ratio": 2.235426,
+        "median_hi": 997.0,
+        "median_lo": 446.0,
+        "n_hi": 3,
+        "n_lo": 6,
+        "same_structure": false
+      },
+      "6C(60%)-3C: batch1_fastcharge/batch2_fastcharge": {
+        "ratio": 1.86,
+        "median_hi": 744.0,
+        "median_lo": 400.0,
+        "n_hi": 2,
+        "n_lo": 2,
+        "same_structure": true
+      }
+    },
+    "same_protocol_ratio_range": [
+      1.074369,
+      3.333333
+    ],
+    "same_protocol_ratio_range_same_structure": [
+      1.530488,
+      2.027194
+    ],
+    "same_protocol_group_n_range": [
+      2,
+      6
+    ],
+    "batch1_4.8C_replicates": [
+      636.0,
+      870.0
+    ],
+    "batch1_policy_mean_range": {
+      "min": 546.5,
+      "min_policy": "5.4C(80%)-5.4C",
+      "max": 1074.0,
+      "max_policy": "4.4C(80%)-4.4C",
+      "ratio": 1.965233
+    },
+    "shared_protocols_batch1_batch2fc": [
+      "4.8C(80%)-4.8C",
+      "6C(60%)-3C"
+    ],
+    "batch2fc_protocols_absent_in_batch1": [
+      "3.6C(30%)-6C",
+      "3.6C(9%)-5C",
+      "4.65C(44%)-5C",
+      "4.65C(69%)-6C",
+      "5.2C(50%)-4.25C",
+      "5.2C(58%)-4C",
+      "5.6C(26%)-4.5C"
+    ],
+    "tests": {
+      "batch1_vs_batch2": {
+        "n": [
+          36,
+          39
+        ],
+        "ks_D": 0.769231,
+        "ks_p": 0.0,
+        "mwu_p": 1e-06,
+        "median_a": 772.5,
+        "median_b": 472.0
+      },
+      "batch1_vs_batch3": {
+        "n": [
+          36,
+          44
+        ],
+        "ks_D": 0.469697,
+        "ks_p": 0.000173,
+        "mwu_p": 9e-06,
+        "median_a": 772.5,
+        "median_b": 1005.5
+      },
+      "batch2_vs_batch3": {
+        "n": [
+          39,
+          44
+        ],
+        "ks_D": 0.769231,
+        "ks_p": 0.0,
+        "mwu_p": 0.0,
+        "median_a": 472.0,
+        "median_b": 1005.5
+      },
+      "batch1_vs_batch2_fastcharge": {
+        "n": [
+          36,
+          30
+        ],
+        "ks_D": 1.0,
+        "ks_p": 0.0,
+        "mwu_p": 0.0,
+        "median_a": 772.5,
+        "median_b": 451.0
+      },
+      "batch1_vs_batch2_newstructure": {
+        "n": [
+          36,
+          9
+        ],
+        "ks_D": 0.5,
+        "ks_p": 0.042098,
+        "mwu_p": 0.022351,
+        "median_a": 772.5,
+        "median_b": 904.0
+      },
+      "batch2_newstructure_vs_batch3": {
+        "n": [
+          9,
+          44
+        ],
+        "ks_D": 0.232323,
+        "ks_p": 0.727721,
+        "mwu_p": 0.30277,
+        "median_a": 904.0,
+        "median_b": 1005.5
+      }
+    },
+    "same_protocol": {
+      "4.8C(80%)-4.8C": {
+        "batch1_fastcharge": {
+          "labeled_lives": [
+            636.0,
+            870.0
+          ],
+          "lower_bounds": [],
+          "median_labeled": 753.0
+        },
+        "batch2_fastcharge": {
+          "labeled_lives": [
+            437.0,
+            472.0,
+            492.0,
+            503.0,
+            514.0
+          ],
+          "lower_bounds": [],
+          "median_labeled": 492.0
+        },
+        "batch2_newstructure": {
+          "labeled_lives": [
+            777.0,
+            809.0,
+            1029.0
+          ],
+          "lower_bounds": [],
+          "median_labeled": 809.0
+        },
+        "batch3_newstructure": {
+          "labeled_lives": [
+            1078.0,
+            1390.0,
+            1638.0,
+            1642.0,
+            1801.0,
+            1836.0
+          ],
+          "lower_bounds": [
+            2189.0,
+            2237.0
+          ],
+          "median_labeled": 1640.0
+        }
+      },
+      "5.2C(58%)-4C": {
+        "batch2_fastcharge": {
+          "labeled_lives": [
+            452.0,
+            477.0,
+            489.0,
+            493.0
+          ],
+          "lower_bounds": [],
+          "median_labeled": 483.0
+        },
+        "batch2_newstructure": {
+          "labeled_lives": [
+            841.0,
+            904.0,
+            1140.0
+          ],
+          "lower_bounds": [],
+          "median_labeled": 904.0
+        }
+      },
+      "5.6C(26%)-4.5C": {
+        "batch2_fastcharge": {
+          "labeled_lives": [
+            412.0,
+            425.0,
+            442.0,
+            450.0,
+            471.0,
+            491.0
+          ],
+          "lower_bounds": [],
+          "median_labeled": 446.0
+        },
+        "batch2_newstructure": {
+          "labeled_lives": [
+            791.0,
+            997.0,
+            1186.0
+          ],
+          "lower_bounds": [],
+          "median_labeled": 997.0
+        }
+      },
+      "6C(60%)-3C": {
+        "batch1_fastcharge": {
+          "labeled_lives": [
+            731.0,
+            757.0
+          ],
+          "lower_bounds": [],
+          "median_labeled": 744.0
+        },
+        "batch2_fastcharge": {
+          "labeled_lives": [
+            392.0,
+            408.0
+          ],
+          "lower_bounds": [],
+          "median_labeled": 400.0
+        }
+      }
+    },
+    "protocol_variance": {
+      "batch1": {
+        "n": 36,
+        "n_policies": 20,
+        "eta2_policy": 0.893561,
+        "pooled_within_policy_sd": 71.750218,
+        "total_sd": 148.695734
+      },
+      "batch2": {
+        "n": 39,
+        "n_policies": 12,
+        "eta2_policy": 0.905693,
+        "pooled_within_policy_sd": 80.952306,
+        "total_sd": 222.201629
+      },
+      "batch3": {
+        "n": 44,
+        "n_policies": 8,
+        "eta2_policy": 0.550421,
+        "pooled_within_policy_sd": 230.003948,
+        "total_sd": 313.869692
+      }
+    },
+    "train_range_check": {
+      "batch1_label_range": [
+        534.0,
+        1074.0
+      ],
+      "batch2": {
+        "n": 39,
+        "n_below": 30,
+        "n_above": 2,
+        "frac_outside": 0.820513,
+        "mape_floor_pct": 14.67373
+      },
+      "batch3": {
+        "n": 44,
+        "n_below": 0,
+        "n_above": 16,
+        "frac_outside": 0.363636,
+        "mape_floor_pct": 6.851554
+      }
+    }
+  },
+  "c_data_quality": {
+    "definition": "QD 점프 = 연속 사이클 |ΔQD|>10 mAh 횟수(전체 기록); 초기 QD 점프 = cycle 2~100 |ΔQD|>3 mAh; IR 스파이크 = |IR−이동중앙값(11)|>1 mΩ; flag = QD 점프 ≥3 또는 IR 스파이크 ≥5 (운영 정의)",
+    "batch_baseline": {
+      "batch1": {
+        "qd_jump10_median": 0.0,
+        "qd_jump10_max": 85,
+        "qd_jump3_early_median": 0.0,
+        "qd_jump3_early_p90": 1.5,
+        "ir_spike1_median": 1.0,
+        "tmax_step_max_p90": 2.152425,
+        "flagged": [
+          "batch1-00",
+          "batch1-03"
+        ]
+      },
+      "batch2": {
+        "qd_jump10_median": 1.0,
+        "qd_jump10_max": 6,
+        "qd_jump3_early_median": 3.0,
+        "qd_jump3_early_p90": 7.0,
+        "ir_spike1_median": 0.0,
+        "tmax_step_max_p90": 2.08567,
+        "flagged": [
+          "batch2-43"
+        ]
+      },
+      "batch3": {
+        "qd_jump10_median": 0.0,
+        "qd_jump10_max": 7,
+        "qd_jump3_early_median": 0.0,
+        "qd_jump3_early_p90": 0.0,
+        "ir_spike1_median": 0.0,
+        "tmax_step_max_p90": 1.504641,
+        "flagged": [
+          "batch3-37"
+        ]
+      }
+    },
+    "batch3_paper_removed_and_upper_outliers": [
+      {
+        "idx": 2,
+        "cell_key": "batch3-02",
+        "policy": "5.6C(19%)-4.6C-newstructure",
+        "cycle_life": 1267.0,
+        "labeled": true,
+        "paper_removed_channel": true,
+        "tukey_high": false,
+        "mates_lives": [
+          796.0,
+          816.0,
+          817.0,
+          1028.0,
+          1048.0,
+          1093.0,
+          1146.0
+        ],
+        "life_over_mates_median": 1.23249,
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 0.0,
+        "tmax_step_max": 1.679496,
+        "tmax_step_at": 509,
+        "QD_10": 1.062787,
+        "qd10_rank_low_of_46": 11,
+        "flag": false
+      },
+      {
+        "idx": 7,
+        "cell_key": "batch3-07",
+        "policy": "4.8C(80%)-4.8C-newstructure",
+        "cycle_life": 1836.0,
+        "labeled": true,
+        "paper_removed_channel": false,
+        "tukey_high": true,
+        "mates_lives": [
+          1078.0,
+          1390.0,
+          1638.0,
+          1642.0,
+          1801.0
+        ],
+        "life_over_mates_median": 1.120879,
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 0.0,
+        "tmax_step_max": 1.006149,
+        "tmax_step_at": 1198,
+        "QD_10": 1.070285,
+        "qd10_rank_low_of_46": 30,
+        "flag": false
+      },
+      {
+        "idx": 23,
+        "cell_key": "batch3-23",
+        "policy": "4.8C(80%)-4.8C-newstructure",
+        "cycle_life": null,
+        "labeled": false,
+        "paper_removed_channel": true,
+        "tukey_high": false,
+        "mates_lives": [
+          1078.0,
+          1390.0,
+          1638.0,
+          1642.0,
+          1801.0,
+          1836.0
+        ],
+        "life_over_mates_median": null,
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 0.0,
+        "tmax_step_max": 0.87187,
+        "tmax_step_at": 1617,
+        "QD_10": 1.06839,
+        "qd10_rank_low_of_46": 23,
+        "flag": false
+      },
+      {
+        "idx": 32,
+        "cell_key": "batch3-32",
+        "policy": "4.8C(80%)-4.8C-newstructure",
+        "cycle_life": null,
+        "labeled": false,
+        "paper_removed_channel": true,
+        "tukey_high": false,
+        "mates_lives": [
+          1078.0,
+          1390.0,
+          1638.0,
+          1642.0,
+          1801.0,
+          1836.0
+        ],
+        "life_over_mates_median": null,
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 0.0,
+        "tmax_step_max": 1.057801,
+        "tmax_step_at": 1647,
+        "QD_10": 1.074612,
+        "qd10_rank_low_of_46": 43,
+        "flag": false
+      },
+      {
+        "idx": 37,
+        "cell_key": "batch3-37",
+        "policy": "4.8C(80%)-4.8C-newstructure",
+        "cycle_life": 1390.0,
+        "labeled": true,
+        "paper_removed_channel": true,
+        "tukey_high": false,
+        "mates_lives": [
+          1078.0,
+          1638.0,
+          1642.0,
+          1801.0,
+          1836.0
+        ],
+        "life_over_mates_median": 0.846529,
+        "qd_jump10": 7,
+        "qd_jump3_early": 11,
+        "ir_spike1": 10.0,
+        "tmax_step_max": 1.329786,
+        "tmax_step_at": 1196,
+        "QD_10": 1.04875,
+        "qd10_rank_low_of_46": 1,
+        "flag": true
+      },
+      {
+        "idx": 38,
+        "cell_key": "batch3-38",
+        "policy": "5C(67%)-4C-newstructure",
+        "cycle_life": 1935.0,
+        "labeled": true,
+        "paper_removed_channel": true,
+        "tukey_high": true,
+        "mates_lives": [
+          813.0,
+          825.0,
+          828.0,
+          1009.0,
+          1046.0,
+          1284.0
+        ],
+        "life_over_mates_median": 2.106696,
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 0.0,
+        "tmax_step_max": 1.258627,
+        "tmax_step_at": 1332,
+        "QD_10": 1.072342,
+        "qd10_rank_low_of_46": 37,
+        "flag": false
+      },
+      {
+        "idx": 39,
+        "cell_key": "batch3-39",
+        "policy": "5.3C(54%)-4C-newstructure",
+        "cycle_life": 1156.0,
+        "labeled": true,
+        "paper_removed_channel": true,
+        "tukey_high": false,
+        "mates_lives": [
+          935.0,
+          940.0,
+          989.0,
+          1039.0,
+          1063.0,
+          1158.0,
+          1315.0
+        ],
+        "life_over_mates_median": 1.112608,
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 0.0,
+        "tmax_step_max": 0.475236,
+        "tmax_step_at": 222,
+        "QD_10": 1.050417,
+        "qd10_rank_low_of_46": 3,
+        "flag": false
+      },
+      {
+        "idx": 45,
+        "cell_key": "batch3-45",
+        "policy": "4.8C(80%)-4.8C-newstructure",
+        "cycle_life": 1801.0,
+        "labeled": true,
+        "paper_removed_channel": false,
+        "tukey_high": true,
+        "mates_lives": [
+          1078.0,
+          1390.0,
+          1638.0,
+          1642.0,
+          1836.0
+        ],
+        "life_over_mates_median": 1.099512,
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 0.0,
+        "tmax_step_max": 1.041292,
+        "tmax_step_at": 1700,
+        "QD_10": 1.071331,
+        "qd10_rank_low_of_46": 35,
+        "flag": false
+      }
+    ],
+    "notion_day2_batch3_note": "노션 DAY 2 ▶ Batch 3: '이상치 제거 고려 : 배치 수집 시기 사이에 수개월 공백이 있어, 일부 셀은 데이터 품질 문제로 원논문에서도 제거됨'",
+    "paper_channel_to_cell_mapping": "원논문 제거 채널 번호(c2·c23·c32·c37·c38·c39)와 본 파일 셀 번호의 대응은 미확인 (EOL 미도달 셀이 23·32라는 점은 대응 가능성을 시사할 뿐 확인은 아님)",
+    "short_cells": [
+      {
+        "cell_key": "batch1-20",
+        "qd_jump10": 0,
+        "qd_jump3_early": 2,
+        "ir_spike1": 0.0,
+        "flag": false
+      },
+      {
+        "cell_key": "batch1-21",
+        "qd_jump10": 0,
+        "qd_jump3_early": 2,
+        "ir_spike1": 2.0,
+        "flag": false
+      },
+      {
+        "cell_key": "batch1-44",
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 1.0,
+        "flag": false
+      },
+      {
+        "cell_key": "batch1-45",
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 1.0,
+        "flag": false
+      },
+      {
+        "cell_key": "batch2-06",
+        "qd_jump10": 0,
+        "qd_jump3_early": 7,
+        "ir_spike1": 0.0,
+        "flag": false
+      },
+      {
+        "cell_key": "batch2-07",
+        "qd_jump10": 2,
+        "qd_jump3_early": 4,
+        "ir_spike1": 0.0,
+        "flag": false
+      },
+      {
+        "cell_key": "batch2-15",
+        "qd_jump10": 0,
+        "qd_jump3_early": 2,
+        "ir_spike1": 0.0,
+        "flag": false
+      },
+      {
+        "cell_key": "batch2-19",
+        "qd_jump10": 1,
+        "qd_jump3_early": 6,
+        "ir_spike1": 0.0,
+        "flag": false
+      },
+      {
+        "cell_key": "batch3-06",
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 1.0,
+        "flag": false
+      },
+      {
+        "cell_key": "batch3-21",
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 0.0,
+        "flag": false
+      },
+      {
+        "cell_key": "batch3-28",
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 0.0,
+        "flag": false
+      },
+      {
+        "cell_key": "batch3-31",
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 0.0,
+        "flag": false
+      },
+      {
+        "cell_key": "batch3-41",
+        "qd_jump10": 0,
+        "qd_jump3_early": 0,
+        "ir_spike1": 1.0,
+        "flag": false
+      }
+    ],
+    "n_short_flagged": 0
+  },
+  "c_outliers": {
+    "batch1_chargetime_avgC80_redundancy": {
+      "chargetime_vs_avgC80_rho": -0.990953,
+      "p": 0.0
+    },
+    "batch3_upper_robust_z": {
+      "7": 3.637427,
+      "38": 4.071027,
+      "45": 3.484134
+    },
+    "spearman_by_batch_group": {
+      "batch1_fastcharge": {
+        "C1": {
+          "n": 36,
+          "min": 4.4,
+          "max": 8.0,
+          "rel_range": 0.6,
+          "rho": -0.23741,
+          "p": 0.163252,
+          "interpretable": true
+        },
+        "C2": {
+          "n": 36,
+          "min": 3.0,
+          "max": 5.4,
+          "rel_range": 0.666667,
+          "rho": -0.161241,
+          "p": 0.347489,
+          "interpretable": true
+        },
+        "avgC_80": {
+          "n": 36,
+          "min": 4.0,
+          "max": 5.4,
+          "rel_range": 0.311111,
+          "rho": -0.435995,
+          "p": 0.007858,
+          "interpretable": true
+        },
+        "chargetime_2_6": {
+          "n": 36,
+          "min": 8.964706,
+          "max": 12.147216,
+          "rel_range": 0.295199,
+          "rho": 0.432231,
+          "p": 0.008473,
+          "interpretable": true
+        },
+        "dQD_100_10": {
+          "n": 36,
+          "min": -0.014476,
+          "max": 0.001872,
+          "rel_range": 12.854728,
+          "rho": 0.490797,
+          "p": 0.002372,
+          "interpretable": true
+        },
+        "log10_var_dQ": {
+          "n": 36,
+          "min": -4.178878,
+          "max": -3.350338,
+          "rel_range": 0.218816,
+          "rho": -0.826232,
+          "p": 0.0,
+          "interpretable": true
+        },
+        "QD_10": {
+          "n": 36,
+          "min": 1.0581,
+          "max": 1.098139,
+          "rel_range": 0.037007,
+          "rho": 0.162827,
+          "p": 0.342705,
+          "interpretable": true
+        },
+        "IR_mean_2_100": {
+          "n": 36,
+          "min": 15.090236,
+          "max": 18.004754,
+          "rel_range": 0.175202,
+          "rho": 0.195521,
+          "p": 0.253124,
+          "interpretable": true
+        },
+        "Tmax_mean_2_100": {
+          "n": 36,
+          "min": 30.709141,
+          "max": 37.99024,
+          "rel_range": 0.200445,
+          "rho": -0.102458,
+          "p": 0.552095,
+          "interpretable": true
+        }
+      },
+      "batch2_fastcharge": {
+        "C1": {
+          "n": 30,
+          "min": 3.6,
+          "max": 6.0,
+          "rel_range": 0.461538,
+          "rho": -0.061434,
+          "p": 0.747076,
+          "interpretable": true
+        },
+        "C2": {
+          "n": 30,
+          "min": 3.0,
+          "max": 6.0,
+          "rel_range": 0.666667,
+          "rho": -0.042786,
+          "p": 0.822373,
+          "interpretable": true
+        },
+        "avgC_80": {
+          "n": 30,
+          "min": 4.790419,
+          "max": 4.806867,
+          "rel_range": 0.003427,
+          "rho": 0.239144,
+          "p": 0.203106,
+          "interpretable": false
+        },
+        "chargetime_2_6": {
+          "n": 30,
+          "min": 10.169781,
+          "max": 10.223914,
+          "rel_range": 0.00532,
+          "rho": -0.581664,
+          "p": 0.000748,
+          "interpretable": false
+        },
+        "dQD_100_10": {
+          "n": 30,
+          "min": -0.022705,
+          "max": 0.010472,
+          "rel_range": 17.656316,
+          "rho": 0.291055,
+          "p": 0.118657,
+          "interpretable": true
+        },
+        "log10_var_dQ": {
+          "n": 30,
+          "min": -3.707303,
+          "max": -3.085882,
+          "rel_range": 0.179831,
+          "rho": -0.38251,
+          "p": 0.036965,
+          "interpretable": true
+        },
+        "QD_10": {
+          "n": 30,
+          "min": 1.071181,
+          "max": 1.109928,
+          "rel_range": 0.035275,
+          "rho": 0.439252,
+          "p": 0.01516,
+          "interpretable": true
+        },
+        "IR_mean_2_100": {
+          "n": 27,
+          "min": 15.297589,
+          "max": 17.700573,
+          "rel_range": 0.144352,
+          "rho": 0.305297,
+          "p": 0.121492,
+          "interpretable": true
+        },
+        "Tmax_mean_2_100": {
+          "n": 30,
+          "min": 31.012201,
+          "max": 39.797135,
+          "rel_range": 0.241167,
+          "rho": -0.241878,
+          "p": 0.197833,
+          "interpretable": true
+        }
+      },
+      "batch2_newstructure": {
+        "C1": {
+          "n": 9,
+          "min": 4.8,
+          "max": 5.6,
+          "rel_range": 0.153846,
+          "rho": 0.316228,
+          "p": 0.407084,
+          "interpretable": true
+        },
+        "C2": {
+          "n": 9,
+          "min": 4.0,
+          "max": 4.8,
+          "rel_range": 0.177778,
+          "rho": -0.316228,
+          "p": 0.407084,
+          "interpretable": true
+        },
+        "avgC_80": {
+          "n": 9,
+          "min": 4.8,
+          "max": 4.806867,
+          "rel_range": 0.00143,
+          "rho": 0.316228,
+          "p": 0.407084,
+          "interpretable": false
+        },
+        "chargetime_2_6": {
+          "n": 9,
+          "min": 10.036202,
+          "max": 10.041901,
+          "rel_range": 0.000568,
+          "rho": -0.4,
+          "p": 0.286105,
+          "interpretable": false
+        },
+        "dQD_100_10": {
+          "n": 9,
+          "min": -0.005766,
+          "max": 0.006928,
+          "rel_range": 4.087224,
+          "rho": -0.7,
+          "p": 0.03577,
+          "interpretable": true
+        },
+        "log10_var_dQ": {
+          "n": 9,
+          "min": -4.448585,
+          "max": -4.102423,
+          "rel_range": 0.081803,
+          "rho": -0.166667,
+          "p": 0.668231,
+          "interpretable": true
+        },
+        "QD_10": {
+          "n": 9,
+          "min": 1.0688,
+          "max": 1.1031,
+          "rel_range": 0.031419,
+          "rho": -0.2,
+          "p": 0.605901,
+          "interpretable": true
+        },
+        "IR_mean_2_100": {
+          "n": 6,
+          "min": 14.790623,
+          "max": 16.466365,
+          "rel_range": 0.111926,
+          "rho": 0.314286,
+          "p": 0.544093,
+          "interpretable": true
+        },
+        "Tmax_mean_2_100": {
+          "n": 9,
+          "min": 33.58605,
+          "max": 38.961105,
+          "rel_range": 0.145748,
+          "rho": 0.416667,
+          "p": 0.264586,
+          "interpretable": true
+        }
+      },
+      "batch3_newstructure": {
+        "C1": {
+          "n": 44,
+          "min": 3.7,
+          "max": 5.9,
+          "rel_range": 0.415094,
+          "rho": -0.228875,
+          "p": 0.135072,
+          "interpretable": true
+        },
+        "C2": {
+          "n": 44,
+          "min": 3.1,
+          "max": 5.9,
+          "rel_range": 0.651163,
+          "rho": 0.015736,
+          "p": 0.919246,
+          "interpretable": true
+        },
+        "avgC_80": {
+          "n": 44,
+          "min": 4.793669,
+          "max": 4.813158,
+          "rel_range": 0.004059,
+          "rho": -0.132052,
+          "p": 0.392846,
+          "interpretable": false
+        },
+        "chargetime_2_6": {
+          "n": 44,
+          "min": 10.041139,
+          "max": 11.045003,
+          "rel_range": 0.099952,
+          "rho": 0.214462,
+          "p": 0.162127,
+          "interpretable": true
+        },
+        "dQD_100_10": {
+          "n": 44,
+          "min": -0.018674,
+          "max": 0.000391,
+          "rel_range": 16.125862,
+          "rho": 0.031503,
+          "p": 0.839132,
+          "interpretable": true
+        },
+        "log10_var_dQ": {
+          "n": 44,
+          "min": -5.098856,
+          "max": -3.451658,
+          "rel_range": 0.394519,
+          "rho": -0.797237,
+          "p": 0.0,
+          "interpretable": true
+        },
+        "QD_10": {
+          "n": 44,
+          "min": 1.04875,
+          "max": 1.076539,
+          "rel_range": 0.026008,
+          "rho": 0.12996,
+          "p": 0.400453,
+          "interpretable": true
+        },
+        "IR_mean_2_100": {
+          "n": 44,
+          "min": 13.420885,
+          "max": 18.306993,
+          "rel_range": 0.317822,
+          "rho": 0.168652,
+          "p": 0.273795,
+          "interpretable": true
+        },
+        "Tmax_mean_2_100": {
+          "n": 44,
+          "min": 31.680285,
+          "max": 40.524259,
+          "rel_range": 0.237519,
+          "rho": -0.035098,
+          "p": 0.821063,
+          "interpretable": true
+        }
+      }
+    },
+    "evidence_split_batch1_vs_batch23": {
+      "C1": {
+        "batch1_n": 4,
+        "batch1_pct_by_cell": {
+          "#20": 22.2,
+          "#21": 22.2,
+          "#45": 91.7,
+          "#44": 91.7
+        },
+        "batch1_pcts": [
+          22.2,
+          22.2,
+          91.7,
+          91.7
+        ],
+        "batch1_n_ge70": 2,
+        "batch1_n_ge90": 2,
+        "batch23_n_evaluable": 9,
+        "batch23_n_ge70": 3
+      },
+      "C2": {
+        "batch1_n": 4,
+        "batch1_pct_by_cell": {
+          "#20": 97.2,
+          "#21": 97.2,
+          "#45": 61.1,
+          "#44": 61.1
+        },
+        "batch1_pcts": [
+          97.2,
+          97.2,
+          61.1,
+          61.1
+        ],
+        "batch1_n_ge70": 2,
+        "batch1_n_ge90": 2,
+        "batch23_n_evaluable": 9,
+        "batch23_n_ge70": 6
+      },
+      "avgC_80": {
+        "batch1_n": 4,
+        "batch1_pct_by_cell": {
+          "#20": 97.2,
+          "#21": 97.2,
+          "#45": 58.3,
+          "#44": 58.3
+        },
+        "batch1_pcts": [
+          97.2,
+          97.2,
+          58.3,
+          58.3
+        ],
+        "batch1_n_ge70": 2,
+        "batch1_n_ge90": 2,
+        "batch23_n_evaluable": 0,
+        "batch23_n_ge70": 0
+      },
+      "chargetime_2_6": {
+        "batch1_n": 4,
+        "batch1_pct_by_cell": {
+          "#20": 95.8,
+          "#21": 98.6,
+          "#45": 62.5,
+          "#44": 56.9
+        },
+        "batch1_pcts": [
+          95.8,
+          98.6,
+          62.5,
+          56.9
+        ],
+        "batch1_n_ge70": 2,
+        "batch1_n_ge90": 2,
+        "batch23_n_evaluable": 5,
+        "batch23_n_ge70": 0
+      },
+      "dQD_100_10": {
+        "batch1_n": 4,
+        "batch1_pct_by_cell": {
+          "#20": 98.6,
+          "#21": 95.8,
+          "#45": 70.8,
+          "#44": 90.3
+        },
+        "batch1_pcts": [
+          98.6,
+          95.8,
+          70.8,
+          90.3
+        ],
+        "batch1_n_ge70": 4,
+        "batch1_n_ge90": 3,
+        "batch23_n_evaluable": 9,
+        "batch23_n_ge70": 3
+      },
+      "log10_var_dQ": {
+        "batch1_n": 4,
+        "batch1_pct_by_cell": {
+          "#20": 95.8,
+          "#21": 98.6,
+          "#45": 90.3,
+          "#44": 93.1
+        },
+        "batch1_pcts": [
+          95.8,
+          98.6,
+          90.3,
+          93.1
+        ],
+        "batch1_n_ge70": 4,
+        "batch1_n_ge90": 4,
+        "batch23_n_evaluable": 9,
+        "batch23_n_ge70": 5
+      },
+      "QD_10": {
+        "batch1_n": 4,
+        "batch1_pct_by_cell": {
+          "#20": 81.9,
+          "#21": 26.4,
+          "#45": 18.1,
+          "#44": 15.3
+        },
+        "batch1_pcts": [
+          81.9,
+          26.4,
+          18.1,
+          15.3
+        ],
+        "batch1_n_ge70": 1,
+        "batch1_n_ge90": 0,
+        "batch23_n_evaluable": 9,
+        "batch23_n_ge70": 7
+      },
+      "IR_mean_2_100": {
+        "batch1_n": 4,
+        "batch1_pct_by_cell": {
+          "#20": 4.2,
+          "#21": 1.4,
+          "#45": 51.4,
+          "#44": 95.8
+        },
+        "batch1_pcts": [
+          4.2,
+          1.4,
+          51.4,
+          95.8
+        ],
+        "batch1_n_ge70": 1,
+        "batch1_n_ge90": 1,
+        "batch23_n_evaluable": 9,
+        "batch23_n_ge70": 2
+      },
+      "Tmax_mean_2_100": {
+        "batch1_n": 4,
+        "batch1_pct_by_cell": {
+          "#20": 15.3,
+          "#21": 73.6,
+          "#45": 56.9,
+          "#44": 29.2
+        },
+        "batch1_pcts": [
+          15.3,
+          73.6,
+          56.9,
+          29.2
+        ],
+        "batch1_n_ge70": 1,
+        "batch1_n_ge90": 0,
+        "batch23_n_evaluable": 9,
+        "batch23_n_ge70": 4
+      }
+    },
+    "peer_ratio_summary": {
+      "n_protocol_type": 10,
+      "n_within_0.95_1.05": 8,
+      "within_range": [
+        0.955277,
+        1.046816
+      ],
+      "outside": [
+        {
+          "cell_key": "batch3-28",
+          "life_over_mates": 0.751911
+        },
+        {
+          "cell_key": "batch3-21",
+          "life_over_mates": 1.278146
+        }
+      ],
+      "all_range": [
+        0.751911,
+        1.278146
+      ]
+    },
+    "protocol_rank_by_batch_group": {
+      "batch1_fastcharge": {
+        "p10": 616.5,
+        "protocols": [
+          {
+            "policy": "5.4C(80%)-5.4C",
+            "n": 2,
+            "median": 546.5,
+            "C1": 5.4,
+            "Q1": 80.0,
+            "C2": 5.4,
+            "avgC_80": 5.4
+          },
+          {
+            "policy": "8C(35%)-3.6C",
+            "n": 2,
+            "median": 607.5,
+            "C1": 8.0,
+            "Q1": 35.0,
+            "C2": 3.6,
+            "avgC_80": 4.740741
+          },
+          {
+            "policy": "7C(40%)-3.6C",
+            "n": 2,
+            "median": 621.0,
+            "C1": 7.0,
+            "Q1": 40.0,
+            "C2": 3.6,
+            "avgC_80": 4.754717
+          },
+          {
+            "policy": "7C(40%)-3C",
+            "n": 2,
+            "median": 676.0,
+            "C1": 7.0,
+            "Q1": 40.0,
+            "C2": 3.0,
+            "avgC_80": 4.2
+          },
+          {
+            "policy": "8C(25%)-3.6C",
+            "n": 2,
+            "median": 676.5,
+            "C1": 8.0,
+            "Q1": 25.0,
+            "C2": 3.6,
+            "avgC_80": 4.34717
+          },
+          {
+            "policy": "7C(30%)-3.6C",
+            "n": 2,
+            "median": 722.5,
+            "C1": 7.0,
+            "Q1": 30.0,
+            "C2": 3.6,
+            "avgC_80": 4.401747
+          },
+          {
+            "policy": "5.4C(70%)-3C",
+            "n": 2,
+            "median": 739.5,
+            "C1": 5.4,
+            "Q1": 70.0,
+            "C2": 3.0,
+            "avgC_80": 4.909091
+          },
+          {
+            "policy": "6C(60%)-3C",
+            "n": 2,
+            "median": 744.0,
+            "C1": 6.0,
+            "Q1": 60.0,
+            "C2": 3.0,
+            "avgC_80": 4.8
+          },
+          {
+            "policy": "4.8C(80%)-4.8C",
+            "n": 2,
+            "median": 753.0,
+            "C1": 4.8,
+            "Q1": 80.0,
+            "C2": 4.8,
+            "avgC_80": 4.8
+          },
+          {
+            "policy": "5.4C(50%)-3C",
+            "n": 1,
+            "median": 788.0,
+            "C1": 5.4,
+            "Q1": 50.0,
+            "C2": 3.0,
+            "avgC_80": 4.153846
+          },
+          {
+            "policy": "6C(50%)-3.6C",
+            "n": 2,
+            "median": 792.5,
+            "C1": 6.0,
+            "Q1": 50.0,
+            "C2": 3.6,
+            "avgC_80": 4.8
+          },
+          {
+            "policy": "5.4C(60%)-3C",
+            "n": 2,
+            "median": 799.5,
+            "C1": 5.4,
+            "Q1": 60.0,
+            "C2": 3.0,
+            "avgC_80": 4.5
+          },
+          {
+            "policy": "6C(40%)-3.6C",
+            "n": 2,
+            "median": 856.0,
+            "C1": 6.0,
+            "Q1": 40.0,
+            "C2": 3.6,
+            "avgC_80": 4.5
+          },
+          {
+            "policy": "5.4C(60%)-3.6C",
+            "n": 2,
+            "median": 859.5,
+            "C1": 5.4,
+            "Q1": 60.0,
+            "C2": 3.6,
+            "avgC_80": 4.8
+          },
+          {
+            "policy": "6C(50%)-3C",
+            "n": 2,
+            "median": 888.5,
+            "C1": 6.0,
+            "Q1": 50.0,
+            "C2": 3.0,
+            "avgC_80": 4.363636
+          },
+          {
+            "policy": "6C(40%)-3C",
+            "n": 2,
+            "median": 935.5,
+            "C1": 6.0,
+            "Q1": 40.0,
+            "C2": 3.0,
+            "avgC_80": 4.0
+          },
+          {
+            "policy": "8C(15%)-3.6C",
+            "n": 2,
+            "median": 1008.5,
+            "C1": 8.0,
+            "Q1": 15.0,
+            "C2": 3.6,
+            "avgC_80": 4.013937
+          },
+          {
+            "policy": "6C(30%)-3.6C",
+            "n": 1,
+            "median": 1014.0,
+            "C1": 6.0,
+            "Q1": 30.0,
+            "C2": 3.6,
+            "avgC_80": 4.235294
+          },
+          {
+            "policy": "5.4C(40%)-3.6C",
+            "n": 1,
+            "median": 1054.0,
+            "C1": 5.4,
+            "Q1": 40.0,
+            "C2": 3.6,
+            "avgC_80": 4.32
+          },
+          {
+            "policy": "4.4C(80%)-4.4C",
+            "n": 1,
+            "median": 1074.0,
+            "C1": 4.4,
+            "Q1": 80.0,
+            "C2": 4.4,
+            "avgC_80": 4.4
+          }
+        ]
+      },
+      "batch2_fastcharge": {
+        "p10": 406.8,
+        "protocols": [
+          {
+            "policy": "3.6C(9%)-5C",
+            "n": 2,
+            "median": 394.5,
+            "C1": 3.6,
+            "Q1": 9.0,
+            "C2": 5.0,
+            "avgC_80": 4.790419
+          },
+          {
+            "policy": "6C(60%)-3C",
+            "n": 2,
+            "median": 400.0,
+            "C1": 6.0,
+            "Q1": 60.0,
+            "C2": 3.0,
+            "avgC_80": 4.8
+          },
+          {
+            "policy": "3.6C(30%)-6C",
+            "n": 2,
+            "median": 421.0,
+            "C1": 3.6,
+            "Q1": 30.0,
+            "C2": 6.0,
+            "avgC_80": 4.8
+          },
+          {
+            "policy": "5.6C(26%)-4.5C",
+            "n": 6,
+            "median": 446.0,
+            "C1": 5.6,
+            "Q1": 26.0,
+            "C2": 4.5,
+            "avgC_80": 4.806867
+          },
+          {
+            "policy": "5.2C(50%)-4.25C",
+            "n": 5,
+            "median": 449.0,
+            "C1": 5.2,
+            "Q1": 50.0,
+            "C2": 4.25,
+            "avgC_80": 4.797829
+          },
+          {
+            "policy": "4.65C(69%)-6C",
+            "n": 2,
+            "median": 452.0,
+            "C1": 4.65,
+            "Q1": 69.0,
+            "C2": 6.0,
+            "avgC_80": 4.798452
+          },
+          {
+            "policy": "4.65C(44%)-5C",
+            "n": 2,
+            "median": 482.5,
+            "C1": 4.65,
+            "Q1": 44.0,
+            "C2": 5.0,
+            "avgC_80": 4.801239
+          },
+          {
+            "policy": "5.2C(58%)-4C",
+            "n": 4,
+            "median": 483.0,
+            "C1": 5.2,
+            "Q1": 58.0,
+            "C2": 4.0,
+            "avgC_80": 4.803695
+          },
+          {
+            "policy": "4.8C(80%)-4.8C",
+            "n": 5,
+            "median": 492.0,
+            "C1": 4.8,
+            "Q1": 80.0,
+            "C2": 4.8,
+            "avgC_80": 4.8
+          }
+        ]
+      },
+      "batch2_newstructure": {
+        "p10": 788.2,
+        "protocols": [
+          {
+            "policy": "4.8C(80%)-4.8C-newstructure",
+            "n": 3,
+            "median": 809.0,
+            "C1": 4.8,
+            "Q1": 80.0,
+            "C2": 4.8,
+            "avgC_80": 4.8
+          },
+          {
+            "policy": "5.2C(58%)-4C-newstructure",
+            "n": 3,
+            "median": 904.0,
+            "C1": 5.2,
+            "Q1": 58.0,
+            "C2": 4.0,
+            "avgC_80": 4.803695
+          },
+          {
+            "policy": "5.6C(26%)-4.5C-newstructure",
+            "n": 3,
+            "median": 997.0,
+            "C1": 5.6,
+            "Q1": 26.0,
+            "C2": 4.5,
+            "avgC_80": 4.806867
+          }
+        ]
+      },
+      "batch3_newstructure": {
+        "p10": 789.0,
+        "protocols": [
+          {
+            "policy": "3.7C(31%)-5.9C-newstructure",
+            "n": 3,
+            "median": 667.0,
+            "C1": 3.7,
+            "Q1": 31.0,
+            "C2": 5.9,
+            "avgC_80": 4.795167
+          },
+          {
+            "policy": "5.9C(60%)-3.1C-newstructure",
+            "n": 2,
+            "median": 866.5,
+            "C1": 5.9,
+            "Q1": 60.0,
+            "C2": 3.1,
+            "avgC_80": 4.813158
+          },
+          {
+            "policy": "5.9C(15%)-4.6C-newstructure",
+            "n": 2,
+            "median": 867.0,
+            "C1": 5.9,
+            "Q1": 15.0,
+            "C2": 4.6,
+            "avgC_80": 4.798232
+          },
+          {
+            "policy": "5.6C(36%)-4.3C-newstructure",
+            "n": 8,
+            "median": 890.5,
+            "C1": 5.6,
+            "Q1": 36.0,
+            "C2": 4.3,
+            "avgC_80": 4.801595
+          },
+          {
+            "policy": "5C(67%)-4C-newstructure",
+            "n": 7,
+            "median": 1009.0,
+            "C1": 5.0,
+            "Q1": 67.0,
+            "C2": 4.0,
+            "avgC_80": 4.804805
+          },
+          {
+            "policy": "5.6C(19%)-4.6C-newstructure",
+            "n": 8,
+            "median": 1038.0,
+            "C1": 5.6,
+            "Q1": 19.0,
+            "C2": 4.6,
+            "avgC_80": 4.80373
+          },
+          {
+            "policy": "5.3C(54%)-4C-newstructure",
+            "n": 8,
+            "median": 1051.0,
+            "C1": 5.3,
+            "Q1": 54.0,
+            "C2": 4.0,
+            "avgC_80": 4.793669
+          },
+          {
+            "policy": "4.8C(80%)-4.8C-newstructure",
+            "n": 6,
+            "median": 1640.0,
+            "C1": 4.8,
+            "Q1": 80.0,
+            "C2": 4.8,
+            "avgC_80": 4.8
+          }
+        ]
+      }
+    },
+    "batch1_qd_noise": {
+      "resid_sd_mAh_median": 0.284975,
+      "resid_sd_mAh_p90": 0.587452,
+      "diff_noise_sd_mAh_median": 0.403016,
+      "abs_dQD_mAh_median": 1.28735,
+      "abs_dQD_mAh_q25": 0.9332,
+      "n_abs_dQD_lt_2x_diffnoise": 8,
+      "n": 36,
+      "method": "cycle 10~100 QD에 2차 다항식 적합 → 잔차 SD(단일 사이클 잡음). 두 사이클 차의 잡음 SD = √2 × 잔차 SD"
+    },
+    "rules": {
+      "batch:batch1": {
+        "n": 36,
+        "q1": 681.0,
+        "q3": 871.5,
+        "lower_fence": 395.25,
+        "upper_fence": 1157.25,
+        "low_outliers": [],
+        "high_outliers": [],
+        "robust_z_min": -1.600655,
+        "robust_z_max": 2.023469,
+        "robust_z_gt3.5": [],
+        "p10": 616.5
+      },
+      "batch:batch2": {
+        "n": 39,
+        "q1": 439.5,
+        "q3": 508.5,
+        "lower_fence": 336.0,
+        "upper_fence": 612.0,
+        "low_outliers": [],
+        "high_outliers": [
+          "batch2-07",
+          "batch2-08",
+          "batch2-09",
+          "batch2-32",
+          "batch2-33",
+          "batch2-34",
+          "batch2-43",
+          "batch2-44",
+          "batch2-45"
+        ],
+        "robust_z_min": -1.541691,
+        "robust_z_max": 13.759591,
+        "robust_z_gt3.5": [
+          "batch2-07",
+          "batch2-08",
+          "batch2-09",
+          "batch2-32",
+          "batch2-33",
+          "batch2-34",
+          "batch2-43",
+          "batch2-44",
+          "batch2-45"
+        ],
+        "p10": 411.2
+      },
+      "batch:batch3": {
+        "n": 44,
+        "q1": 828.0,
+        "q3": 1155.25,
+        "lower_fence": 337.125,
+        "upper_fence": 1646.125,
+        "low_outliers": [],
+        "high_outliers": [
+          "batch3-07",
+          "batch3-38",
+          "batch3-45"
+        ],
+        "robust_z_min": -2.034419,
+        "robust_z_max": 4.071027,
+        "robust_z_gt3.5": [
+          "batch3-07",
+          "batch3-38"
+        ],
+        "p10": 789.0
+      },
+      "batch_group:batch1_fastcharge": {
+        "n": 36,
+        "q1": 681.0,
+        "q3": 871.5,
+        "lower_fence": 395.25,
+        "upper_fence": 1157.25,
+        "low_outliers": [],
+        "high_outliers": [],
+        "robust_z_min": -1.600655,
+        "robust_z_max": 2.023469,
+        "robust_z_gt3.5": [],
+        "p10": 616.5
+      },
+      "batch_group:batch2_fastcharge": {
+        "n": 30,
+        "q1": 425.25,
+        "q3": 476.25,
+        "lower_fence": 348.75,
+        "upper_fence": 552.75,
+        "low_outliers": [],
+        "high_outliers": [],
+        "robust_z_min": -1.530573,
+        "robust_z_max": 1.634341,
+        "robust_z_gt3.5": [],
+        "p10": 406.8
+      },
+      "batch_group:batch2_newstructure": {
+        "n": 9,
+        "q1": 809.0,
+        "q3": 1029.0,
+        "lower_fence": 479.0,
+        "upper_fence": 1359.0,
+        "low_outliers": [],
+        "high_outliers": [],
+        "robust_z_min": -0.758055,
+        "robust_z_max": 1.68324,
+        "robust_z_gt3.5": [],
+        "p10": 788.2
+      },
+      "batch_group:batch3_newstructure": {
+        "n": 44,
+        "q1": 828.0,
+        "q3": 1155.25,
+        "lower_fence": 337.125,
+        "upper_fence": 1646.125,
+        "low_outliers": [],
+        "high_outliers": [
+          "batch3-07",
+          "batch3-38",
+          "batch3-45"
+        ],
+        "robust_z_min": -2.034419,
+        "robust_z_max": 4.071027,
+        "robust_z_gt3.5": [
+          "batch3-07",
+          "batch3-38"
+        ],
+        "p10": 789.0
+      }
+    },
+    "short_type_rule": "동일 배치·동일 프로토콜 동료셀 수명 중앙값 ≤ 배치×그룹 Q1(25%) → 프로토콜형, 아니면 개별 셀형",
+    "short_type_counts": {
+      "프로토콜형": 10,
+      "개별 셀형": 3
+    },
+    "short_cells_p10": [
+      {
+        "cell_key": "batch1-20",
+        "policy": "5.4C(80%)-5.4C",
+        "group": "fastcharge",
+        "cycle_life": 534.0,
+        "life_pct_in_group": 2.777778,
+        "mates_lives": [
+          559.0
+        ],
+        "mates_median": 559.0,
+        "life_over_mates": 0.955277,
+        "group_q25": 681.0,
+        "short_type": "프로토콜형",
+        "C1": 5.4,
+        "Q1": 80.0,
+        "C2": 5.4,
+        "avgC_80": 5.4,
+        "chargetime_2_6": 9.021115,
+        "dQD_100_10": -0.014476,
+        "log10_var_dQ": -3.367237,
+        "QD_10": 1.075724,
+        "IR_mean_2_100": 15.210366,
+        "Tmax_mean_2_100": 34.928347,
+        "rp_C1": 22.222222,
+        "rp_C2": 97.222222,
+        "rp_avgC_80": 97.222222,
+        "rp_chargetime_2_6": 95.833333,
+        "rp_dQD_100_10": 98.611111,
+        "rp_log10_var_dQ": 95.833333,
+        "rp_QD_10": 81.944444,
+        "rp_IR_mean_2_100": 4.166667,
+        "rp_Tmax_mean_2_100": 15.277778
+      },
+      {
+        "cell_key": "batch1-21",
+        "policy": "5.4C(80%)-5.4C",
+        "group": "fastcharge",
+        "cycle_life": 559.0,
+        "life_pct_in_group": 5.555556,
+        "mates_lives": [
+          534.0
+        ],
+        "mates_median": 534.0,
+        "life_over_mates": 1.046816,
+        "group_q25": 681.0,
+        "short_type": "프로토콜형",
+        "C1": 5.4,
+        "Q1": 80.0,
+        "C2": 5.4,
+        "avgC_80": 5.4,
+        "chargetime_2_6": 8.964706,
+        "dQD_100_10": -0.009073,
+        "log10_var_dQ": -3.350338,
+        "QD_10": 1.085802,
+        "IR_mean_2_100": 15.090236,
+        "Tmax_mean_2_100": 36.948925,
+        "rp_C1": 22.222222,
+        "rp_C2": 97.222222,
+        "rp_avgC_80": 97.222222,
+        "rp_chargetime_2_6": 98.611111,
+        "rp_dQD_100_10": 95.833333,
+        "rp_log10_var_dQ": 98.611111,
+        "rp_QD_10": 26.388889,
+        "rp_IR_mean_2_100": 1.388889,
+        "rp_Tmax_mean_2_100": 73.611111
+      },
+      {
+        "cell_key": "batch1-45",
+        "policy": "8C(35%)-3.6C",
+        "group": "fastcharge",
+        "cycle_life": 599.0,
+        "life_pct_in_group": 8.333333,
+        "mates_lives": [
+          616.0
+        ],
+        "mates_median": 616.0,
+        "life_over_mates": 0.972403,
+        "group_q25": 681.0,
+        "short_type": "프로토콜형",
+        "C1": 8.0,
+        "Q1": 35.0,
+        "C2": 3.6,
+        "avgC_80": 4.740741,
+        "chargetime_2_6": 10.254465,
+        "dQD_100_10": -0.00169,
+        "log10_var_dQ": -3.425292,
+        "QD_10": 1.087518,
+        "IR_mean_2_100": 16.674252,
+        "Tmax_mean_2_100": 36.696428,
+        "rp_C1": 91.666667,
+        "rp_C2": 61.111111,
+        "rp_avgC_80": 58.333333,
+        "rp_chargetime_2_6": 62.5,
+        "rp_dQD_100_10": 70.833333,
+        "rp_log10_var_dQ": 90.277778,
+        "rp_QD_10": 18.055556,
+        "rp_IR_mean_2_100": 51.388889,
+        "rp_Tmax_mean_2_100": 56.944444
+      },
+      {
+        "cell_key": "batch1-44",
+        "policy": "8C(35%)-3.6C",
+        "group": "fastcharge",
+        "cycle_life": 616.0,
+        "life_pct_in_group": 11.111111,
+        "mates_lives": [
+          599.0
+        ],
+        "mates_median": 599.0,
+        "life_over_mates": 1.028381,
+        "group_q25": 681.0,
+        "short_type": "프로토콜형",
+        "C1": 8.0,
+        "Q1": 35.0,
+        "C2": 3.6,
+        "avgC_80": 4.740741,
+        "chargetime_2_6": 10.271104,
+        "dQD_100_10": -0.003506,
+        "log10_var_dQ": -3.4207,
+        "QD_10": 1.088216,
+        "IR_mean_2_100": 17.41385,
+        "Tmax_mean_2_100": 35.790959,
+        "rp_C1": 91.666667,
+        "rp_C2": 61.111111,
+        "rp_avgC_80": 58.333333,
+        "rp_chargetime_2_6": 56.944444,
+        "rp_dQD_100_10": 90.277778,
+        "rp_log10_var_dQ": 93.055556,
+        "rp_QD_10": 15.277778,
+        "rp_IR_mean_2_100": 95.833333,
+        "rp_Tmax_mean_2_100": 29.166667
+      },
+      {
+        "cell_key": "batch2-19",
+        "policy": "6C(60%)-3C",
+        "group": "fastcharge",
+        "cycle_life": 392.0,
+        "life_pct_in_group": 3.333333,
+        "mates_lives": [
+          408.0
+        ],
+        "mates_median": 408.0,
+        "life_over_mates": 0.960784,
+        "group_q25": 425.25,
+        "short_type": "프로토콜형",
+        "C1": 6.0,
+        "Q1": 60.0,
+        "C2": 3.0,
+        "avgC_80": 4.8,
+        "chargetime_2_6": 10.175535,
+        "dQD_100_10": 0.000609,
+        "log10_var_dQ": -3.291958,
+        "QD_10": 1.092451,
+        "IR_mean_2_100": 16.718258,
+        "Tmax_mean_2_100": 36.548833,
+        "rp_C1": 96.666667,
+        "rp_C2": 3.333333,
+        "rp_avgC_80": null,
+        "rp_chargetime_2_6": null,
+        "rp_dQD_100_10": 58.333333,
+        "rp_log10_var_dQ": 75.0,
+        "rp_QD_10": 78.333333,
+        "rp_IR_mean_2_100": 53.703704,
+        "rp_Tmax_mean_2_100": 55.0
+      },
+      {
+        "cell_key": "batch2-06",
+        "policy": "3.6C(9%)-5C",
+        "group": "fastcharge",
+        "cycle_life": 393.0,
+        "life_pct_in_group": 6.666667,
+        "mates_lives": [
+          396.0
+        ],
+        "mates_median": 396.0,
+        "life_over_mates": 0.992424,
+        "group_q25": 425.25,
+        "short_type": "프로토콜형",
+        "C1": 3.6,
+        "Q1": 9.0,
+        "C2": 5.0,
+        "avgC_80": 4.790419,
+        "chargetime_2_6": 10.179131,
+        "dQD_100_10": 0.000254,
+        "log10_var_dQ": -3.53004,
+        "QD_10": 1.090343,
+        "IR_mean_2_100": 16.037469,
+        "Tmax_mean_2_100": 39.797135,
+        "rp_C1": 6.666667,
+        "rp_C2": 80.0,
+        "rp_avgC_80": null,
+        "rp_chargetime_2_6": null,
+        "rp_dQD_100_10": 61.666667,
+        "rp_log10_var_dQ": 11.666667,
+        "rp_QD_10": 85.0,
+        "rp_IR_mean_2_100": 9.259259,
+        "rp_Tmax_mean_2_100": 98.333333
+      },
+      {
+        "cell_key": "batch2-15",
+        "policy": "3.6C(9%)-5C",
+        "group": "fastcharge",
+        "cycle_life": 396.0,
+        "life_pct_in_group": 10.0,
+        "mates_lives": [
+          393.0
+        ],
+        "mates_median": 393.0,
+        "life_over_mates": 1.007634,
+        "group_q25": 425.25,
+        "short_type": "프로토콜형",
+        "C1": 3.6,
+        "Q1": 9.0,
+        "C2": 5.0,
+        "avgC_80": 4.790419,
+        "chargetime_2_6": 10.174113,
+        "dQD_100_10": 0.005894,
+        "log10_var_dQ": -3.516252,
+        "QD_10": 1.071181,
+        "IR_mean_2_100": 16.303823,
+        "Tmax_mean_2_100": 36.072684,
+        "rp_C1": 6.666667,
+        "rp_C2": 80.0,
+        "rp_avgC_80": null,
+        "rp_chargetime_2_6": null,
+        "rp_dQD_100_10": 28.333333,
+        "rp_log10_var_dQ": 15.0,
+        "rp_QD_10": 98.333333,
+        "rp_IR_mean_2_100": 27.777778,
+        "rp_Tmax_mean_2_100": 45.0
+      },
+      {
+        "cell_key": "batch2-07",
+        "policy": "4.8C(80%)-4.8C-newstructure",
+        "group": "newstructure",
+        "cycle_life": 777.0,
+        "life_pct_in_group": 11.111111,
+        "mates_lives": [
+          809.0,
+          1029.0
+        ],
+        "mates_median": 919.0,
+        "life_over_mates": 0.845484,
+        "group_q25": 809.0,
+        "short_type": "개별 셀형",
+        "C1": 4.8,
+        "Q1": 80.0,
+        "C2": 4.8,
+        "avgC_80": 4.8,
+        "chargetime_2_6": 10.03704,
+        "dQD_100_10": 0.006928,
+        "log10_var_dQ": -4.23167,
+        "QD_10": 1.090342,
+        "IR_mean_2_100": 14.790623,
+        "Tmax_mean_2_100": 37.149507,
+        "rp_C1": 16.666667,
+        "rp_C2": 83.333333,
+        "rp_avgC_80": null,
+        "rp_chargetime_2_6": null,
+        "rp_dQD_100_10": 5.555556,
+        "rp_log10_var_dQ": 50.0,
+        "rp_QD_10": 72.222222,
+        "rp_IR_mean_2_100": 8.333333,
+        "rp_Tmax_mean_2_100": 72.222222
+      },
+      {
+        "cell_key": "batch3-28",
+        "policy": "3.7C(31%)-5.9C-newstructure",
+        "group": "newstructure",
+        "cycle_life": 541.0,
+        "life_pct_in_group": 2.272727,
+        "mates_lives": [
+          667.0,
+          772.0
+        ],
+        "mates_median": 719.5,
+        "life_over_mates": 0.751911,
+        "group_q25": 828.0,
+        "short_type": "프로토콜형",
+        "C1": 3.7,
+        "Q1": 31.0,
+        "C2": 5.9,
+        "avgC_80": 4.795167,
+        "chargetime_2_6": 10.059142,
+        "dQD_100_10": -0.018448,
+        "log10_var_dQ": -3.451658,
+        "QD_10": 1.052458,
+        "IR_mean_2_100": 13.420885,
+        "Tmax_mean_2_100": 39.557918,
+        "rp_C1": 3.409091,
+        "rp_C2": 96.590909,
+        "rp_avgC_80": null,
+        "rp_chargetime_2_6": 19.318182,
+        "rp_dQD_100_10": 96.590909,
+        "rp_log10_var_dQ": 98.863636,
+        "rp_QD_10": 92.045455,
+        "rp_IR_mean_2_100": 1.136364,
+        "rp_Tmax_mean_2_100": 94.318182
+      },
+      {
+        "cell_key": "batch3-06",
+        "policy": "3.7C(31%)-5.9C-newstructure",
+        "group": "newstructure",
+        "cycle_life": 667.0,
+        "life_pct_in_group": 4.545455,
+        "mates_lives": [
+          541.0,
+          772.0
+        ],
+        "mates_median": 656.5,
+        "life_over_mates": 1.015994,
+        "group_q25": 828.0,
+        "short_type": "프로토콜형",
+        "C1": 3.7,
+        "Q1": 31.0,
+        "C2": 5.9,
+        "avgC_80": 4.795167,
+        "chargetime_2_6": 10.062472,
+        "dQD_100_10": -0.018674,
+        "log10_var_dQ": -3.525708,
+        "QD_10": 1.062454,
+        "IR_mean_2_100": 13.730661,
+        "Tmax_mean_2_100": 36.987651,
+        "rp_C1": 3.409091,
+        "rp_C2": 96.590909,
+        "rp_avgC_80": null,
+        "rp_chargetime_2_6": 17.045455,
+        "rp_dQD_100_10": 98.863636,
+        "rp_log10_var_dQ": 96.590909,
+        "rp_QD_10": 78.409091,
+        "rp_IR_mean_2_100": 3.409091,
+        "rp_Tmax_mean_2_100": 46.590909
+      },
+      {
+        "cell_key": "batch3-31",
+        "policy": "5.9C(60%)-3.1C-newstructure",
+        "group": "newstructure",
+        "cycle_life": 731.0,
+        "life_pct_in_group": 6.818182,
+        "mates_lives": [
+          1002.0
+        ],
+        "mates_median": 1002.0,
+        "life_over_mates": 0.729541,
+        "group_q25": 828.0,
+        "short_type": "개별 셀형",
+        "C1": 5.9,
+        "Q1": 60.0,
+        "C2": 3.1,
+        "avgC_80": 4.813158,
+        "chargetime_2_6": 10.046478,
+        "dQD_100_10": -0.001041,
+        "log10_var_dQ": -3.839603,
+        "QD_10": 1.070856,
+        "IR_mean_2_100": 15.875272,
+        "Tmax_mean_2_100": 36.773043,
+        "rp_C1": 95.454545,
+        "rp_C2": 2.272727,
+        "rp_avgC_80": null,
+        "rp_chargetime_2_6": 21.590909,
+        "rp_dQD_100_10": 42.045455,
+        "rp_log10_var_dQ": 92.045455,
+        "rp_QD_10": 28.409091,
+        "rp_IR_mean_2_100": 92.045455,
+        "rp_Tmax_mean_2_100": 39.772727
+      },
+      {
+        "cell_key": "batch3-21",
+        "policy": "3.7C(31%)-5.9C-newstructure",
+        "group": "newstructure",
+        "cycle_life": 772.0,
+        "life_pct_in_group": 9.090909,
+        "mates_lives": [
+          541.0,
+          667.0
+        ],
+        "mates_median": 604.0,
+        "life_over_mates": 1.278146,
+        "group_q25": 828.0,
+        "short_type": "프로토콜형",
+        "C1": 3.7,
+        "Q1": 31.0,
+        "C2": 5.9,
+        "avgC_80": 4.795167,
+        "chargetime_2_6": 10.067868,
+        "dQD_100_10": -0.014786,
+        "log10_var_dQ": -3.704327,
+        "QD_10": 1.068618,
+        "IR_mean_2_100": 14.093014,
+        "Tmax_mean_2_100": 37.917776,
+        "rp_C1": 3.409091,
+        "rp_C2": 96.590909,
+        "rp_avgC_80": null,
+        "rp_chargetime_2_6": 14.772727,
+        "rp_dQD_100_10": 94.318182,
+        "rp_log10_var_dQ": 94.318182,
+        "rp_QD_10": 48.863636,
+        "rp_IR_mean_2_100": 5.681818,
+        "rp_Tmax_mean_2_100": 71.590909
+      },
+      {
+        "cell_key": "batch3-41",
+        "policy": "5.6C(36%)-4.3C-newstructure",
+        "group": "newstructure",
+        "cycle_life": 786.0,
+        "life_pct_in_group": 11.363636,
+        "mates_lives": [
+          828.0,
+          850.0,
+          858.0,
+          923.0,
+          932.0,
+          1115.0,
+          1155.0
+        ],
+        "mates_median": 923.0,
+        "life_over_mates": 0.851571,
+        "group_q25": 828.0,
+        "short_type": "개별 셀형",
+        "C1": 5.6,
+        "Q1": 36.0,
+        "C2": 4.3,
+        "avgC_80": 4.801595,
+        "chargetime_2_6": 10.042974,
+        "dQD_100_10": 0.000391,
+        "log10_var_dQ": -4.219509,
+        "QD_10": 1.053762,
+        "IR_mean_2_100": 18.306993,
+        "Tmax_mean_2_100": 36.629191,
+        "rp_C1": 72.727273,
+        "rp_C2": 47.727273,
+        "rp_avgC_80": null,
+        "rp_chargetime_2_6": 67.045455,
+        "rp_dQD_100_10": 1.136364,
+        "rp_log10_var_dQ": 44.318182,
+        "rp_QD_10": 87.5,
+        "rp_IR_mean_2_100": 98.863636,
+        "rp_Tmax_mean_2_100": 37.5
+      }
+    ],
+    "evidence_summary": {
+      "C1": {
+        "n_evaluable": 13,
+        "n_pct_ge70": 5,
+        "median_risk_pct": 22.222222,
+        "spearman_rho_batch1": -0.23741
+      },
+      "C2": {
+        "n_evaluable": 13,
+        "n_pct_ge70": 8,
+        "median_risk_pct": 80.0,
+        "spearman_rho_batch1": -0.161241
+      },
+      "avgC_80": {
+        "n_evaluable": 4,
+        "n_pct_ge70": 2,
+        "median_risk_pct": 77.777778,
+        "spearman_rho_batch1": -0.435995
+      },
+      "chargetime_2_6": {
+        "n_evaluable": 9,
+        "n_pct_ge70": 2,
+        "median_risk_pct": 56.944444,
+        "spearman_rho_batch1": 0.432231
+      },
+      "dQD_100_10": {
+        "n_evaluable": 13,
+        "n_pct_ge70": 7,
+        "median_risk_pct": 70.833333,
+        "spearman_rho_batch1": 0.490797
+      },
+      "log10_var_dQ": {
+        "n_evaluable": 13,
+        "n_pct_ge70": 9,
+        "median_risk_pct": 92.045455,
+        "spearman_rho_batch1": -0.826232
+      },
+      "QD_10": {
+        "n_evaluable": 13,
+        "n_pct_ge70": 8,
+        "median_risk_pct": 78.333333,
+        "spearman_rho_batch1": 0.162827
+      },
+      "IR_mean_2_100": {
+        "n_evaluable": 13,
+        "n_pct_ge70": 3,
+        "median_risk_pct": 9.259259,
+        "spearman_rho_batch1": 0.195521
+      },
+      "Tmax_mean_2_100": {
+        "n_evaluable": 13,
+        "n_pct_ge70": 5,
+        "median_risk_pct": 55.0,
+        "spearman_rho_batch1": -0.102458
+      }
+    },
+    "batch1_short_vs_rest": {
+      "C1": {
+        "n_short": 4,
+        "n_rest": 32,
+        "short_median": 6.7,
+        "rest_median": 6.0,
+        "short_mean": 6.7,
+        "rest_mean": 6.1625,
+        "mwu_p": 0.622097
+      },
+      "C2": {
+        "n_short": 4,
+        "n_rest": 32,
+        "short_median": 4.5,
+        "rest_median": 3.6,
+        "short_mean": 4.5,
+        "rest_mean": 3.45625,
+        "mwu_p": 0.021707
+      },
+      "avgC_80": {
+        "n_short": 4,
+        "n_rest": 32,
+        "short_median": 5.07037,
+        "rest_median": 4.450873,
+        "short_mean": 5.07037,
+        "rest_mean": 4.484054,
+        "mwu_p": 0.045313
+      },
+      "chargetime_2_6": {
+        "n_short": 4,
+        "n_rest": 32,
+        "short_median": 9.63779,
+        "rest_median": 10.882778,
+        "short_mean": 9.627848,
+        "rest_mean": 10.87356,
+        "mwu_p": 0.038129
+      },
+      "dQD_100_10": {
+        "n_short": 4,
+        "n_rest": 32,
+        "short_median": -0.00629,
+        "rest_median": -0.001037,
+        "short_mean": -0.007186,
+        "rest_mean": -0.000925,
+        "mwu_p": 0.0018
+      },
+      "log10_var_dQ": {
+        "n_short": 4,
+        "n_rest": 32,
+        "short_median": -3.393969,
+        "rest_median": -3.825884,
+        "short_mean": -3.390892,
+        "rest_mean": -3.840904,
+        "mwu_p": 3.4e-05
+      },
+      "QD_10": {
+        "n_short": 4,
+        "n_rest": 32,
+        "short_median": 1.08666,
+        "rest_median": 1.08132,
+        "short_mean": 1.084315,
+        "rest_mean": 1.081258,
+        "mwu_p": 0.315287
+      },
+      "IR_mean_2_100": {
+        "n_short": 4,
+        "n_rest": 32,
+        "short_median": 15.942309,
+        "rest_median": 16.635926,
+        "short_mean": 16.097176,
+        "rest_mean": 16.587879,
+        "mwu_p": 0.421119
+      },
+      "Tmax_mean_2_100": {
+        "n_short": 4,
+        "n_rest": 32,
+        "short_median": 36.243693,
+        "rest_median": 36.324715,
+        "short_mean": 36.091165,
+        "rest_mean": 36.136078,
+        "mwu_p": 0.679874
+      }
+    },
+    "risk_direction": {
+      "C1": "클수록 불리",
+      "C2": "클수록 불리",
+      "avgC_80": "클수록 불리",
+      "chargetime_2_6": "작을수록 불리",
+      "dQD_100_10": "작을수록 불리",
+      "log10_var_dQ": "클수록 불리",
+      "QD_10": "작을수록 불리",
+      "IR_mean_2_100": "클수록 불리",
+      "Tmax_mean_2_100": "클수록 불리"
+    }
+  },
+  "c_replicate_spread_batch1": {
+    "n_cells": 36,
+    "n_policies": 20,
+    "n_policies_with_replicates": 16,
+    "n_cells_in_replicated_policies": 32,
+    "lv": {
+      "policy_mean_pearson_r": -0.88137,
+      "policy_mean_p": 0.0,
+      "within_policy_pearson_r": -0.103285,
+      "within_policy_p": 0.573754
+    },
+    "Qcc_init": {
+      "policy_mean_pearson_r": 0.037302,
+      "policy_mean_p": 0.875928,
+      "within_policy_pearson_r": 0.70256,
+      "within_policy_p": 7e-06
+    },
+    "pairs": {
+      "n_pairs": 16,
+      "lv_expected_direction": 8,
+      "Qcc_expected_direction": 14,
+      "Qcc_sign_test_p": 0.004181,
+      "lv_sign_test_p": 1.0
+    },
+    "descriptive_ols_B1": {
+      "M0_coef_[b0,lv]": [
+        1.762408,
+        -0.297248
+      ],
+      "M1_coef_[b0,lv,Qcc_init(Ah)]": [
+        -1.866801,
+        -0.328282,
+        3.299447
+      ],
+      "note": "B1 36셀 OLS 기술 회귀(모델 선택 아님). M0/M1 채택은 DAY 2 B1 정책 단위 grouped-CV 1-SE 규칙으로만 결정"
+    },
+    "Qcc_init_unlabeled_batch_offsets": {
+      "reference": "Batch 1 46셀 Qcc_init 중앙값(라벨 미사용)",
+      "B1_median_Ah": 1.065424,
+      "B1_labeled_sd_mAh": 9.287027,
+      "by_batch_group": {
+        "batch2_fastcharge": {
+          "n": 30,
+          "offset_mAh": -5.317271,
+          "offset_in_B1_SD": -0.572548,
+          "pred_factor_M1": 0.960408,
+          "n_outside_B1_labeled_range": 2
+        },
+        "batch2_newstructure": {
+          "n": 9,
+          "offset_mAh": -8.727252,
+          "offset_in_B1_SD": -0.939725,
+          "pred_factor_M1": 0.935847,
+          "n_outside_B1_labeled_range": 0
+        },
+        "batch3_newstructure": {
+          "n": 46,
+          "offset_mAh": -14.523387,
+          "offset_in_B1_SD": -1.563836,
+          "pred_factor_M1": 0.895531,
+          "n_outside_B1_labeled_range": 5
+        }
+      },
+      "notion_warning": "노션 DAY 2 ▶ Batch 3: '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'",
+      "headroom_caveat": "고정 EOL 0.88 Ah 라벨에서는 초기 용량이 클수록 EOL까지 여유(헤드룸)가 커서 Qcc_init 효과 일부는 라벨 정의의 산물일 수 있음(노션 SOH = 현재/초기 용량은 상대 정의)"
+    },
+    "within_protocol_max_min_ratio": {
+      "batch1": {
+        "n_policies": 16,
+        "max_ratio": 1.367925,
+        "max_policy": "4.8C(80%)-4.8C",
+        "median_ratio": 1.07231
+      },
+      "batch2": {
+        "n_policies": 12,
+        "max_ratio": 1.499368,
+        "max_policy": "5.6C(26%)-4.5C-newstructure",
+        "median_ratio": 1.104316
+      },
+      "batch3": {
+        "n_policies": 8,
+        "max_ratio": 2.380074,
+        "max_policy": "5C(67%)-4C-newstructure",
+        "median_ratio": 1.448226
+      }
+    }
+  },
+  "figures": [
+    "q1_hist_150_2300",
+    "q1_long_short_ratio",
+    "q1_batch_compare",
+    "q1_short_cells_evidence"
+  ]
+}

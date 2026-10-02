@@ -1,0 +1,181 @@
+{
+ "question_no": 5,
+ "purpose": "초기 100 사이클 신호 중 B1에서 수명과 연관된 신호를 가리고, B2/B3에서는 부호 일관성만 일반화 위험 점검으로 본다. 피처 간 중복과, 최강 신호(ΔQ)를 통제한 뒤 남는 추가 정보를 B1 기준으로 확인해 DAY 2 피처와 후보 모델(M0/M1/M2)을 정한다.",
+ "approach": "labeled 셀(B1 36·B2 39·B3 44)의 cycle 2–100 피처 19개로 배치별 Spearman·Pearson을 구했다(B1: 셀 부트스트랩 95% CI, Bonferroni·BH 보정). B2/B3는 부호 일관성과 라벨 없는 분포 이동만 봤다. 중복은 B1 군집(평균 |ρ|≥0.8)과 VIF 4단계로 정리했고, 조건부 기여는 dQ_logvar 통제 편상관과 같은 정책 복제쌍 16개로 점검했다(용량 기울기 mAh/100 cycle·음수=감소·OLS, 첨도 Fisher excess).",
+ "before_after": "B1 단독 순위 3~7위 중 기울기·C-rate·충전시간·왜도(|ρ| 0.42–0.47)는 dQ_logvar를 통제하면 |r|≤0.30으로 유의하지 않게 되고, 단독 ρ +0.15이던 Qcc_init은 편상관 +0.68로 올라온다. 단 Qcc_init은 Qdlin 절대 수준이라 노션 경고('충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생') 대상이다(라벨 없는 이동 B2 fastcharge −5.3·B2 newstructure −8.7·B3 −14.5 mAh → 예측 ×0.96/×0.94/×0.90; 고정 0.88 Ah EOL 헤드룸 효과 포함, 노션 SOH는 현재/초기 상대 정의; DAY 2 ΔQ-only M0 행 병기). VIF는 후보 17개 최대 14,628에서 그룹 대표·가지치기 후 4.4로, 측정 정의를 통일한 M2 풀에서는 4.9로 줄었다.",
+ "takeaway": "B1에서 수명과 확실히 연관된 초기 신호는 ΔQ₁₀₀₋₁₀ 크기 하나다(ρ −0.83 [95% CI −0.92, −0.66], Bonferroni 유의 2개 모두 ΔQ 진폭). B1에서 그다음 순위인 기울기·충전 조건·왜도는 ΔQ를 통제하면 유의하지 않다(|r|≤0.30). ΔQ 크기는 B2/B3에서도 부호가 유지되고 나머지는 반전·소멸한다(일반화 점검, 선택 근거 아님). ΔQ가 못 잡는 복제셀 차이는 Qcc_init이 설명하지만(편상관 +0.68, 14/16쌍) Qdlin 절대 수준이라 노션 경고('충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생') 대상이다(라벨 없는 이동 B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh → 예측 ×0.96/×0.94/×0.90; 고정 0.88 Ah EOL 헤드룸 효과 포함, 노션 SOH는 현재/초기 상대 정의). 그래서 채택은 B1 1-SE 규칙으로만 정하고 DAY 2에 ΔQ-only M0 행을 병기한다. 원논문 피처 조합(VIF 최대 618)은 그룹 대표와 Elastic Net 축소(M2 풀 VIF ≤4.9)로 다룬다.",
+ "ess_meaning": "같은 조건으로 운전되는 ESS 랙에서 먼저 열화될 셀을 고르려면(노션 '수율 선별 → 팩 구성 최적화') 주로 프로토콜 차이를 담는 ΔQ(복제쌍 내부 r −0.10)만으로는 부족하고, 복제셀 차이를 잡는 CC 초기 용량 같은 셀 단위 신호가 필요하다. 다만 그 신호는 Qdlin 절대 수준이라 노션 경고('충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생') 대상이고(라벨 없는 이동 B2 fastcharge −5.3·B2 newstructure −8.7·B3 −14.5 mAh → 예측 ×0.96/×0.94/×0.90, DAY 2 M0 행 병기) 고정 0.88 Ah EOL의 헤드룸 효과도 포함하므로, 상대 SOH(현재/초기) 기준 교체나 새 로트에는 기준선을 재확인한 뒤에만 쓴다.",
+ "sub_items": [
+  {
+   "notion_bullet": "(a) 초기 사이클 피켜들과 Cycle Life 상관 계수 확인",
+   "finding": "B1(n=36)에서 가장 강한 피처는 log₁₀Var(ΔQ₁₀₀₋₁₀)(ρ −0.83 [95% CI −0.92, −0.66])와 log₁₀|min ΔQ|(−0.79)이고, 그다음은 용량 기울기(2–100) +0.47, C-rate −0.44, 충전시간 +0.43, ΔQ 왜도 −0.42 순이다. 유의 피처는 p<0.05 8개, BH 7개, Bonferroni 2개(ΔQ 분산·|min|)이며, 온도·IR·QD(2)는 |ρ|≤0.24다. 원척도 잔차는 적합 수명에 비례해 커지고(BP p=0.002), log₁₀에서는 줄지만 남는다(p=0.017).",
+   "interpretation": "수명과 확실히 연관된 신호는 cycle 10→100 방전곡선 변화의 크기(ΔQ) 하나다(상관, 인과 아님). BH로 추가되는 피처는 CI 폭이 0.5 이상이고, 그중 C-rate·t80·충전시간은 같은 정보다. log 척도에 남는 이분산은 장수명·저분산 쪽, 즉 B1 범위 밖 외삽 구간에서 불확실성이 크다는 뜻이다.",
+   "implication": "타깃은 log₁₀(cycle_life)로 두며, 근거는 상관 크기가 아니라(log −0.844 vs raw −0.827) MAPE(상대오차)와의 정렬, 곱셈형 열화, B1 이분산 완화다. 기준선은 dQ_logvar 단일 선형 모델(M0)이고, 예측구간은 외삽 거리에 따라 넓히며, 온도·IR은 우선순위를 낮춘다."
+  },
+  {
+   "notion_bullet": "(b) 가장 강한 관계 식별",
+   "finding": "세 배치에서 부호·강도가 유지되는 신호는 ΔQ 크기뿐이고(log₁₀Var ρ −0.83/−0.71/−0.80, 119셀 Pearson(log–log) −0.897 vs 원논문 −0.93), B1 3~8위 신호는 B2/B3에서 반전·소멸하거나 사실상 상수다(avgC 4.79–4.81C). B3는 B1 관계선 위에 있지만(수명비 0.98, 44셀) 47.7%가 B1 ΔQ 범위보다 작고, B2 fastcharge는 수명비 0.76(−24%; 같은 ΔQ 창 중앙값 650→472, −27%)이다. B2 충전시간 반전(ρ −0.80)은 fastcharge 안에서도 남지만(−0.58, 폭 약 3초) 그 66%가 9개 정책 사이 차이라, 정책 평균을 빼면 −0.32(p=0.09)로 약해진다.",
+   "interpretation": "B3는 관계가 같고 범위만 다른 반면 B2는 겹치는 구간에서도 수명 수준이 24% 낮아, 노션의 'Batch 1/2 유사'는 이 관계 기준으로 재현되지 않는다(B3 차이는 재현된다). ΔQ는 같은 셀의 사이클 간 차이라 고정 Qdlin 오프셋이 상쇄되므로(Q3) 이 이동은 노션이 말한 '충전 커브 시작 시점' 왜곡이 아니며, B2 break-in이 cycle 81까지 이어진 점(Q2)이 후보 설명이다. 충전시간 반전은 설계 t80이 모두 10분이라 설계된 차이가 아니고, 정책 단계 구성과 셀 차이 중 무엇이 원인인지는 구분되지 않는다(인과 아님).",
+   "implication": "핵심 피처는 B1 근거(ρ −0.83, 19개 중 Bonferroni 유의, (a))로 dQ_logvar로 고정하고, 선형(log–log)을 1순위로 두는 근거는 B1과 도메인이다(원논문 단조 관계, B1 중도절단 #00–04가 이미 라벨 셀 피처 범위 밖 −5.01~−4.44라 외삽 필요). B2/B3 범위 이탈(43.6%/47.7%)과 B2 fastcharge 약 1.3배 과대예측은 일반화 위험으로만 인용하고, B2 오차는 그룹별로 해석한다."
+  },
+  {
+   "notion_bullet": "(c) 멀티클리니어리티 문제 확인",
+   "finding": "B1 중복 그룹은 6개(평균 |ρ| 0.82–0.99: G1 QD(2)·절편, G2 IR, G3 충전시간·avgC·t80, G4 ΔQ 분산·|min|, G5 max QD−QD(2)·기울기, G6 Tmax·Tavg)이고, 후보 17개 중 13개가 VIF≥10이다(최대 14,628; 원논문 조합 최대 618). 그룹 대표 선택 → VIF>5 제거(기울기 2–100, 12.3) → G5 재편입을 거치면 최대 VIF는 4.4다. 측정 정의를 통일한 DAY 2 M2 풀 10개는 최대 VIF 4.9(CC break-in; Qcc_init을 빼서 정의해 r −0.63)다. Qcc_init은 노션 경고 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'의 대상인 Qdlin 절대 수준; 라벨 없는 배치 이동 B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh → 예측 ×0.96/×0.94/×0.90; DAY 2 ΔQ-only M0 행 병기((d) 참조).",
+   "interpretation": "G1·G3·G4는 정의상 같은 양(Pearson 평균 |r| 0.98–1.00)이라 함께 넣으면 같은 정보를 단위만 바꿔 여러 번 넣는 셈이고, G2(Pearson 0.44)·G5(0.65)는 순위로만 강한 통계적 겹침이다. 원논문 조합을 OLS로 쓰면 계수가 불안정하다(원논문도 Elastic Net 사용). 기울기(2–100)는 B1 근거(VIF 12.3, ΔQ 분산과 ρ −0.72)로 뺐고, B2/B3 반전은 위험으로 기록만 한다.",
+   "implication": "M2 재현 풀의 그룹 대표는 측정값 기준으로 바꾸고(G1 summary QD(2) → Qcc_init(CC 끝점, CV 방전분 제외, B1 r 0.995), G5 → CC break-in, G3 avgC_80 → 실측 chargetime_avg5(B1 |ρ| 0.99)), 축소 강도는 B1 정책 단위 CV로만 정한다. Qcc_init은 Qdlin 절대 수준이라 노션 경고('충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생') 대상이고(라벨 없는 이동 B2 fastcharge −5.3·B2 newstructure −8.7·B3 −14.5 mAh → 예측 ×0.96/×0.94/×0.90, DAY 2 M0 행 병기), summary QD(2)였다면 B2 fastcharge가 오히려 +17.2 mAh(×1.14)로 움직였을 것이다."
+  },
+  {
+   "notion_bullet": "(d) [추가 점검 — 노션 3개 항목 외] 조건부 기여: dQ_logvar 통제 편상관 & 복제쌍 분석 (Batch 1)",
+   "finding": "B1에서 dQ_logvar를 통제한 편상관은 Qcc_init(cycle 2–6 Qdlin 2.0 V 끝점 중앙값)이 +0.68로 가장 크고(p=8e-6, CI 0.42–0.83, 단독 ρ +0.15), break-in 계열(−0.62~−0.69, 단독과 부호 반대)도 Bonferroni 기준(|r|≈0.49)을 넘지만 기울기·충전 조건·온도·IR·왜도·첨도는 |r|≤0.32다. Qcc_init까지 통제하면 summary break-in(−0.56)만 기준을 넘고 CC판 break-in은 −0.35(p=0.04)다. 정책 평균 20개 단위 r은 dQ_logvar −0.88, Qcc_init +0.04인 반면, 같은 정책 복제쌍 16개 안에서는 dQ_logvar 8/16(r −0.10), Qcc_init 14/16(p=0.004, r +0.70)이다. 단 Qcc_init은 노션 경고 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'의 대상인 Qdlin 절대 수준; 라벨 없는 배치 이동 B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh → 예측 ×0.96/×0.94/×0.90; DAY 2 ΔQ-only M0 행 병기.",
+   "interpretation": "B1에서 ΔQ 분산은 변동의 99%가 정책 사이에 있는 프로토콜 간 신호이고, Qcc_init은 같은 조건 복제셀 사이 차이를 잡는 상보 신호다(r 0.24, VIF 1.06). 그러나 Qcc_init은 Qdlin 2.0 V 끝점의 절대 수준, 즉 노션이 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'이라고 경고한 배치 간 비교 그 자체이며, 라벨 없이 본 이동은 B2 fastcharge −5.3, B2 newstructure −8.7, B3 −14.5 mAh(B1 SD 9.3 mAh), 예측으로는 ×0.96/×0.94/×0.90다. 또 EOL이 고정 0.88 Ah라 초기 용량이 클수록 EOL까지 여유가 커서, 이 효과의 일부는 절대 EOL 라벨 정의에서 나온 것이다(노션 SOH는 현재/초기 용량 비율, 인과 아님). 그래서 DAY 2에 ΔQ-only M0 행을 병기한다.",
+   "implication": "Qcc_init은 노션 경고 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'의 대상인 Qdlin 절대 수준(라벨 없는 배치 이동 B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh)이고 고정 0.88 Ah EOL 헤드룸 효과(노션 SOH는 현재/초기 상대 정의)를 포함하므로 후보로만 둔다. M1(dQ_logvar+Qcc_init)과 M0(dQ_logvar 단독) 중 선택은 B1 정책 단위 반복 그룹 CV의 사전 고정 1-SE 규칙으로만 하고, DAY 2 성능표에는 M0 행을 항상 나란히 두어 계수 3.30 log₁₀/Ah 기준 예측 이동(×0.96/×0.94/×0.90)이 Gap에서 차지하는 몫을 분리한다. break-in은 부호가 불안정하고 중도절단 #10 하한을 13–17% 밑돌아 CC판만 M2 풀에 두며, 분할은 정책 단위 Hold-out 9셀(#16·17·23·30·31·32·33·44·45, results/holdout_cells.csv)로 고정한다."
+  }
+ ],
+ "pdf_figures": [
+  {
+   "path": "reports/figures/q5_corr_ranking.png",
+   "caption": "초기 피처 19개의 Spearman ρ다. ΔQ 크기 두 피처만 세 배치에서 B1 막대 끝에 모이고, B1 3~8위 신호는 B2/B3에서 반전·소멸하거나 상수(회색 ×)가 된다."
+  },
+  {
+   "path": "reports/figures/q5d_replicate_pairs.png",
+   "caption": "(추가 점검 d) ΔQ 분산은 정책 평균 단위로(r −0.88), Qcc_init은 같은 정책 복제쌍 안에서(14/16) 수명과 함께 움직인다. 두 피처는 상보적이다. 단 Qcc_init은 노션 경고 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'의 대상인 Qdlin 절대 수준이다(B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh → ×0.96/×0.94/×0.90, M0 병기)."
+  }
+ ],
+ "key_insight_one_line": "B1에서 수명과 확실히 연관된 초기 신호는 ΔQ₁₀₀₋₁₀ 크기 하나다(ρ −0.83 [95% CI −0.92, −0.66]; B2/B3에서도 부호 유지는 일관성 점검). B1에서 ΔQ는 주로 프로토콜 간 차이를, Qcc_init은 복제셀 간 차이를 설명한다(편상관 +0.68, 14/16쌍). 단 Qcc_init은 노션 경고 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'의 대상인 Qdlin 절대 수준이라(B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh → ×0.96/×0.94/×0.90) B1 1-SE 규칙으로만 채택하고 M0를 병기한다.",
+ "changes_made": [
+  "src/eda/q5d_conditional.py 신설: Qcc_init·CC break-in·CV 방전분 정의를 프로젝트로 옮기고 다음을 계산 → results/eda/q5d_results.json, q5d_cell_features.csv\n  · dQ_logvar(+Qcc_init) 통제 편상관 16개와 Bonferroni 기준선\n  · 정책 평균 vs 복제쌍 부호검정\n  · 라벨 없는 배치 이동과 예측 배율\n  · 중도절단 하한 점검\n  · Hold-out 절차 재현",
+  "results/holdout_cells.csv 생성: 사전 등록 절차로 재현한 결과 #16·17·23·30·31·32·33·44·45와 일치(9셀/5정책)",
+  "새 그림 추가: q5d_replicate_pairs.png(PDF), q5d_partial_corr.png, q5d_qcc_batch_offset.png. q5_vif.png에는 ④ M2 풀 VIF 패널 추가(최대 4.9)",
+  "q5_corr_ranking.png를 PDF용 Spearman 단일 패널로 단순화(3지표판은 q5_corr_ranking_3metrics.png로 분리)",
+  "q5_correlation.py 수정(상관·VIF 값은 변하지 않음):\n  · 첨도를 Fisher excess로 변경\n  · 용량 기울기를 mAh/100 cycle·음수=감소·OLS 명시로 변경하고 Theil–Sen 참고 열 추가\n  · early_features.csv에 Qcc_init·cc_breakin 열 추가",
+  "B2 fastcharge 충전시간 문구 수정: 설계 차이는 아님, 정책 사이 66%, 정책 구성과 셀 차이는 구분 불가",
+  "B3 수명비 0.98의 표본을 44셀로 명시",
+  "수치 표기 통일: 0.76(−24%)과 같은 창 −27%, Spearman CI 표기, ×1.14",
+  "Qcc_init이 나오는 모든 서술 문장(본문·캡션·한 줄 요약·단서·부록 후보표)에 다음을 명시:\n  · 노션 경고 전문 인용과 Qdlin 절대 수준이라는 점\n  · 배치 이동 −5.3/−8.7/−14.5 mAh와 예측 배율(×0.96/×0.94/×0.90)\n  · DAY 2 ΔQ-only M0 행 병기\n  · 고정 EOL 헤드룸 한계",
+  "선형 1순위 근거를 B1+도메인으로 다시 서술(B2/B3는 위험으로만 인용). 그룹 대표를 Qcc_init·CC break-in·실측 chargetime_avg5로 교체",
+  "노션 EDA 4단 구조와 ESS 한 줄 추가. batch_comparison·caveats를 최상위 항목으로 정리",
+  "목적·요약·한 줄 요약을 B1 기준 선별로 바꾸고 B2/B3는 부호 일관성 점검으로만 표기. #00–04 dQ_logvar 범위를 −5.01~−4.44로 정정. Qcc_init 서술 문장에 노션 경고 전문 반영. B3 충전시간 단서를 '라벨 6셀(전체 8셀)'로 명시"
+ ],
+ "details": {
+  "scripts": [
+   "src/eda/q5_correlation.py",
+   "src/eda/q5d_conditional.py"
+  ],
+  "run_order": "cd ess-battery-project && python src/eda/q5_correlation.py && python src/eda/q5d_conditional.py",
+  "results_files": [
+   "results/eda/q5_results.json",
+   "results/eda/q5d_results.json",
+   "results/eda/early_features.csv",
+   "results/eda/q5d_cell_features.csv",
+   "results/holdout_cells.csv"
+  ],
+  "all_figures": [
+   {
+    "path": "reports/figures/q5_corr_ranking.png",
+    "role": "PDF Fig 1 — (a)(b)"
+   },
+   {
+    "path": "reports/figures/q5d_replicate_pairs.png",
+    "role": "PDF Fig 2 — (d)"
+   },
+   {
+    "path": "reports/figures/q5_corr_ranking_3metrics.png",
+    "role": "부록 — Spearman/Pearson(log)/Pearson(raw) 비교"
+   },
+   {
+    "path": "reports/figures/q5_top_signals.png",
+    "role": "부록 — (b) 대표 신호 4개 배치별 산점도, 같은 ΔQ 창·수명비"
+   },
+   {
+    "path": "reports/figures/q5_feature_corr_heatmap.png",
+    "role": "부록 — (c) 중복 그룹 G1–G6"
+   },
+   {
+    "path": "reports/figures/q5_vif.png",
+    "role": "부록 — (c) VIF 4단계(④ M2 풀)"
+   },
+   {
+    "path": "reports/figures/q5d_partial_corr.png",
+    "role": "부록 — (d) 편상관 16개, Bonferroni 선"
+   },
+   {
+    "path": "reports/figures/q5d_qcc_batch_offset.png",
+    "role": "부록 — (d) Qcc_init vs summary QD(2) 배치 이동(라벨 미사용), CV 방전분 (Qcc_init: 노션 경고 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'의 대상인 Qdlin 절대 수준; 라벨 없는 배치 이동 B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh → 예측 ×0.96/×0.94/×0.90; DAY 2 ΔQ-only M0 행 병기)"
+   }
+  ],
+  "feature_candidates": [
+   {
+    "name": "dQ_logvar",
+    "status": "필수(M0~M2)",
+    "basis": "B1 ρ −0.83 [95% CI −0.92, −0.66], Bonferroni 유의, G4 대표; 셀 안 차분이라 고정 Qdlin 오프셋 상쇄. B1에서 주로 정책 간 신호(정책 평균 r −0.88, 복제쌍 내부 −0.10)."
+   },
+   {
+    "name": "Qcc_init",
+    "status": "후보(M1 채택 여부는 B1 그룹 CV 1-SE 규칙), M2 풀 포함",
+    "basis": "B1 dQ_logvar 통제 편상관 +0.68(p=8e-6), 복제쌍 14/16(p=0.004), VIF 1.06. 노션 경고 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생' 대상인 Qdlin 절대 수준: B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh → 예측 ×0.96/×0.94/×0.90; DAY 2 M0 행 병기. 고정 0.88 Ah EOL 헤드룸 효과 포함(노션 SOH는 현재/초기)."
+   },
+   {
+    "name": "cc_breakin (CC break-in 상승폭)",
+    "status": "M2 축소 풀만",
+    "basis": "dQ_logvar 통제 −0.62이나 단독 +0.30과 부호 반대, dQ_logvar+Qcc 통제 −0.35(p=0.04, Bonferroni 미달), 중도절단 #10 하한 −13%; Qcc_init과 정의상 얽힘(r −0.63). (Qcc_init: 노션 경고 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'의 대상인 Qdlin 절대 수준; 라벨 없는 배치 이동 B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh → 예측 ×0.96/×0.94/×0.90; DAY 2 ΔQ-only M0 행 병기)"
+   },
+   {
+    "name": "dQ_skew / dQ_kurt (Fisher)",
+    "status": "M2 축소 풀만",
+    "basis": "dQ_logvar+Qcc 통제 편상관 +0.13 / −0.25(ns); 원논문 discharge 피처 재현용. (Qcc_init: 노션 경고 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'의 대상인 Qdlin 절대 수준; 라벨 없는 배치 이동 B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh → 예측 ×0.96/×0.94/×0.90; DAY 2 ΔQ-only M0 행 병기)"
+   },
+   {
+    "name": "fade_slope_91_100 (mAh/100 cycle, 음수=감소)",
+    "status": "M2 축소 풀만",
+    "basis": "B1 ρ +0.32(p=0.056), dQ_logvar 통제 +0.05; 원논문 full 재현용."
+   },
+   {
+    "name": "chargetime_avg5 (실측, G3 대표)",
+    "status": "M2 축소 풀만(원논문 full 재현용)",
+    "basis": "avgC_80·t80과 B1 |ρ| 0.99–1.00으로 정보 동일하지만 정책 문자열이 아닌 측정값; dQ_logvar 통제 +0.12. B2/B3 반전은 일반화 위험."
+   },
+   {
+    "name": "Tavg_mean, IR_min, IR_diff",
+    "status": "M2 축소 풀만",
+    "basis": "B1 |ρ|≤0.24, dQ_logvar+Qcc 통제 |r|≤0.19; B2 #41–46 IR 결측은 Pipeline 내 대체. (Qcc_init: 노션 경고 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'의 대상인 Qdlin 절대 수준; 라벨 없는 배치 이동 B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh → 예측 ×0.96/×0.94/×0.90; DAY 2 ΔQ-only M0 행 병기)"
+   },
+   {
+    "name": "제외: summary QD(2)·절편(G1 비대표), dQ_logabsmin(G4), avgC_80·t80(G3 정책값), fade_slope_2_100(VIF 12.3), summary max QD−QD(2)(CC판으로 대체), Tmax·Tmin·IR(2)",
+    "status": "제외",
+    "basis": "정의상 중복·VIF·측정 정의(CV 방전분) 근거는 B1+도메인. B2/B3 수치는 일반화 위험 참고만."
+   }
+  ],
+  "key_numbers": {
+   "b1_spearman_dQ_logvar": "ρ −0.826 [95% CI −0.92, −0.66], p=5.4e-10 (Pearson log −0.844, raw −0.827; CI는 Spearman 부트스트랩)",
+   "b2_b3_spearman_dQ_logvar": "B2 −0.709 (fastcharge −0.38, newstructure −0.17) / B3 −0.797",
+   "pooled_119_pearson_loglog": "−0.897 (원논문 124셀 −0.93), Spearman −0.888",
+   "ratio_to_b1_line": "B3 0.98(44셀; B1 범위 안 23셀도 0.98) · B2 newstructure 0.94 · B2 fastcharge 0.76(−24%; B1 범위 안 19셀 0.74)",
+   "same_window": "ΔQ 창 [−3.707, −3.350]: B1 14셀 중앙 649.5 vs B2 fastcharge 19셀 472 (−27%, Mann–Whitney p=1.4e-6)",
+   "within_group_slopes": "log10 life ~ dQ_logvar: B1 −0.297, B3 −0.309, B2 fastcharge −0.081, newstructure −0.162",
+   "covariate_shift": "B1 dQ_logvar 범위 밖: B3 47.7%, B2 43.6%(15.4% 아래 + 28.2% 위); B1 중도절단 #00–04 −5.01~−4.44 (< −4.18)",
+   "b2_fastcharge_chargetime": "ρ −0.58 (p=0.0007, 10.17–10.22분); 정책 사이 분산 66% (Kruskal p=0.002); 정책 평균 제거 ρ −0.32 (p=0.09)",
+   "b3_fade_slope_influence": "B3 Pearson(log) +0.43 → |z|≥3 2셀(#06, #28) 제외 +0.15 → 3.7C(31%)-5.9C 3셀 모두 제외 −0.08 (Spearman −0.12)",
+   "multiple_testing": "p<0.05 8개, BH q<0.05 7개, Bonferroni 2개",
+   "target_scale": "원척도 BP p=0.002 → log10 p=0.017; 수명 왜도 +0.30 → −0.01",
+   "vif": "17개 최대 14,628(13개 ≥10); 원논문 조합 최대 618; 대표 10개 중 기울기 2–100 12.3; Q5 규칙 최종 10개 최대 4.4(ΔQ 분산 5.4); M2 풀 최대 4.9(CC break-in), ΔQ 분산 4.4",
+   "partial_corr_given_logvar": "Qcc_init +0.676 (p=8.4e-6; CI 0.42–0.83; LOO 0.60–0.72; cycle 8–12 정의 +0.66, r 0.999), summary QD(2) +0.69, summary break-in −0.69, CC break-in −0.62, 그 외 |r|≤0.32",
+   "partial_corr_given_logvar_qcc": "summary max QD−QD(2) −0.56 (p=6e-4, Bonferroni 통과), I_qw80 −0.36 (p=0.04), CC break-in −0.35 (p=0.04), 그 외 |r|≤0.26",
+   "replicate_pairs": "정책 평균 r: dQ_logvar −0.88 / Qcc_init +0.04; 복제쌍 내부 r −0.10 (8/16) / +0.70 (14/16, p=0.004); 정책 사이 분산 비율 dQ_logvar 99%, log 수명 89%",
+   "descriptive_m0_m1_in_sample": "B1 in-sample(CV 아님) RMSE log10 0.0435 → 0.0320, MAPE 8.2% → 5.8%; Qcc 계수 3.30 log10/Ah (+10 mAh → ×1.08)",
+   "batch_offsets_label_free": "Qcc_init: B2 fastcharge −5.3 mAh(−0.57 SD, 범위 밖 2/30), B2 newstructure −8.7(−0.94 SD, 0/9), B3 −14.5(−1.56 SD, 5/46) → ×0.96/×0.94/×0.90; summary QD(2): B2 fastcharge +17.2(+2.08 SD, 17/30) → ×1.14",
+   "cv_discharge_cycle2_6": "B1 15.4 · B2 fastcharge 39.6 · B2 newstructure 38.7 · B3 15.6 mAh (Q3 cycle 10 기준 15.6/38.2/15.7)",
+   "censored_lower_bound": "중도절단 10셀 하한 위반: M0 2(#03 −1.3%, #22 −2.9%), M1 2(#10 −1.3%, #22 −0.5%), M1+summary break-in #10 −16.5%, M1+CC break-in #10 −12.7%",
+   "holdout": "5정책 9셀 #16·17·23·30·31·32·33·44·45 (599–1,014, 중앙 757); train 27셀/15정책 (534–1,074, 중앙 788); #31만 Qcc_init이 train 최댓값보다 2.5 mAh 높음"
+  }
+ },
+ "caveats": [
+  "상관은 인과가 아니다. 편상관·복제쌍 분석도 B1 기술통계이며 모델 성능(CV) 결과가 아니다.",
+  "B1 n=36(복제쌍 16개)이라 CI가 넓다. (d)에서 후보 16개를 검정했으므로 Bonferroni 기준을 함께 표시했고, 주력 채택은 p<0.001이면서 복제쌍 부호검정까지 지지되는 Qcc_init만 후보로 올렸다(사후 탐색 편향 인정). Qcc_init은 노션 경고 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'의 대상인 Qdlin 절대 수준; 라벨 없는 배치 이동 B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh → 예측 ×0.96/×0.94/×0.90; DAY 2 ΔQ-only M0 행 병기.",
+  "Qcc_init은 노션 경고 '충전 커브 시작 시점이 배치별로 상이 : Qdlin 변수를 단순 비교하면 왜곡 발생'의 대상인 Qdlin 절대 수준이다. 그 배치 이동(B2 fastcharge −5.3 · B2 newstructure −8.7 · B3 −14.5 mAh)과 예측 배율(×0.96/×0.94/×0.90)은 라벨 없이 피처 분포만으로 계산했고, B2/B3 라벨은 피처 선택에 쓰지 않았다. 배율은 B1 in-sample 계수(3.30 log10/Ah)를 쓴 환산값이다. 이 효과가 드러나도록 DAY 2에 ΔQ-only M0 행을 병기한다.",
+  "B1·B3 기록은 0.88 Ah 직전에서 끝나므로 상대 SOH(초기 대비 80%)로 라벨을 다시 만드는 민감도 분석은 할 수 없다.",
+  "Qdlin 2.0 V 끝점 이상값(≤0 또는 >1.2 Ah, cycle 2–100: B1 4개, B2 fastcharge/newstructure 8개, B3 0개)은 NaN 처리 후 5-사이클 중앙값이 흡수한다.",
+  "B2 #41–46은 IR이 전 사이클 0(측정 누락)이라 IR 상관은 B2 n=33이다.",
+  "Batch 3 평균 충전시간은 4.8C(80%)-4.8C 라벨 6셀(전체 8셀 중 #23·#32 라벨 없음)만 11.04분이라 이 6셀이 Pearson(log) +0.60을 만든다(제외 시 −0.45)."
+ ],
+ "batch_comparison": "핵심 신호 log₁₀Var(ΔQ₁₀₀₋₁₀)는 세 배치 모두 음의 상관이다(Spearman B1 −0.83 / B2 −0.71 / B3 −0.80; B2 fastcharge만 −0.38). B1 3~8위 신호는 다른 배치에서 유지되지 않는다: 용량 기울기(2–100, mAh/100 cycle, 음수 = 감소, OLS) +0.47 → −0.27/+0.09, 평균 충전시간 +0.43 → −0.80/+0.21, ΔQ 왜도 −0.42 → −0.15/+0.06이고, avgC_80·t80은 B2/B3가 10분 등시간 충전(4.79–4.81C)이라 해석할 수 없다. B3는 B1 관계선 위에 있지만(기울기 −0.309 vs −0.297, B1 선 대비 수명비 0.98, 44셀) 47.7%가 B1 ΔQ 범위 밖이다. B2 fastcharge는 B1 선 대비 수명비 0.76(−24%)이고, 같은 ΔQ 창 중앙값 비교로는 649.5 → 472(−27%)다. newstructure는 0.94다. B2 fastcharge 충전시간 반전(ρ −0.58)은 약 3초 폭이고 그 66%가 9개 정책 사이 차이라, 정책 평균을 빼면 −0.32(p=0.09)다. 이 비교는 일반화 점검이며 피처 선택 근거로 쓰지 않았다."
+}

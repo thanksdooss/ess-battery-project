@@ -1,0 +1,3679 @@
+{
+  "meta": {
+    "raw_rows_used": [
+      2,
+      5,
+      10
+    ],
+    "raw_cycles_used": [
+      3,
+      6,
+      11
+    ],
+    "descriptor_aggregation": "cycle 3·6·11 기술자 중앙값",
+    "cells_by_batch_group": {
+      "batch1-fastcharge": 46,
+      "batch2-fastcharge": 30,
+      "batch2-newstructure": 9,
+      "batch3-newstructure": 46
+    },
+    "note": "varcharge/slowcycle(Batch 2 8셀)은 수명 라벨이 없어 제외"
+  },
+  "a_policy_life": {
+    "table": [
+      {
+        "batch": "batch1",
+        "policy": "3.6C(80%)-3.6C",
+        "group": "fastcharge",
+        "n_labeled": 0,
+        "n_censored_or_nan": 3,
+        "mean": null,
+        "std": null,
+        "min": null,
+        "max": null,
+        "lower_bounds": [
+          1177,
+          1179,
+          1190
+        ],
+        "t80_policy": 13.333,
+        "avgC_policy": 3.6,
+        "I_qw_policy": 3.6,
+        "t80_meas": 13.338,
+        "I_avg80_meas": 3.599,
+        "I_qw_meas": 3.6
+      },
+      {
+        "batch": "batch1",
+        "policy": "4.4C(80%)-4.4C",
+        "group": "fastcharge",
+        "n_labeled": 1,
+        "n_censored_or_nan": 0,
+        "mean": 1074.0,
+        "std": null,
+        "min": 1074.0,
+        "max": 1074.0,
+        "lower_bounds": [],
+        "t80_policy": 10.909,
+        "avgC_policy": 4.4,
+        "I_qw_policy": 4.4,
+        "t80_meas": 10.914,
+        "I_avg80_meas": 4.398,
+        "I_qw_meas": 4.399
+      },
+      {
+        "batch": "batch1",
+        "policy": "4.8C(80%)-4.8C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 753.0,
+        "std": 165.46,
+        "min": 636.0,
+        "max": 870.0,
+        "lower_bounds": [],
+        "t80_policy": 10.0,
+        "avgC_policy": 4.8,
+        "I_qw_policy": 4.8,
+        "t80_meas": 10.005,
+        "I_avg80_meas": 4.798,
+        "I_qw_meas": 4.799
+      },
+      {
+        "batch": "batch1",
+        "policy": "4C(80%)-4C",
+        "group": "fastcharge",
+        "n_labeled": 0,
+        "n_censored_or_nan": 2,
+        "mean": null,
+        "std": null,
+        "min": null,
+        "max": null,
+        "lower_bounds": [
+          1226,
+          1227
+        ],
+        "t80_policy": 12.0,
+        "avgC_policy": 4.0,
+        "I_qw_policy": 4.0,
+        "t80_meas": 12.005,
+        "I_avg80_meas": 3.998,
+        "I_qw_meas": 3.999
+      },
+      {
+        "batch": "batch1",
+        "policy": "5.4C(40%)-3.6C",
+        "group": "fastcharge",
+        "n_labeled": 1,
+        "n_censored_or_nan": 1,
+        "mean": 1054.0,
+        "std": null,
+        "min": 1054.0,
+        "max": 1054.0,
+        "lower_bounds": [
+          879
+        ],
+        "t80_policy": 11.111,
+        "avgC_policy": 4.32,
+        "I_qw_policy": 4.5,
+        "t80_meas": 11.126,
+        "I_avg80_meas": 4.314,
+        "I_qw_meas": 4.498
+      },
+      {
+        "batch": "batch1",
+        "policy": "5.4C(50%)-3.6C",
+        "group": "fastcharge",
+        "n_labeled": 0,
+        "n_censored_or_nan": 2,
+        "mean": null,
+        "std": null,
+        "min": null,
+        "max": null,
+        "lower_bounds": [
+          897,
+          902
+        ],
+        "t80_policy": 10.556,
+        "avgC_policy": 4.547,
+        "I_qw_policy": 4.725,
+        "t80_meas": 10.57,
+        "I_avg80_meas": 4.541,
+        "I_qw_meas": 4.723
+      },
+      {
+        "batch": "batch1",
+        "policy": "5.4C(50%)-3C",
+        "group": "fastcharge",
+        "n_labeled": 1,
+        "n_censored_or_nan": 1,
+        "mean": 788.0,
+        "std": null,
+        "min": 788.0,
+        "max": 788.0,
+        "lower_bounds": [
+          906
+        ],
+        "t80_policy": 11.556,
+        "avgC_policy": 4.154,
+        "I_qw_policy": 4.5,
+        "t80_meas": 11.568,
+        "I_avg80_meas": 4.149,
+        "I_qw_meas": 4.499
+      },
+      {
+        "batch": "batch1",
+        "policy": "5.4C(60%)-3.6C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 859.5,
+        "std": 3.536,
+        "min": 857.0,
+        "max": 862.0,
+        "lower_bounds": [],
+        "t80_policy": 10.0,
+        "avgC_policy": 4.8,
+        "I_qw_policy": 4.95,
+        "t80_meas": 10.014,
+        "I_avg80_meas": 4.793,
+        "I_qw_meas": 4.948
+      },
+      {
+        "batch": "batch1",
+        "policy": "5.4C(60%)-3C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 799.5,
+        "std": 113.84,
+        "min": 719.0,
+        "max": 880.0,
+        "lower_bounds": [],
+        "t80_policy": 10.667,
+        "avgC_policy": 4.5,
+        "I_qw_policy": 4.8,
+        "t80_meas": 10.68,
+        "I_avg80_meas": 4.494,
+        "I_qw_meas": 4.799
+      },
+      {
+        "batch": "batch1",
+        "policy": "5.4C(70%)-3C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 739.5,
+        "std": 68.589,
+        "min": 691.0,
+        "max": 788.0,
+        "lower_bounds": [],
+        "t80_policy": 9.778,
+        "avgC_policy": 4.909,
+        "I_qw_policy": 5.1,
+        "t80_meas": 9.789,
+        "I_avg80_meas": 4.904,
+        "I_qw_meas": 5.104
+      },
+      {
+        "batch": "batch1",
+        "policy": "5.4C(80%)-5.4C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 546.5,
+        "std": 17.678,
+        "min": 534.0,
+        "max": 559.0,
+        "lower_bounds": [],
+        "t80_policy": 8.889,
+        "avgC_policy": 5.4,
+        "I_qw_policy": 5.4,
+        "t80_meas": 8.898,
+        "I_avg80_meas": 5.394,
+        "I_qw_meas": 5.397
+      },
+      {
+        "batch": "batch1",
+        "policy": "6C(30%)-3.6C",
+        "group": "fastcharge",
+        "n_labeled": 1,
+        "n_censored_or_nan": 1,
+        "mean": 1014.0,
+        "std": null,
+        "min": 1014.0,
+        "max": 1014.0,
+        "lower_bounds": [
+          891
+        ],
+        "t80_policy": 11.333,
+        "avgC_policy": 4.235,
+        "I_qw_policy": 4.5,
+        "t80_meas": 11.348,
+        "I_avg80_meas": 4.23,
+        "I_qw_meas": 4.498
+      },
+      {
+        "batch": "batch1",
+        "policy": "6C(40%)-3.6C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 856.0,
+        "std": 19.799,
+        "min": 842.0,
+        "max": 870.0,
+        "lower_bounds": [],
+        "t80_policy": 10.667,
+        "avgC_policy": 4.5,
+        "I_qw_policy": 4.8,
+        "t80_meas": 10.679,
+        "I_avg80_meas": 4.495,
+        "I_qw_meas": 4.798
+      },
+      {
+        "batch": "batch1",
+        "policy": "6C(40%)-3C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 935.5,
+        "std": 115.26,
+        "min": 854.0,
+        "max": 1017.0,
+        "lower_bounds": [],
+        "t80_policy": 12.0,
+        "avgC_policy": 4.0,
+        "I_qw_policy": 4.5,
+        "t80_meas": 12.012,
+        "I_avg80_meas": 3.996,
+        "I_qw_meas": 4.499
+      },
+      {
+        "batch": "batch1",
+        "policy": "6C(50%)-3.6C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 792.5,
+        "std": 118.09,
+        "min": 709.0,
+        "max": 876.0,
+        "lower_bounds": [],
+        "t80_policy": 10.0,
+        "avgC_policy": 4.8,
+        "I_qw_policy": 5.1,
+        "t80_meas": 10.012,
+        "I_avg80_meas": 4.794,
+        "I_qw_meas": 5.098
+      },
+      {
+        "batch": "batch1",
+        "policy": "6C(50%)-3C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 888.5,
+        "std": 40.305,
+        "min": 860.0,
+        "max": 917.0,
+        "lower_bounds": [],
+        "t80_policy": 11.0,
+        "avgC_policy": 4.364,
+        "I_qw_policy": 4.875,
+        "t80_meas": 11.011,
+        "I_avg80_meas": 4.359,
+        "I_qw_meas": 4.874
+      },
+      {
+        "batch": "batch1",
+        "policy": "6C(60%)-3C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 744.0,
+        "std": 18.385,
+        "min": 731.0,
+        "max": 757.0,
+        "lower_bounds": [],
+        "t80_policy": 10.0,
+        "avgC_policy": 4.8,
+        "I_qw_policy": 5.25,
+        "t80_meas": 10.01,
+        "I_avg80_meas": 4.795,
+        "I_qw_meas": 5.249
+      },
+      {
+        "batch": "batch1",
+        "policy": "7C(30%)-3.6C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 722.5,
+        "std": 27.577,
+        "min": 703.0,
+        "max": 742.0,
+        "lower_bounds": [],
+        "t80_policy": 10.905,
+        "avgC_policy": 4.402,
+        "I_qw_policy": 4.875,
+        "t80_meas": 10.917,
+        "I_avg80_meas": 4.397,
+        "I_qw_meas": 4.873
+      },
+      {
+        "batch": "batch1",
+        "policy": "7C(40%)-3.6C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 621.0,
+        "std": 5.657,
+        "min": 617.0,
+        "max": 625.0,
+        "lower_bounds": [],
+        "t80_policy": 10.095,
+        "avgC_policy": 4.755,
+        "I_qw_policy": 5.3,
+        "t80_meas": 10.108,
+        "I_avg80_meas": 4.748,
+        "I_qw_meas": 5.298
+      },
+      {
+        "batch": "batch1",
+        "policy": "7C(40%)-3C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 676.0,
+        "std": 39.598,
+        "min": 648.0,
+        "max": 704.0,
+        "lower_bounds": [],
+        "t80_policy": 11.429,
+        "avgC_policy": 4.2,
+        "I_qw_policy": 5.0,
+        "t80_meas": 11.446,
+        "I_avg80_meas": 4.194,
+        "I_qw_meas": 4.998
+      },
+      {
+        "batch": "batch1",
+        "policy": "8C(15%)-3.6C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 1008.5,
+        "std": 60.104,
+        "min": 966.0,
+        "max": 1051.0,
+        "lower_bounds": [],
+        "t80_policy": 11.958,
+        "avgC_policy": 4.014,
+        "I_qw_policy": 4.425,
+        "t80_meas": 11.972,
+        "I_avg80_meas": 4.009,
+        "I_qw_meas": 4.422
+      },
+      {
+        "batch": "batch1",
+        "policy": "8C(25%)-3.6C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 676.5,
+        "std": 36.062,
+        "min": 651.0,
+        "max": 702.0,
+        "lower_bounds": [],
+        "t80_policy": 11.042,
+        "avgC_policy": 4.347,
+        "I_qw_policy": 4.975,
+        "t80_meas": 11.055,
+        "I_avg80_meas": 4.342,
+        "I_qw_meas": 4.973
+      },
+      {
+        "batch": "batch1",
+        "policy": "8C(35%)-3.6C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 607.5,
+        "std": 12.021,
+        "min": 599.0,
+        "max": 616.0,
+        "lower_bounds": [],
+        "t80_policy": 10.125,
+        "avgC_policy": 4.741,
+        "I_qw_policy": 5.525,
+        "t80_meas": 10.137,
+        "I_avg80_meas": 4.735,
+        "I_qw_meas": 5.523
+      },
+      {
+        "batch": "batch2",
+        "policy": "3.6C(30%)-6C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 421.0,
+        "std": 7.071,
+        "min": 416.0,
+        "max": 426.0,
+        "lower_bounds": [],
+        "t80_policy": 10.0,
+        "avgC_policy": 4.8,
+        "I_qw_policy": 5.1,
+        "t80_meas": 10.021,
+        "I_avg80_meas": 4.79,
+        "I_qw_meas": 5.087
+      },
+      {
+        "batch": "batch2",
+        "policy": "3.6C(9%)-5C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 394.5,
+        "std": 2.121,
+        "min": 393.0,
+        "max": 396.0,
+        "lower_bounds": [],
+        "t80_policy": 10.02,
+        "avgC_policy": 4.79,
+        "I_qw_policy": 4.842,
+        "t80_meas": 10.009,
+        "I_avg80_meas": 4.796,
+        "I_qw_meas": 4.848
+      },
+      {
+        "batch": "batch2",
+        "policy": "4.65C(44%)-5C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 482.5,
+        "std": 23.335,
+        "min": 466.0,
+        "max": 499.0,
+        "lower_bounds": [],
+        "t80_policy": 9.997,
+        "avgC_policy": 4.801,
+        "I_qw_policy": 4.808,
+        "t80_meas": 10.006,
+        "I_avg80_meas": 4.797,
+        "I_qw_meas": 4.806
+      },
+      {
+        "batch": "batch2",
+        "policy": "4.65C(69%)-6C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 452.0,
+        "std": 11.314,
+        "min": 444.0,
+        "max": 460.0,
+        "lower_bounds": [],
+        "t80_policy": 10.003,
+        "avgC_policy": 4.798,
+        "I_qw_policy": 4.836,
+        "t80_meas": 10.043,
+        "I_avg80_meas": 4.78,
+        "I_qw_meas": 4.81
+      },
+      {
+        "batch": "batch2",
+        "policy": "4.8C(80%)-4.8C",
+        "group": "fastcharge",
+        "n_labeled": 5,
+        "n_censored_or_nan": 0,
+        "mean": 483.6,
+        "std": 30.32,
+        "min": 437.0,
+        "max": 514.0,
+        "lower_bounds": [],
+        "t80_policy": 10.0,
+        "avgC_policy": 4.8,
+        "I_qw_policy": 4.8,
+        "t80_meas": 10.003,
+        "I_avg80_meas": 4.798,
+        "I_qw_meas": 4.8
+      },
+      {
+        "batch": "batch2",
+        "policy": "4.8C(80%)-4.8C-newstructure",
+        "group": "newstructure",
+        "n_labeled": 3,
+        "n_censored_or_nan": 0,
+        "mean": 871.67,
+        "std": 137.19,
+        "min": 777.0,
+        "max": 1029.0,
+        "lower_bounds": [],
+        "t80_policy": 10.0,
+        "avgC_policy": 4.8,
+        "I_qw_policy": 4.8,
+        "t80_meas": 10.004,
+        "I_avg80_meas": 4.798,
+        "I_qw_meas": 4.799
+      },
+      {
+        "batch": "batch2",
+        "policy": "5.2C(50%)-4.25C",
+        "group": "fastcharge",
+        "n_labeled": 5,
+        "n_censored_or_nan": 0,
+        "mean": 454.0,
+        "std": 20.917,
+        "min": 424.0,
+        "max": 474.0,
+        "lower_bounds": [],
+        "t80_policy": 10.005,
+        "avgC_policy": 4.798,
+        "I_qw_policy": 4.844,
+        "t80_meas": 10.007,
+        "I_avg80_meas": 4.797,
+        "I_qw_meas": 4.846
+      },
+      {
+        "batch": "batch2",
+        "policy": "5.2C(58%)-4C",
+        "group": "fastcharge",
+        "n_labeled": 4,
+        "n_censored_or_nan": 0,
+        "mean": 477.75,
+        "std": 18.464,
+        "min": 452.0,
+        "max": 493.0,
+        "lower_bounds": [],
+        "t80_policy": 9.992,
+        "avgC_policy": 4.804,
+        "I_qw_policy": 4.87,
+        "t80_meas": 10.006,
+        "I_avg80_meas": 4.797,
+        "I_qw_meas": 4.867
+      },
+      {
+        "batch": "batch2",
+        "policy": "5.2C(58%)-4C-newstructure",
+        "group": "newstructure",
+        "n_labeled": 3,
+        "n_censored_or_nan": 0,
+        "mean": 961.67,
+        "std": 157.62,
+        "min": 841.0,
+        "max": 1140.0,
+        "lower_bounds": [],
+        "t80_policy": 9.992,
+        "avgC_policy": 4.804,
+        "I_qw_policy": 4.87,
+        "t80_meas": 10.006,
+        "I_avg80_meas": 4.797,
+        "I_qw_meas": 4.867
+      },
+      {
+        "batch": "batch2",
+        "policy": "5.6C(26%)-4.5C",
+        "group": "fastcharge",
+        "n_labeled": 6,
+        "n_censored_or_nan": 0,
+        "mean": 448.5,
+        "std": 29.126,
+        "min": 412.0,
+        "max": 491.0,
+        "lower_bounds": [],
+        "t80_policy": 9.986,
+        "avgC_policy": 4.807,
+        "I_qw_policy": 4.858,
+        "t80_meas": 10.008,
+        "I_avg80_meas": 4.796,
+        "I_qw_meas": 4.85
+      },
+      {
+        "batch": "batch2",
+        "policy": "5.6C(26%)-4.5C-newstructure",
+        "group": "newstructure",
+        "n_labeled": 3,
+        "n_censored_or_nan": 0,
+        "mean": 991.33,
+        "std": 197.56,
+        "min": 791.0,
+        "max": 1186.0,
+        "lower_bounds": [],
+        "t80_policy": 9.986,
+        "avgC_policy": 4.807,
+        "I_qw_policy": 4.858,
+        "t80_meas": 10.007,
+        "I_avg80_meas": 4.797,
+        "I_qw_meas": 4.849
+      },
+      {
+        "batch": "batch2",
+        "policy": "6C(60%)-3C",
+        "group": "fastcharge",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 400.0,
+        "std": 11.314,
+        "min": 392.0,
+        "max": 408.0,
+        "lower_bounds": [],
+        "t80_policy": 10.0,
+        "avgC_policy": 4.8,
+        "I_qw_policy": 5.25,
+        "t80_meas": 10.009,
+        "I_avg80_meas": 4.796,
+        "I_qw_meas": 5.253
+      },
+      {
+        "batch": "batch3",
+        "policy": "3.7C(31%)-5.9C-newstructure",
+        "group": "newstructure",
+        "n_labeled": 3,
+        "n_censored_or_nan": 0,
+        "mean": 660.0,
+        "std": 115.66,
+        "min": 541.0,
+        "max": 772.0,
+        "lower_bounds": [],
+        "t80_policy": 10.01,
+        "avgC_policy": 4.795,
+        "I_qw_policy": 5.048,
+        "t80_meas": 10.015,
+        "I_avg80_meas": 4.793,
+        "I_qw_meas": 5.045
+      },
+      {
+        "batch": "batch3",
+        "policy": "4.8C(80%)-4.8C-newstructure",
+        "group": "newstructure",
+        "n_labeled": 6,
+        "n_censored_or_nan": 2,
+        "mean": 1564.2,
+        "std": 285.72,
+        "min": 1078.0,
+        "max": 1836.0,
+        "lower_bounds": [
+          2189,
+          2237
+        ],
+        "t80_policy": 10.0,
+        "avgC_policy": 4.8,
+        "I_qw_policy": 4.8,
+        "t80_meas": 11.004,
+        "I_avg80_meas": 4.362,
+        "I_qw_meas": 4.363
+      },
+      {
+        "batch": "batch3",
+        "policy": "5.3C(54%)-4C-newstructure",
+        "group": "newstructure",
+        "n_labeled": 8,
+        "n_censored_or_nan": 0,
+        "mean": 1074.4,
+        "std": 129.67,
+        "min": 935.0,
+        "max": 1315.0,
+        "lower_bounds": [],
+        "t80_policy": 10.013,
+        "avgC_policy": 4.794,
+        "I_qw_policy": 4.877,
+        "t80_meas": 10.01,
+        "I_avg80_meas": 4.795,
+        "I_qw_meas": 4.882
+      },
+      {
+        "batch": "batch3",
+        "policy": "5.6C(19%)-4.6C-newstructure",
+        "group": "newstructure",
+        "n_labeled": 8,
+        "n_censored_or_nan": 0,
+        "mean": 1001.4,
+        "std": 174.56,
+        "min": 796.0,
+        "max": 1267.0,
+        "lower_bounds": [],
+        "t80_policy": 9.992,
+        "avgC_policy": 4.804,
+        "I_qw_policy": 4.837,
+        "t80_meas": 10.01,
+        "I_avg80_meas": 4.795,
+        "I_qw_meas": 4.832
+      },
+      {
+        "batch": "batch3",
+        "policy": "5.6C(36%)-4.3C-newstructure",
+        "group": "newstructure",
+        "n_labeled": 8,
+        "n_censored_or_nan": 0,
+        "mean": 930.88,
+        "std": 135.02,
+        "min": 786.0,
+        "max": 1155.0,
+        "lower_bounds": [],
+        "t80_policy": 9.997,
+        "avgC_policy": 4.802,
+        "I_qw_policy": 4.885,
+        "t80_meas": 10.009,
+        "I_avg80_meas": 4.796,
+        "I_qw_meas": 4.882
+      },
+      {
+        "batch": "batch3",
+        "policy": "5.9C(15%)-4.6C-newstructure",
+        "group": "newstructure",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 867.0,
+        "std": 12.728,
+        "min": 858.0,
+        "max": 876.0,
+        "lower_bounds": [],
+        "t80_policy": 10.004,
+        "avgC_policy": 4.798,
+        "I_qw_policy": 4.844,
+        "t80_meas": 10.008,
+        "I_avg80_meas": 4.796,
+        "I_qw_meas": 4.845
+      },
+      {
+        "batch": "batch3",
+        "policy": "5.9C(60%)-3.1C-newstructure",
+        "group": "newstructure",
+        "n_labeled": 2,
+        "n_censored_or_nan": 0,
+        "mean": 866.5,
+        "std": 191.63,
+        "min": 731.0,
+        "max": 1002.0,
+        "lower_bounds": [],
+        "t80_policy": 9.973,
+        "avgC_policy": 4.813,
+        "I_qw_policy": 5.2,
+        "t80_meas": 10.01,
+        "I_avg80_meas": 4.795,
+        "I_qw_meas": 5.19
+      },
+      {
+        "batch": "batch3",
+        "policy": "5C(67%)-4C-newstructure",
+        "group": "newstructure",
+        "n_labeled": 7,
+        "n_censored_or_nan": 0,
+        "mean": 1105.7,
+        "std": 402.91,
+        "min": 813.0,
+        "max": 1935.0,
+        "lower_bounds": [],
+        "t80_policy": 9.99,
+        "avgC_policy": 4.805,
+        "I_qw_policy": 4.838,
+        "t80_meas": 10.009,
+        "I_avg80_meas": 4.795,
+        "I_qw_meas": 4.832
+      }
+    ],
+    "policy_effect": {
+      "batch1": {
+        "n_cells": 36,
+        "n_policies": 20,
+        "eta2": 0.894,
+        "omega2": 0.762,
+        "eta2_null_expect": 0.543,
+        "kruskal_H": 29.94,
+        "kruskal_p": 0.0526
+      },
+      "batch2": {
+        "n_cells": 39,
+        "n_policies": 12,
+        "eta2": 0.906,
+        "omega2": 0.864,
+        "eta2_null_expect": 0.289,
+        "kruskal_H": 31.18,
+        "kruskal_p": 0.00103
+      },
+      "batch3": {
+        "n_cells": 44,
+        "n_policies": 8,
+        "eta2": 0.55,
+        "omega2": 0.457,
+        "eta2_null_expect": 0.163,
+        "kruskal_H": 21.45,
+        "kruskal_p": 0.00316
+      }
+    },
+    "policy_effect_b2_fastcharge_only": {
+      "n_cells": 30,
+      "n_policies": 9,
+      "eta2": 0.671,
+      "omega2": 0.537,
+      "eta2_null_expect": 0.276,
+      "kruskal_H": 18.23,
+      "kruskal_p": 0.0195
+    },
+    "same_policy_name_across_batches": {
+      "4.8C(80%)-4.8C": {
+        "batch1-fastcharge": {
+          "n": 2,
+          "mean": 753.0,
+          "min": 636,
+          "max": 870,
+          "I_peak_meas_median": 4.8
+        },
+        "batch2-fastcharge": {
+          "n": 5,
+          "mean": 483.6,
+          "min": 437,
+          "max": 514,
+          "I_peak_meas_median": 4.8
+        },
+        "batch2-newstructure": {
+          "n": 3,
+          "mean": 871.7,
+          "min": 777,
+          "max": 1029,
+          "I_peak_meas_median": 4.8
+        },
+        "batch3-newstructure": {
+          "n": 6,
+          "mean": 1564.2,
+          "min": 1078,
+          "max": 1836,
+          "I_peak_meas_median": 4.37
+        }
+      },
+      "5.2C(58%)-4C": {
+        "batch2-fastcharge": {
+          "n": 4,
+          "mean": 477.8,
+          "min": 452,
+          "max": 493,
+          "I_peak_meas_median": 5.21
+        },
+        "batch2-newstructure": {
+          "n": 3,
+          "mean": 961.7,
+          "min": 841,
+          "max": 1140,
+          "I_peak_meas_median": 5.2
+        }
+      },
+      "5.6C(26%)-4.5C": {
+        "batch2-fastcharge": {
+          "n": 6,
+          "mean": 448.5,
+          "min": 412,
+          "max": 491,
+          "I_peak_meas_median": 5.6
+        },
+        "batch2-newstructure": {
+          "n": 3,
+          "mean": 991.3,
+          "min": 791,
+          "max": 1186,
+          "I_peak_meas_median": 5.6
+        }
+      },
+      "6C(60%)-3C": {
+        "batch1-fastcharge": {
+          "n": 2,
+          "mean": 744.0,
+          "min": 731,
+          "max": 757,
+          "I_peak_meas_median": 6.0
+        },
+        "batch2-fastcharge": {
+          "n": 2,
+          "mean": 400.0,
+          "min": 392,
+          "max": 408,
+          "I_peak_meas_median": 6.0
+        }
+      }
+    },
+    "same_policy_name_4.8C_same_measured_current": {
+      "groups": {
+        "batch1-fastcharge": {
+          "n": 2,
+          "mean": 753.0,
+          "min": 636,
+          "max": 870,
+          "I_peak_meas_median": 4.8
+        },
+        "batch2-fastcharge": {
+          "n": 5,
+          "mean": 483.6,
+          "min": 437,
+          "max": 514,
+          "I_peak_meas_median": 4.8
+        },
+        "batch2-newstructure": {
+          "n": 3,
+          "mean": 871.7,
+          "min": 777,
+          "max": 1029,
+          "I_peak_meas_median": 4.8
+        }
+      },
+      "ratio_max_over_min": 1.8,
+      "ratio_incl_batch3_name_only": 3.23
+    },
+    "b2_fastcharge_vs_newstructure_same_name": {
+      "4.8C(80%)-4.8C": {
+        "fc_max": 514,
+        "ns_min": 777
+      },
+      "5.2C(58%)-4C": {
+        "fc_max": 493,
+        "ns_min": 841
+      },
+      "5.6C(26%)-4.5C": {
+        "fc_max": 491,
+        "ns_min": 791
+      }
+    },
+    "b1_fully_censored_policies": [
+      "3.6C(80%)-3.6C",
+      "4C(80%)-4C",
+      "5.4C(50%)-3.6C"
+    ]
+  },
+  "b_crate_vs_life": {
+    "batch1_labeled_n": 36,
+    "batch1_avgC_range_labeled": [
+      4.0,
+      5.4
+    ],
+    "batch1_avgC_range_all": [
+      3.6,
+      5.4
+    ],
+    "batch1_censored_avgC": [
+      3.6,
+      3.6,
+      3.6,
+      4.0,
+      4.0,
+      4.15,
+      4.24,
+      4.32,
+      4.55,
+      4.55
+    ],
+    "corr_batch1_cell": {
+      "C1": {
+        "spearman": {
+          "rho": -0.237,
+          "p": 0.163,
+          "n": 36
+        },
+        "pearson": {
+          "r": -0.235,
+          "p": 0.167,
+          "n": 36
+        }
+      },
+      "Q1": {
+        "spearman": {
+          "rho": -0.059,
+          "p": 0.733,
+          "n": 36
+        },
+        "pearson": {
+          "r": -0.175,
+          "p": 0.308,
+          "n": 36
+        }
+      },
+      "C2": {
+        "spearman": {
+          "rho": -0.161,
+          "p": 0.347,
+          "n": 36
+        },
+        "pearson": {
+          "r": -0.235,
+          "p": 0.168,
+          "n": 36
+        }
+      },
+      "t80_min": {
+        "spearman": {
+          "rho": 0.436,
+          "p": 0.00786,
+          "n": 36
+        },
+        "pearson": {
+          "r": 0.576,
+          "p": 0.000233,
+          "n": 36
+        }
+      },
+      "avgC_80": {
+        "spearman": {
+          "rho": -0.436,
+          "p": 0.00786,
+          "n": 36
+        },
+        "pearson": {
+          "r": -0.58,
+          "p": 0.00021,
+          "n": 36
+        }
+      },
+      "I_qw_policy": {
+        "spearman": {
+          "rho": -0.78,
+          "p": 2.05e-08,
+          "n": 36
+        },
+        "pearson": {
+          "r": -0.816,
+          "p": 1.32e-09,
+          "n": 36
+        }
+      },
+      "I_qw80": {
+        "spearman": {
+          "rho": -0.785,
+          "p": 1.5e-08,
+          "n": 36
+        },
+        "pearson": {
+          "r": -0.816,
+          "p": 1.32e-09,
+          "n": 36
+        }
+      },
+      "I_peak": {
+        "spearman": {
+          "rho": -0.22,
+          "p": 0.198,
+          "n": 36
+        },
+        "pearson": {
+          "r": -0.235,
+          "p": 0.167,
+          "n": 36
+        }
+      }
+    },
+    "corr_batch1_policy_level": {
+      "C1": {
+        "rho": -0.349,
+        "p": 0.132,
+        "n": 20
+      },
+      "Q1": {
+        "rho": -0.02,
+        "p": 0.934,
+        "n": 20
+      },
+      "C2": {
+        "rho": -0.026,
+        "p": 0.912,
+        "n": 20
+      },
+      "t80_min": {
+        "rho": 0.466,
+        "p": 0.0384,
+        "n": 20
+      },
+      "avgC_80": {
+        "rho": -0.466,
+        "p": 0.0384,
+        "n": 20
+      },
+      "I_qw_policy": {
+        "rho": -0.844,
+        "p": 2.88e-06,
+        "n": 20
+      },
+      "I_qw80": {
+        "rho": -0.862,
+        "p": 1.06e-06,
+        "n": 20
+      },
+      "I_peak": {
+        "rho": -0.301,
+        "p": 0.198,
+        "n": 20
+      }
+    },
+    "corr_batch1_incl_censored_lowerbound": {
+      "C1": {
+        "rho": -0.483,
+        "p": 0.00068,
+        "n": 46
+      },
+      "avgC_80": {
+        "rho": -0.634,
+        "p": 2.19e-06,
+        "n": 46
+      },
+      "t80_min": {
+        "rho": 0.634,
+        "p": 2.19e-06,
+        "n": 46
+      },
+      "I_qw80": {
+        "rho": -0.87,
+        "p": 4.41e-15,
+        "n": 46
+      }
+    },
+    "c1_8_policies": {
+      "8C(15%)-3.6C": {
+        "mean": 1008.5,
+        "size": 2
+      },
+      "8C(25%)-3.6C": {
+        "mean": 676.5,
+        "size": 2
+      },
+      "8C(35%)-3.6C": {
+        "mean": 607.5,
+        "size": 2
+      }
+    },
+    "life_by_C1": {
+      "4.4": {
+        "mean": 1074.0,
+        "min": 1074.0,
+        "max": 1074.0,
+        "size": 1
+      },
+      "4.8": {
+        "mean": 753.0,
+        "min": 636.0,
+        "max": 870.0,
+        "size": 2
+      },
+      "5.4": {
+        "mean": 773.2,
+        "min": 534.0,
+        "max": 1054.0,
+        "size": 10
+      },
+      "6.0": {
+        "mean": 858.8,
+        "min": 709.0,
+        "max": 1017.0,
+        "size": 11
+      },
+      "7.0": {
+        "mean": 673.2,
+        "min": 617.0,
+        "max": 742.0,
+        "size": 6
+      },
+      "8.0": {
+        "mean": 764.2,
+        "min": 599.0,
+        "max": 1051.0,
+        "size": 6
+      }
+    },
+    "avgC_is_48_over_t80": "avgC_80 = 48/t80_min (단조 변환) → Spearman |ρ| 동일",
+    "iqw_policy_vs_meas_b1_maxabsdiff": 0.0092,
+    "batch23_iso_time": {
+      "batch1": {
+        "avgC_policy_min": 3.6,
+        "avgC_policy_max": 5.4,
+        "avgC_policy_std": 0.4059,
+        "t80_policy_min": 8.889,
+        "t80_policy_max": 13.333,
+        "I_qw80_meas_min": 3.599,
+        "I_qw80_meas_max": 5.523,
+        "I_avg80_meas_min": 3.599,
+        "I_avg80_meas_max": 5.398
+      },
+      "batch2": {
+        "avgC_policy_min": 4.79,
+        "avgC_policy_max": 4.807,
+        "avgC_policy_std": 0.0041,
+        "t80_policy_min": 9.986,
+        "t80_policy_max": 10.02,
+        "I_qw80_meas_min": 4.798,
+        "I_qw80_meas_max": 5.256,
+        "I_avg80_meas_min": 4.777,
+        "I_avg80_meas_max": 4.799
+      },
+      "batch3": {
+        "avgC_policy_min": 4.794,
+        "avgC_policy_max": 4.813,
+        "avgC_policy_std": 0.0047,
+        "t80_policy_min": 9.973,
+        "t80_policy_max": 10.013,
+        "I_qw80_meas_min": 4.363,
+        "I_qw80_meas_max": 5.191,
+        "I_avg80_meas_min": 4.362,
+        "I_avg80_meas_max": 4.797
+      }
+    },
+    "b1_I_qw80_range_labeled": [
+      4.399,
+      5.523
+    ],
+    "corr_other_batches": {
+      "batch2_all": {
+        "avgC_80": {
+          "rho": 0.353,
+          "p": 0.0274,
+          "n": 39
+        },
+        "I_avg80": {
+          "rho": 0.544,
+          "p": 0.000346,
+          "n": 39
+        },
+        "I_qw80": {
+          "rho": -0.174,
+          "p": 0.289,
+          "n": 39
+        },
+        "I_peak": {
+          "rho": -0.319,
+          "p": 0.0477,
+          "n": 39
+        },
+        "C1": {
+          "rho": 0.055,
+          "p": 0.739,
+          "n": 39
+        },
+        "Q1": {
+          "rho": 0.288,
+          "p": 0.0756,
+          "n": 39
+        }
+      },
+      "batch2_fastcharge": {
+        "avgC_80": {
+          "rho": 0.239,
+          "p": 0.203,
+          "n": 30
+        },
+        "I_avg80": {
+          "rho": 0.555,
+          "p": 0.00147,
+          "n": 30
+        },
+        "I_qw80": {
+          "rho": -0.381,
+          "p": 0.0379,
+          "n": 30
+        },
+        "I_peak": {
+          "rho": -0.406,
+          "p": 0.0261,
+          "n": 30
+        },
+        "C1": {
+          "rho": -0.061,
+          "p": 0.747,
+          "n": 30
+        },
+        "Q1": {
+          "rho": 0.396,
+          "p": 0.0303,
+          "n": 30
+        }
+      },
+      "batch3": {
+        "avgC_80": {
+          "rho": -0.132,
+          "p": 0.393,
+          "n": 44
+        },
+        "I_avg80": {
+          "rho": -0.366,
+          "p": 0.0146,
+          "n": 44
+        },
+        "I_qw80": {
+          "rho": -0.535,
+          "p": 0.000183,
+          "n": 44
+        },
+        "I_peak": {
+          "rho": -0.594,
+          "p": 2.17e-05,
+          "n": 44
+        },
+        "C1": {
+          "rho": -0.229,
+          "p": 0.135,
+          "n": 44
+        },
+        "Q1": {
+          "rho": 0.443,
+          "p": 0.00258,
+          "n": 44
+        }
+      },
+      "batch3_excl_measured_4.36C_labeled6": {
+        "n_excluded_labeled": 6,
+        "I_qw80": {
+          "rho": -0.322,
+          "p": 0.0485,
+          "n": 38
+        },
+        "I_qw_policy": {
+          "rho": -0.303,
+          "p": 0.0645,
+          "n": 38
+        },
+        "I_peak": {
+          "rho": -0.418,
+          "p": 0.00903,
+          "n": 38
+        }
+      }
+    },
+    "life_at_policy_t80_10min": {
+      "batch1": {
+        "n": 8,
+        "mean": 787.2,
+        "min": 636,
+        "max": 876,
+        "policies": [
+          "4.8C(80%)-4.8C",
+          "5.4C(60%)-3.6C",
+          "6C(50%)-3.6C",
+          "6C(60%)-3C"
+        ]
+      },
+      "batch2-fastcharge": {
+        "n": 30,
+        "mean": 453.0,
+        "min": 392,
+        "max": 514
+      },
+      "batch2-newstructure": {
+        "n": 9,
+        "mean": 941.6,
+        "min": 777,
+        "max": 1186
+      },
+      "batch3-newstructure": {
+        "n": 44,
+        "mean": 1059.7,
+        "min": 541,
+        "max": 1935
+      }
+    },
+    "b1_within_b2fc_iqw_range": {
+      "b2fc_I_qw80_range": [
+        4.7983,
+        5.2561
+      ],
+      "b2fc_mean_life": 453.0,
+      "strict": {
+        "n": 21,
+        "mean_life": 770.1,
+        "b2fc_shorter_pct": 41.2
+      },
+      "loose_0.0005C": {
+        "n": 22,
+        "mean_life": 773.4,
+        "b2fc_shorter_pct": 41.4
+      }
+    }
+  },
+  "b_notion_thresholds": {
+    "definitions": {
+      "def_t80": "정책 t80(0→80% 충전시간) ≤ 10분 = 고속 충전 (평균 C-rate ≥ 4.8C)",
+      "def_iqw_tertile": "실측 충전량 가중 평균 전류 3분위 (Batch 1 라벨 36셀 기준 경계 4.7990C, 5.0316C; 정책값 4.80 동률 6셀은 실측 미세 차이로 하위 4 / 중위 2 로 갈림 → tertile_tie_sensitivity 참고)",
+      "classes": "장수명 >1,000 / 단수명 <500 (노션 Q1 정의), 라벨 기준 550 (노션 분류 정의). 중도절단 셀은 하한값이라 개수에서 분리"
+    },
+    "iqw_tertile_cuts": [
+      4.799,
+      5.032
+    ],
+    "table": {
+      "def_t80": {
+        ">10분 (느린 쪽)": {
+          "n_labeled": 24,
+          "mean": 813.0,
+          "min": 599,
+          "max": 1074,
+          "n_gt1000": 5,
+          "n_550_1000": 19,
+          "n_500_550": 0,
+          "n_lt500": 0,
+          "n_lt550": 0,
+          "n_censored": 10,
+          "censored_lower_bounds": [
+            879,
+            891,
+            897,
+            902,
+            906,
+            1177,
+            1179,
+            1190,
+            1226,
+            1227
+          ],
+          "n_censored_lb_gt1000": 5
+        },
+        "≤10분 (고속)": {
+          "n_labeled": 12,
+          "mean": 739.2,
+          "min": 534,
+          "max": 876,
+          "n_gt1000": 0,
+          "n_550_1000": 11,
+          "n_500_550": 1,
+          "n_lt500": 0,
+          "n_lt550": 1,
+          "n_censored": 0,
+          "censored_lower_bounds": [],
+          "n_censored_lb_gt1000": 0
+        }
+      },
+      "def_iqw_tertile": {
+        "하위 1/3": {
+          "n_labeled": 12,
+          "mean": 927.4,
+          "min": 719,
+          "max": 1074,
+          "n_gt1000": 5,
+          "n_550_1000": 7,
+          "n_500_550": 0,
+          "n_lt500": 0,
+          "n_lt550": 0,
+          "n_censored": 10,
+          "censored_lower_bounds": [
+            879,
+            891,
+            897,
+            902,
+            906,
+            1177,
+            1179,
+            1190,
+            1226,
+            1227
+          ],
+          "n_censored_lb_gt1000": 5
+        },
+        "중위 1/3": {
+          "n_labeled": 12,
+          "mean": 762.7,
+          "min": 636,
+          "max": 917,
+          "n_gt1000": 0,
+          "n_550_1000": 12,
+          "n_500_550": 0,
+          "n_lt500": 0,
+          "n_lt550": 0,
+          "n_censored": 0,
+          "censored_lower_bounds": [],
+          "n_censored_lb_gt1000": 0
+        },
+        "상위 1/3": {
+          "n_labeled": 12,
+          "mean": 675.2,
+          "min": 534,
+          "max": 876,
+          "n_gt1000": 0,
+          "n_550_1000": 11,
+          "n_500_550": 1,
+          "n_lt500": 0,
+          "n_lt550": 1,
+          "n_censored": 0,
+          "censored_lower_bounds": [],
+          "n_censored_lb_gt1000": 0
+        }
+      }
+    },
+    "tests": {
+      "t80_mannwhitney_p": 0.29,
+      "tertile_kruskal_p": 0.000265,
+      "tertile_low_vs_high_mannwhitney_p": 0.000275
+    },
+    "b1_cells_gt1000_labeled": [
+      {
+        "cell_key": "batch1-05",
+        "policy": "4.4C(80%)-4.4C",
+        "cycle_life": 1074.0,
+        "I_qw80": 4.399,
+        "t80_min": 10.909
+      },
+      {
+        "cell_key": "batch1-09",
+        "policy": "5.4C(40%)-3.6C",
+        "cycle_life": 1054.0,
+        "I_qw80": 4.498,
+        "t80_min": 11.111
+      },
+      {
+        "cell_key": "batch1-23",
+        "policy": "6C(30%)-3.6C",
+        "cycle_life": 1014.0,
+        "I_qw80": 4.498,
+        "t80_min": 11.333
+      },
+      {
+        "cell_key": "batch1-24",
+        "policy": "6C(40%)-3C",
+        "cycle_life": 1017.0,
+        "I_qw80": 4.499,
+        "t80_min": 12.0
+      },
+      {
+        "cell_key": "batch1-41",
+        "policy": "8C(15%)-3.6C",
+        "cycle_life": 1051.0,
+        "I_qw80": 4.422,
+        "t80_min": 11.958
+      }
+    ],
+    "b1_cells_lt550_labeled": [
+      {
+        "cell_key": "batch1-20",
+        "policy": "5.4C(80%)-5.4C",
+        "cycle_life": 534.0,
+        "I_qw80": 5.395,
+        "t80_min": 8.889
+      }
+    ],
+    "tertile_tie_sensitivity": {
+      "note": "실측 3분위 경계 1 (4.799C) 에서 정책 I_qw = 4.80 인 셀 6개(3개 정책 × 2셀)가 실측 차이 <0.001C 로 하위 4 / 중위 2 로 갈림 (방법 자체의 실측–정책 차이 최대 0.009C 보다 작음). 경계 2 (5.032C) 에는 동률 없음",
+      "tied_policy_values_at_cut1": [
+        4.8
+      ],
+      "tied_policy_values_at_cut2": [],
+      "tied_cells": [
+        {
+          "cell_key": "batch1-06",
+          "policy": "4.8C(80%)-4.8C",
+          "I_qw_policy": 4.8,
+          "I_qw80": 4.7991,
+          "cycle_life": 636.0,
+          "measured_tier": "중위 1/3"
+        },
+        {
+          "cell_key": "batch1-07",
+          "policy": "4.8C(80%)-4.8C",
+          "I_qw_policy": 4.8,
+          "I_qw80": 4.7991,
+          "cycle_life": 870.0,
+          "measured_tier": "중위 1/3"
+        },
+        {
+          "cell_key": "batch1-14",
+          "policy": "5.4C(60%)-3C",
+          "I_qw_policy": 4.8,
+          "I_qw80": 4.7988,
+          "cycle_life": 880.0,
+          "measured_tier": "하위 1/3"
+        },
+        {
+          "cell_key": "batch1-15",
+          "policy": "5.4C(60%)-3C",
+          "I_qw_policy": 4.8,
+          "I_qw80": 4.7986,
+          "cycle_life": 719.0,
+          "measured_tier": "하위 1/3"
+        },
+        {
+          "cell_key": "batch1-26",
+          "policy": "6C(40%)-3.6C",
+          "I_qw_policy": 4.8,
+          "I_qw80": 4.7984,
+          "cycle_life": 870.0,
+          "measured_tier": "하위 1/3"
+        },
+        {
+          "cell_key": "batch1-27",
+          "policy": "6C(40%)-3.6C",
+          "I_qw_policy": 4.8,
+          "I_qw80": 4.7981,
+          "cycle_life": 842.0,
+          "measured_tier": "하위 1/3"
+        }
+      ],
+      "measured_tertile_n": {
+        "하위 1/3": 12,
+        "중위 1/3": 12,
+        "상위 1/3": 12
+      },
+      "ties_to_low (정책 I_qw ≤ 4.80 → 하위)": {
+        "하위 1/3": {
+          "n_labeled": 14,
+          "mean": 902.5,
+          "min": 636,
+          "max": 1074,
+          "n_gt1000": 5,
+          "n_550_1000": 9,
+          "n_500_550": 0,
+          "n_lt500": 0,
+          "n_lt550": 0,
+          "n_censored": 10,
+          "censored_lower_bounds": [
+            879,
+            891,
+            897,
+            902,
+            906,
+            1177,
+            1179,
+            1190,
+            1226,
+            1227
+          ],
+          "n_censored_lb_gt1000": 5
+        },
+        "중위 1/3": {
+          "n_labeled": 10,
+          "mean": 764.6,
+          "min": 648,
+          "max": 917,
+          "n_gt1000": 0,
+          "n_550_1000": 10,
+          "n_500_550": 0,
+          "n_lt500": 0,
+          "n_lt550": 0,
+          "n_censored": 0,
+          "censored_lower_bounds": [],
+          "n_censored_lb_gt1000": 0
+        },
+        "상위 1/3": {
+          "n_labeled": 12,
+          "mean": 675.2,
+          "min": 534,
+          "max": 876,
+          "n_gt1000": 0,
+          "n_550_1000": 11,
+          "n_500_550": 1,
+          "n_lt500": 0,
+          "n_lt550": 1,
+          "n_censored": 0,
+          "censored_lower_bounds": [],
+          "n_censored_lb_gt1000": 0
+        },
+        "kruskal_p": 0.000683,
+        "low_vs_high_mannwhitney_p": 0.000467
+      },
+      "ties_to_mid (정책 I_qw = 4.80 → 중위)": {
+        "하위 1/3": {
+          "n_labeled": 8,
+          "mean": 977.2,
+          "min": 788,
+          "max": 1074,
+          "n_gt1000": 5,
+          "n_550_1000": 3,
+          "n_500_550": 0,
+          "n_lt500": 0,
+          "n_lt550": 0,
+          "n_censored": 10,
+          "censored_lower_bounds": [
+            879,
+            891,
+            897,
+            902,
+            906,
+            1177,
+            1179,
+            1190,
+            1226,
+            1227
+          ],
+          "n_censored_lb_gt1000": 5
+        },
+        "중위 1/3": {
+          "n_labeled": 16,
+          "mean": 778.9,
+          "min": 636,
+          "max": 917,
+          "n_gt1000": 0,
+          "n_550_1000": 16,
+          "n_500_550": 0,
+          "n_lt500": 0,
+          "n_lt550": 0,
+          "n_censored": 0,
+          "censored_lower_bounds": [],
+          "n_censored_lb_gt1000": 0
+        },
+        "상위 1/3": {
+          "n_labeled": 12,
+          "mean": 675.2,
+          "min": 534,
+          "max": 876,
+          "n_gt1000": 0,
+          "n_550_1000": 11,
+          "n_500_550": 1,
+          "n_lt500": 0,
+          "n_lt550": 1,
+          "n_censored": 0,
+          "censored_lower_bounds": [],
+          "n_censored_lb_gt1000": 0
+        },
+        "kruskal_p": 0.000213,
+        "low_vs_high_mannwhitney_p": 0.000514
+      },
+      "policy_cut_values": {
+        "tie_value": 4.8,
+        "lo_max_if_ties_to_mid": 4.725,
+        "hi_min": 5.1
+      }
+    }
+  },
+  "c_current_pattern": {
+    "descriptor_definitions": {
+      "I_peak": "충전 구간(I≥1.5C) 전류 99백분위 [C]",
+      "t_peak": "I ≥ 0.95·I_peak 유지 시간 [분]",
+      "t80_meas": "∫I dt/60 이 0.8(정격 80%) 도달까지 시간 [분]",
+      "I_avg80": "0.8/(t80_meas/60) [C]",
+      "I_qw80": "0→80% 구간 ∫I²dt/∫Idt = Σ C_k·ΔSOC_k/0.8 (충전량 가중 평균 전류) [C]",
+      "t_chg": "충전 시작~방전 시작(휴지·1C CC-CV 포함) [분]",
+      "dT_chg": "0→80% 구간 최고 T − 시작 T [°C]",
+      "slope_2_100": "clean QD 사이클 2–100 Theil–Sen 기울기 × 1e5 [mAh/100cyc], 음수 = 감소",
+      "slope_100_300": "clean QD 사이클 100–300 Theil–Sen 기울기 × 1e5 [mAh/100cyc], 음수 = 감소 (100 사이클 이후 정보 → EDA 전용)",
+      "fade_life": "(QD_init − 0.88)/cycle_life × 1000 [mAh/cyc], QD_init = 사이클 2–11 QD 중앙값",
+      "dTmax": "Tmax 중앙값(사이클 91–100) − Tmax 중앙값(사이클 6–15) [°C]",
+      "dIR": "IR 중앙값(91–100) − IR 중앙값(2–11) [mΩ]"
+    },
+    "I_column_unit_check_qc_per_c_median": 1.1,
+    "spearman": {
+      "batch1": {
+        "I_peak": {
+          "slope_2_100": {
+            "rho": -0.138,
+            "p": 0.422,
+            "n": 36
+          },
+          "slope_100_300": {
+            "rho": -0.095,
+            "p": 0.582,
+            "n": 36
+          },
+          "dTmax": {
+            "rho": 0.77,
+            "p": 3.98e-08,
+            "n": 36
+          },
+          "dIR": {
+            "rho": 0.786,
+            "p": 1.39e-08,
+            "n": 36
+          },
+          "cycle_life": {
+            "rho": -0.22,
+            "p": 0.198,
+            "n": 36
+          },
+          "fade_life": {
+            "rho": 0.233,
+            "p": 0.172,
+            "n": 36
+          }
+        },
+        "t_peak": {
+          "slope_2_100": {
+            "rho": -0.057,
+            "p": 0.741,
+            "n": 36
+          },
+          "slope_100_300": {
+            "rho": -0.128,
+            "p": 0.455,
+            "n": 36
+          },
+          "dTmax": {
+            "rho": -0.69,
+            "p": 3.19e-06,
+            "n": 36
+          },
+          "dIR": {
+            "rho": -0.684,
+            "p": 4.23e-06,
+            "n": 36
+          },
+          "cycle_life": {
+            "rho": 0.055,
+            "p": 0.75,
+            "n": 36
+          },
+          "fade_life": {
+            "rho": -0.045,
+            "p": 0.796,
+            "n": 36
+          }
+        },
+        "t80_meas": {
+          "slope_2_100": {
+            "rho": 0.54,
+            "p": 0.00068,
+            "n": 36
+          },
+          "slope_100_300": {
+            "rho": 0.558,
+            "p": 0.000403,
+            "n": 36
+          },
+          "dTmax": {
+            "rho": 0.212,
+            "p": 0.214,
+            "n": 36
+          },
+          "dIR": {
+            "rho": 0.229,
+            "p": 0.179,
+            "n": 36
+          },
+          "cycle_life": {
+            "rho": 0.435,
+            "p": 0.00807,
+            "n": 36
+          },
+          "fade_life": {
+            "rho": -0.522,
+            "p": 0.00109,
+            "n": 36
+          }
+        },
+        "I_avg80": {
+          "slope_2_100": {
+            "rho": -0.54,
+            "p": 0.00068,
+            "n": 36
+          },
+          "slope_100_300": {
+            "rho": -0.558,
+            "p": 0.000403,
+            "n": 36
+          },
+          "dTmax": {
+            "rho": -0.212,
+            "p": 0.214,
+            "n": 36
+          },
+          "dIR": {
+            "rho": -0.229,
+            "p": 0.179,
+            "n": 36
+          },
+          "cycle_life": {
+            "rho": -0.435,
+            "p": 0.00807,
+            "n": 36
+          },
+          "fade_life": {
+            "rho": 0.522,
+            "p": 0.00109,
+            "n": 36
+          }
+        },
+        "I_qw80": {
+          "slope_2_100": {
+            "rho": -0.612,
+            "p": 7.21e-05,
+            "n": 36
+          },
+          "slope_100_300": {
+            "rho": -0.792,
+            "p": 9.06e-09,
+            "n": 36
+          },
+          "dTmax": {
+            "rho": 0.294,
+            "p": 0.0816,
+            "n": 36
+          },
+          "dIR": {
+            "rho": 0.313,
+            "p": 0.0633,
+            "n": 36
+          },
+          "cycle_life": {
+            "rho": -0.785,
+            "p": 1.5e-08,
+            "n": 36
+          },
+          "fade_life": {
+            "rho": 0.843,
+            "p": 1.14e-10,
+            "n": 36
+          }
+        },
+        "t_chg": {
+          "slope_2_100": {
+            "rho": 0.499,
+            "p": 0.00193,
+            "n": 36
+          },
+          "slope_100_300": {
+            "rho": 0.529,
+            "p": 0.000904,
+            "n": 36
+          },
+          "dTmax": {
+            "rho": 0.219,
+            "p": 0.2,
+            "n": 36
+          },
+          "dIR": {
+            "rho": 0.227,
+            "p": 0.184,
+            "n": 36
+          },
+          "cycle_life": {
+            "rho": 0.42,
+            "p": 0.0107,
+            "n": 36
+          },
+          "fade_life": {
+            "rho": -0.505,
+            "p": 0.0017,
+            "n": 36
+          }
+        },
+        "dT_chg": {
+          "slope_2_100": {
+            "rho": -0.202,
+            "p": 0.237,
+            "n": 36
+          },
+          "slope_100_300": {
+            "rho": -0.534,
+            "p": 0.000799,
+            "n": 36
+          },
+          "dTmax": {
+            "rho": 0.159,
+            "p": 0.353,
+            "n": 36
+          },
+          "dIR": {
+            "rho": -0.048,
+            "p": 0.783,
+            "n": 36
+          },
+          "cycle_life": {
+            "rho": -0.548,
+            "p": 0.000536,
+            "n": 36
+          },
+          "fade_life": {
+            "rho": 0.532,
+            "p": 0.000838,
+            "n": 36
+          }
+        }
+      },
+      "batch2_fastcharge": {
+        "I_peak": {
+          "slope_2_100": {
+            "rho": -0.51,
+            "p": 0.00402,
+            "n": 30
+          },
+          "slope_100_300": {
+            "rho": -0.219,
+            "p": 0.246,
+            "n": 30
+          },
+          "dTmax": {
+            "rho": -0.039,
+            "p": 0.836,
+            "n": 30
+          },
+          "dIR": {
+            "rho": -0.118,
+            "p": 0.556,
+            "n": 27
+          },
+          "cycle_life": {
+            "rho": -0.406,
+            "p": 0.0261,
+            "n": 30
+          },
+          "fade_life": {
+            "rho": 0.431,
+            "p": 0.0174,
+            "n": 30
+          }
+        },
+        "t_peak": {
+          "slope_2_100": {
+            "rho": 0.446,
+            "p": 0.0136,
+            "n": 30
+          },
+          "slope_100_300": {
+            "rho": 0.282,
+            "p": 0.131,
+            "n": 30
+          },
+          "dTmax": {
+            "rho": 0.309,
+            "p": 0.0966,
+            "n": 30
+          },
+          "dIR": {
+            "rho": 0.473,
+            "p": 0.0128,
+            "n": 27
+          },
+          "cycle_life": {
+            "rho": 0.192,
+            "p": 0.309,
+            "n": 30
+          },
+          "fade_life": {
+            "rho": -0.176,
+            "p": 0.352,
+            "n": 30
+          }
+        },
+        "t80_meas": {
+          "slope_2_100": {
+            "rho": -0.509,
+            "p": 0.00405,
+            "n": 30
+          },
+          "slope_100_300": {
+            "rho": -0.372,
+            "p": 0.0428,
+            "n": 30
+          },
+          "dTmax": {
+            "rho": -0.044,
+            "p": 0.818,
+            "n": 30
+          },
+          "dIR": {
+            "rho": -0.43,
+            "p": 0.025,
+            "n": 27
+          },
+          "cycle_life": {
+            "rho": -0.555,
+            "p": 0.00147,
+            "n": 30
+          },
+          "fade_life": {
+            "rho": 0.463,
+            "p": 0.0101,
+            "n": 30
+          }
+        },
+        "I_avg80": {
+          "slope_2_100": {
+            "rho": 0.509,
+            "p": 0.00405,
+            "n": 30
+          },
+          "slope_100_300": {
+            "rho": 0.372,
+            "p": 0.0428,
+            "n": 30
+          },
+          "dTmax": {
+            "rho": 0.044,
+            "p": 0.818,
+            "n": 30
+          },
+          "dIR": {
+            "rho": 0.43,
+            "p": 0.025,
+            "n": 27
+          },
+          "cycle_life": {
+            "rho": 0.555,
+            "p": 0.00147,
+            "n": 30
+          },
+          "fade_life": {
+            "rho": -0.463,
+            "p": 0.0101,
+            "n": 30
+          }
+        },
+        "I_qw80": {
+          "slope_2_100": {
+            "rho": -0.146,
+            "p": 0.442,
+            "n": 30
+          },
+          "slope_100_300": {
+            "rho": -0.088,
+            "p": 0.644,
+            "n": 30
+          },
+          "dTmax": {
+            "rho": 0.022,
+            "p": 0.908,
+            "n": 30
+          },
+          "dIR": {
+            "rho": 0.186,
+            "p": 0.354,
+            "n": 27
+          },
+          "cycle_life": {
+            "rho": -0.381,
+            "p": 0.0379,
+            "n": 30
+          },
+          "fade_life": {
+            "rho": 0.436,
+            "p": 0.0159,
+            "n": 30
+          }
+        },
+        "t_chg": {
+          "slope_2_100": {
+            "rho": 0.226,
+            "p": 0.229,
+            "n": 30
+          },
+          "slope_100_300": {
+            "rho": 0.25,
+            "p": 0.182,
+            "n": 30
+          },
+          "dTmax": {
+            "rho": 0.291,
+            "p": 0.118,
+            "n": 30
+          },
+          "dIR": {
+            "rho": 0.226,
+            "p": 0.256,
+            "n": 27
+          },
+          "cycle_life": {
+            "rho": 0.098,
+            "p": 0.608,
+            "n": 30
+          },
+          "fade_life": {
+            "rho": -0.077,
+            "p": 0.687,
+            "n": 30
+          }
+        },
+        "dT_chg": {
+          "slope_2_100": {
+            "rho": 0.027,
+            "p": 0.886,
+            "n": 30
+          },
+          "slope_100_300": {
+            "rho": 0.197,
+            "p": 0.296,
+            "n": 30
+          },
+          "dTmax": {
+            "rho": 0.337,
+            "p": 0.0682,
+            "n": 30
+          },
+          "dIR": {
+            "rho": 0.13,
+            "p": 0.518,
+            "n": 27
+          },
+          "cycle_life": {
+            "rho": -0.02,
+            "p": 0.918,
+            "n": 30
+          },
+          "fade_life": {
+            "rho": -0.117,
+            "p": 0.539,
+            "n": 30
+          }
+        }
+      },
+      "batch2_all": {
+        "I_peak": {
+          "slope_2_100": {
+            "rho": -0.378,
+            "p": 0.0178,
+            "n": 39
+          },
+          "slope_100_300": {
+            "rho": -0.214,
+            "p": 0.19,
+            "n": 39
+          },
+          "dTmax": {
+            "rho": -0.117,
+            "p": 0.477,
+            "n": 39
+          },
+          "dIR": {
+            "rho": -0.101,
+            "p": 0.576,
+            "n": 33
+          },
+          "cycle_life": {
+            "rho": -0.319,
+            "p": 0.0477,
+            "n": 39
+          },
+          "fade_life": {
+            "rho": 0.338,
+            "p": 0.0354,
+            "n": 39
+          }
+        },
+        "t_peak": {
+          "slope_2_100": {
+            "rho": 0.329,
+            "p": 0.041,
+            "n": 39
+          },
+          "slope_100_300": {
+            "rho": 0.212,
+            "p": 0.196,
+            "n": 39
+          },
+          "dTmax": {
+            "rho": 0.318,
+            "p": 0.0484,
+            "n": 39
+          },
+          "dIR": {
+            "rho": 0.361,
+            "p": 0.0388,
+            "n": 33
+          },
+          "cycle_life": {
+            "rho": 0.174,
+            "p": 0.29,
+            "n": 39
+          },
+          "fade_life": {
+            "rho": -0.166,
+            "p": 0.312,
+            "n": 39
+          }
+        },
+        "t80_meas": {
+          "slope_2_100": {
+            "rho": -0.329,
+            "p": 0.041,
+            "n": 39
+          },
+          "slope_100_300": {
+            "rho": -0.395,
+            "p": 0.0128,
+            "n": 39
+          },
+          "dTmax": {
+            "rho": -0.067,
+            "p": 0.683,
+            "n": 39
+          },
+          "dIR": {
+            "rho": -0.407,
+            "p": 0.0187,
+            "n": 33
+          },
+          "cycle_life": {
+            "rho": -0.544,
+            "p": 0.000346,
+            "n": 39
+          },
+          "fade_life": {
+            "rho": 0.491,
+            "p": 0.0015,
+            "n": 39
+          }
+        },
+        "I_avg80": {
+          "slope_2_100": {
+            "rho": 0.329,
+            "p": 0.041,
+            "n": 39
+          },
+          "slope_100_300": {
+            "rho": 0.395,
+            "p": 0.0128,
+            "n": 39
+          },
+          "dTmax": {
+            "rho": 0.067,
+            "p": 0.683,
+            "n": 39
+          },
+          "dIR": {
+            "rho": 0.407,
+            "p": 0.0187,
+            "n": 33
+          },
+          "cycle_life": {
+            "rho": 0.544,
+            "p": 0.000346,
+            "n": 39
+          },
+          "fade_life": {
+            "rho": -0.491,
+            "p": 0.0015,
+            "n": 39
+          }
+        },
+        "I_qw80": {
+          "slope_2_100": {
+            "rho": -0.186,
+            "p": 0.256,
+            "n": 39
+          },
+          "slope_100_300": {
+            "rho": 0.016,
+            "p": 0.925,
+            "n": 39
+          },
+          "dTmax": {
+            "rho": -0.051,
+            "p": 0.756,
+            "n": 39
+          },
+          "dIR": {
+            "rho": 0.21,
+            "p": 0.241,
+            "n": 33
+          },
+          "cycle_life": {
+            "rho": -0.174,
+            "p": 0.289,
+            "n": 39
+          },
+          "fade_life": {
+            "rho": 0.217,
+            "p": 0.184,
+            "n": 39
+          }
+        },
+        "t_chg": {
+          "slope_2_100": {
+            "rho": 0.458,
+            "p": 0.00339,
+            "n": 39
+          },
+          "slope_100_300": {
+            "rho": -0.382,
+            "p": 0.0163,
+            "n": 39
+          },
+          "dTmax": {
+            "rho": 0.384,
+            "p": 0.0159,
+            "n": 39
+          },
+          "dIR": {
+            "rho": 0.088,
+            "p": 0.628,
+            "n": 33
+          },
+          "cycle_life": {
+            "rho": -0.493,
+            "p": 0.00142,
+            "n": 39
+          },
+          "fade_life": {
+            "rho": 0.504,
+            "p": 0.00108,
+            "n": 39
+          }
+        },
+        "dT_chg": {
+          "slope_2_100": {
+            "rho": 0.193,
+            "p": 0.24,
+            "n": 39
+          },
+          "slope_100_300": {
+            "rho": -0.165,
+            "p": 0.315,
+            "n": 39
+          },
+          "dTmax": {
+            "rho": 0.395,
+            "p": 0.0128,
+            "n": 39
+          },
+          "dIR": {
+            "rho": 0.092,
+            "p": 0.612,
+            "n": 33
+          },
+          "cycle_life": {
+            "rho": -0.309,
+            "p": 0.0554,
+            "n": 39
+          },
+          "fade_life": {
+            "rho": 0.221,
+            "p": 0.176,
+            "n": 39
+          }
+        }
+      },
+      "batch3": {
+        "I_peak": {
+          "slope_2_100": {
+            "rho": -0.452,
+            "p": 0.00209,
+            "n": 44
+          },
+          "slope_100_300": {
+            "rho": -0.563,
+            "p": 6.92e-05,
+            "n": 44
+          },
+          "dTmax": {
+            "rho": 0.119,
+            "p": 0.443,
+            "n": 44
+          },
+          "dIR": {
+            "rho": 0.203,
+            "p": 0.186,
+            "n": 44
+          },
+          "cycle_life": {
+            "rho": -0.594,
+            "p": 2.17e-05,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": 0.606,
+            "p": 1.32e-05,
+            "n": 44
+          }
+        },
+        "t_peak": {
+          "slope_2_100": {
+            "rho": 0.326,
+            "p": 0.0307,
+            "n": 44
+          },
+          "slope_100_300": {
+            "rho": 0.544,
+            "p": 0.000137,
+            "n": 44
+          },
+          "dTmax": {
+            "rho": -0.286,
+            "p": 0.06,
+            "n": 44
+          },
+          "dIR": {
+            "rho": -0.076,
+            "p": 0.625,
+            "n": 44
+          },
+          "cycle_life": {
+            "rho": 0.429,
+            "p": 0.00363,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": -0.473,
+            "p": 0.00119,
+            "n": 44
+          }
+        },
+        "t80_meas": {
+          "slope_2_100": {
+            "rho": -0.008,
+            "p": 0.958,
+            "n": 44
+          },
+          "slope_100_300": {
+            "rho": 0.279,
+            "p": 0.0663,
+            "n": 44
+          },
+          "dTmax": {
+            "rho": -0.192,
+            "p": 0.211,
+            "n": 44
+          },
+          "dIR": {
+            "rho": -0.015,
+            "p": 0.923,
+            "n": 44
+          },
+          "cycle_life": {
+            "rho": 0.366,
+            "p": 0.0146,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": -0.38,
+            "p": 0.011,
+            "n": 44
+          }
+        },
+        "I_avg80": {
+          "slope_2_100": {
+            "rho": 0.008,
+            "p": 0.958,
+            "n": 44
+          },
+          "slope_100_300": {
+            "rho": -0.279,
+            "p": 0.0663,
+            "n": 44
+          },
+          "dTmax": {
+            "rho": 0.192,
+            "p": 0.211,
+            "n": 44
+          },
+          "dIR": {
+            "rho": 0.015,
+            "p": 0.923,
+            "n": 44
+          },
+          "cycle_life": {
+            "rho": -0.366,
+            "p": 0.0146,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": 0.38,
+            "p": 0.011,
+            "n": 44
+          }
+        },
+        "I_qw80": {
+          "slope_2_100": {
+            "rho": -0.313,
+            "p": 0.0385,
+            "n": 44
+          },
+          "slope_100_300": {
+            "rho": -0.295,
+            "p": 0.0518,
+            "n": 44
+          },
+          "dTmax": {
+            "rho": 0.016,
+            "p": 0.92,
+            "n": 44
+          },
+          "dIR": {
+            "rho": 0.414,
+            "p": 0.00523,
+            "n": 44
+          },
+          "cycle_life": {
+            "rho": -0.535,
+            "p": 0.000183,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": 0.508,
+            "p": 0.000437,
+            "n": 44
+          }
+        },
+        "t_chg": {
+          "slope_2_100": {
+            "rho": 0.378,
+            "p": 0.0114,
+            "n": 44
+          },
+          "slope_100_300": {
+            "rho": 0.256,
+            "p": 0.0937,
+            "n": 44
+          },
+          "dTmax": {
+            "rho": -0.121,
+            "p": 0.435,
+            "n": 44
+          },
+          "dIR": {
+            "rho": 0.106,
+            "p": 0.492,
+            "n": 44
+          },
+          "cycle_life": {
+            "rho": 0.001,
+            "p": 0.994,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": 0.125,
+            "p": 0.42,
+            "n": 44
+          }
+        },
+        "dT_chg": {
+          "slope_2_100": {
+            "rho": -0.247,
+            "p": 0.105,
+            "n": 44
+          },
+          "slope_100_300": {
+            "rho": -0.386,
+            "p": 0.00971,
+            "n": 44
+          },
+          "dTmax": {
+            "rho": 0.571,
+            "p": 5.21e-05,
+            "n": 44
+          },
+          "dIR": {
+            "rho": -0.032,
+            "p": 0.835,
+            "n": 44
+          },
+          "cycle_life": {
+            "rho": -0.458,
+            "p": 0.00179,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": 0.409,
+            "p": 0.00586,
+            "n": 44
+          }
+        }
+      },
+      "batch1_all46_incl_censored": {
+        "I_peak": {
+          "slope_2_100": {
+            "rho": -0.38,
+            "p": 0.00922,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": -0.436,
+            "p": 0.00243,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": 0.824,
+            "p": 2.09e-12,
+            "n": 46
+          },
+          "dIR": {
+            "rho": 0.68,
+            "p": 1.98e-07,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": -0.473,
+            "p": 0.00091,
+            "n": 46
+          },
+          "fade_life": {
+            "rho": 0.473,
+            "p": 0.000912,
+            "n": 46
+          }
+        },
+        "t_peak": {
+          "slope_2_100": {
+            "rho": 0.202,
+            "p": 0.179,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": 0.229,
+            "p": 0.125,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": -0.772,
+            "p": 3.29e-10,
+            "n": 46
+          },
+          "dIR": {
+            "rho": -0.587,
+            "p": 1.78e-05,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": 0.309,
+            "p": 0.0367,
+            "n": 46
+          },
+          "fade_life": {
+            "rho": -0.314,
+            "p": 0.0337,
+            "n": 46
+          }
+        },
+        "t80_meas": {
+          "slope_2_100": {
+            "rho": 0.513,
+            "p": 0.00027,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": 0.655,
+            "p": 7.75e-07,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": -0.137,
+            "p": 0.364,
+            "n": 46
+          },
+          "dIR": {
+            "rho": 0.111,
+            "p": 0.464,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": 0.629,
+            "p": 2.8e-06,
+            "n": 46
+          },
+          "fade_life": {
+            "rho": -0.68,
+            "p": 2e-07,
+            "n": 46
+          }
+        },
+        "I_avg80": {
+          "slope_2_100": {
+            "rho": -0.513,
+            "p": 0.00027,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": -0.655,
+            "p": 7.75e-07,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": 0.137,
+            "p": 0.364,
+            "n": 46
+          },
+          "dIR": {
+            "rho": -0.111,
+            "p": 0.464,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": -0.629,
+            "p": 2.8e-06,
+            "n": 46
+          },
+          "fade_life": {
+            "rho": 0.68,
+            "p": 2e-07,
+            "n": 46
+          }
+        },
+        "I_qw80": {
+          "slope_2_100": {
+            "rho": -0.612,
+            "p": 6.08e-06,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": -0.854,
+            "p": 4.72e-14,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": 0.477,
+            "p": 0.000808,
+            "n": 46
+          },
+          "dIR": {
+            "rho": 0.301,
+            "p": 0.042,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": -0.87,
+            "p": 4.41e-15,
+            "n": 46
+          },
+          "fade_life": {
+            "rho": 0.893,
+            "p": 8.03e-17,
+            "n": 46
+          }
+        },
+        "t_chg": {
+          "slope_2_100": {
+            "rho": 0.486,
+            "p": 0.000614,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": 0.64,
+            "p": 1.64e-06,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": -0.135,
+            "p": 0.372,
+            "n": 46
+          },
+          "dIR": {
+            "rho": 0.104,
+            "p": 0.491,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": 0.62,
+            "p": 4.24e-06,
+            "n": 46
+          },
+          "fade_life": {
+            "rho": -0.669,
+            "p": 3.64e-07,
+            "n": 46
+          }
+        },
+        "dT_chg": {
+          "slope_2_100": {
+            "rho": -0.271,
+            "p": 0.0688,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": -0.649,
+            "p": 1.04e-06,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": 0.369,
+            "p": 0.0115,
+            "n": 46
+          },
+          "dIR": {
+            "rho": 0.027,
+            "p": 0.86,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": -0.687,
+            "p": 1.38e-07,
+            "n": 46
+          },
+          "fade_life": {
+            "rho": 0.639,
+            "p": 1.78e-06,
+            "n": 46
+          }
+        }
+      },
+      "batch3_all46": {
+        "I_peak": {
+          "slope_2_100": {
+            "rho": -0.456,
+            "p": 0.00143,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": -0.596,
+            "p": 1.23e-05,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": 0.14,
+            "p": 0.353,
+            "n": 46
+          },
+          "dIR": {
+            "rho": 0.233,
+            "p": 0.12,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": -0.594,
+            "p": 2.17e-05,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": 0.606,
+            "p": 1.32e-05,
+            "n": 44
+          }
+        },
+        "t_peak": {
+          "slope_2_100": {
+            "rho": 0.338,
+            "p": 0.0217,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": 0.577,
+            "p": 2.75e-05,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": -0.296,
+            "p": 0.0455,
+            "n": 46
+          },
+          "dIR": {
+            "rho": -0.119,
+            "p": 0.43,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": 0.429,
+            "p": 0.00363,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": -0.473,
+            "p": 0.00119,
+            "n": 44
+          }
+        },
+        "t80_meas": {
+          "slope_2_100": {
+            "rho": 0.03,
+            "p": 0.845,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": 0.347,
+            "p": 0.0181,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": -0.199,
+            "p": 0.184,
+            "n": 46
+          },
+          "dIR": {
+            "rho": -0.068,
+            "p": 0.653,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": 0.366,
+            "p": 0.0146,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": -0.38,
+            "p": 0.011,
+            "n": 44
+          }
+        },
+        "I_avg80": {
+          "slope_2_100": {
+            "rho": -0.03,
+            "p": 0.845,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": -0.347,
+            "p": 0.0181,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": 0.199,
+            "p": 0.184,
+            "n": 46
+          },
+          "dIR": {
+            "rho": 0.068,
+            "p": 0.653,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": -0.366,
+            "p": 0.0146,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": 0.38,
+            "p": 0.011,
+            "n": 44
+          }
+        },
+        "I_qw80": {
+          "slope_2_100": {
+            "rho": -0.32,
+            "p": 0.0302,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": -0.353,
+            "p": 0.0162,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": 0.042,
+            "p": 0.784,
+            "n": 46
+          },
+          "dIR": {
+            "rho": 0.433,
+            "p": 0.00264,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": -0.535,
+            "p": 0.000183,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": 0.508,
+            "p": 0.000437,
+            "n": 44
+          }
+        },
+        "t_chg": {
+          "slope_2_100": {
+            "rho": 0.399,
+            "p": 0.00604,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": 0.316,
+            "p": 0.0325,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": -0.148,
+            "p": 0.327,
+            "n": 46
+          },
+          "dIR": {
+            "rho": 0.075,
+            "p": 0.62,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": 0.001,
+            "p": 0.994,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": 0.125,
+            "p": 0.42,
+            "n": 44
+          }
+        },
+        "dT_chg": {
+          "slope_2_100": {
+            "rho": -0.263,
+            "p": 0.078,
+            "n": 46
+          },
+          "slope_100_300": {
+            "rho": -0.413,
+            "p": 0.00439,
+            "n": 46
+          },
+          "dTmax": {
+            "rho": 0.583,
+            "p": 2.12e-05,
+            "n": 46
+          },
+          "dIR": {
+            "rho": -0.003,
+            "p": 0.983,
+            "n": 46
+          },
+          "cycle_life": {
+            "rho": -0.458,
+            "p": 0.00179,
+            "n": 44
+          },
+          "fade_life": {
+            "rho": 0.409,
+            "p": 0.00586,
+            "n": 44
+          }
+        }
+      }
+    },
+    "degradation_measure_vs_life": {
+      "batch1": {
+        "slope_2_100": {
+          "rho": 0.524,
+          "p": 0.00103,
+          "n": 36
+        },
+        "slope_100_300": {
+          "rho": 0.828,
+          "p": 4.69e-10,
+          "n": 36
+        },
+        "dTmax": {
+          "rho": -0.292,
+          "p": 0.0843,
+          "n": 36
+        },
+        "dIR": {
+          "rho": -0.222,
+          "p": 0.194,
+          "n": 36
+        },
+        "fade_life": {
+          "rho": -0.958,
+          "p": 5.27e-20,
+          "n": 36
+        }
+      },
+      "batch2_fastcharge": {
+        "slope_2_100": {
+          "rho": 0.142,
+          "p": 0.453,
+          "n": 30
+        },
+        "slope_100_300": {
+          "rho": 0.676,
+          "p": 4.13e-05,
+          "n": 30
+        },
+        "dTmax": {
+          "rho": 0.0,
+          "p": 1.0,
+          "n": 30
+        },
+        "dIR": {
+          "rho": 0.22,
+          "p": 0.271,
+          "n": 27
+        },
+        "fade_life": {
+          "rho": -0.809,
+          "p": 6.24e-08,
+          "n": 30
+        }
+      },
+      "batch2_all": {
+        "slope_2_100": {
+          "rho": -0.231,
+          "p": 0.157,
+          "n": 39
+        },
+        "slope_100_300": {
+          "rho": 0.823,
+          "p": 1.28e-10,
+          "n": 39
+        },
+        "dTmax": {
+          "rho": -0.167,
+          "p": 0.31,
+          "n": 39
+        },
+        "dIR": {
+          "rho": 0.257,
+          "p": 0.148,
+          "n": 33
+        },
+        "fade_life": {
+          "rho": -0.913,
+          "p": 5.86e-16,
+          "n": 39
+        }
+      },
+      "batch3": {
+        "slope_2_100": {
+          "rho": 0.116,
+          "p": 0.452,
+          "n": 44
+        },
+        "slope_100_300": {
+          "rho": 0.58,
+          "p": 3.64e-05,
+          "n": 44
+        },
+        "dTmax": {
+          "rho": -0.017,
+          "p": 0.914,
+          "n": 44
+        },
+        "dIR": {
+          "rho": -0.234,
+          "p": 0.126,
+          "n": 44
+        },
+        "fade_life": {
+          "rho": -0.98,
+          "p": 3.12e-31,
+          "n": 44
+        }
+      }
+    },
+    "key_iqw_vs_initial_slope": {
+      "batch1": {
+        "rho": -0.612,
+        "p": 7.21e-05,
+        "n": 36
+      },
+      "batch2_fastcharge": {
+        "rho": -0.146,
+        "p": 0.442,
+        "n": 30
+      },
+      "batch2_all": {
+        "rho": -0.186,
+        "p": 0.256,
+        "n": 39
+      },
+      "batch3": {
+        "rho": -0.313,
+        "p": 0.0385,
+        "n": 44
+      },
+      "batch1_all46_incl_censored": {
+        "rho": -0.612,
+        "p": 6.08e-06,
+        "n": 46
+      },
+      "batch3_all46": {
+        "rho": -0.32,
+        "p": 0.0302,
+        "n": 46
+      }
+    },
+    "key_iqw_vs_mid_slope": {
+      "batch1": {
+        "rho": -0.792,
+        "p": 9.06e-09,
+        "n": 36
+      },
+      "batch2_fastcharge": {
+        "rho": -0.088,
+        "p": 0.644,
+        "n": 30
+      },
+      "batch2_all": {
+        "rho": 0.016,
+        "p": 0.925,
+        "n": 39
+      },
+      "batch3": {
+        "rho": -0.295,
+        "p": 0.0518,
+        "n": 44
+      },
+      "batch1_all46_incl_censored": {
+        "rho": -0.854,
+        "p": 4.72e-14,
+        "n": 46
+      },
+      "batch3_all46": {
+        "rho": -0.353,
+        "p": 0.0162,
+        "n": 46
+      }
+    },
+    "b1_dIR_dTmax_vs_life": {
+      "dIR": {
+        "rho": -0.222,
+        "p": 0.194,
+        "n": 36
+      },
+      "dTmax": {
+        "rho": -0.292,
+        "p": 0.0843,
+        "n": 36
+      }
+    },
+    "row10_vs_row2_spearman": {
+      "I_peak": {
+        "spearman": 0.997,
+        "median_abs_diff": 0.0006
+      },
+      "t_peak": {
+        "spearman": 0.998,
+        "median_abs_diff": 0.0005
+      },
+      "t80_meas": {
+        "spearman": 0.911,
+        "median_abs_diff": 0.0012
+      },
+      "I_avg80": {
+        "spearman": 0.911,
+        "median_abs_diff": 0.0005
+      },
+      "I_qw80": {
+        "spearman": 0.997,
+        "median_abs_diff": 0.0004
+      },
+      "t_chg": {
+        "spearman": 0.997,
+        "median_abs_diff": 0.1689
+      },
+      "dT_chg": {
+        "spearman": 0.902,
+        "median_abs_diff": 0.1861
+      }
+    },
+    "fade_life_vs_life_b1": {
+      "rho": -0.958,
+      "p": 5.27e-20,
+      "n": 36
+    },
+    "chargetime_vs_t80": {
+      "ratio_by_batch_group": {
+        "batch1-fastcharge": {
+          "median": 1.0089,
+          "min": 1.0006,
+          "max": 1.0184,
+          "size": 46
+        },
+        "batch2-fastcharge": {
+          "median": 1.0177,
+          "min": 1.0155,
+          "max": 1.0239,
+          "size": 30
+        },
+        "batch2-newstructure": {
+          "median": 1.0048,
+          "min": 1.0036,
+          "max": 1.0055,
+          "size": 9
+        },
+        "batch3-newstructure": {
+          "median": 1.0051,
+          "min": 1.0028,
+          "max": 1.104,
+          "size": 46
+        }
+      },
+      "deviating_cells_ratio_gt_1.05": [
+        {
+          "cell_key": "batch3-07",
+          "policy": "4.8C(80%)-4.8C-newstructure",
+          "t80_min": 10.0,
+          "ct_med": 11.039,
+          "t80_meas": 11.003,
+          "I_peak": 4.367,
+          "cycle_life": 1836.0
+        },
+        {
+          "cell_key": "batch3-10",
+          "policy": "4.8C(80%)-4.8C-newstructure",
+          "t80_min": 10.0,
+          "ct_med": 11.038,
+          "t80_meas": 11.003,
+          "I_peak": 4.366,
+          "cycle_life": 1078.0
+        },
+        {
+          "cell_key": "batch3-16",
+          "policy": "4.8C(80%)-4.8C-newstructure",
+          "t80_min": 10.0,
+          "ct_med": 11.04,
+          "t80_meas": 11.005,
+          "I_peak": 4.365,
+          "cycle_life": 1638.0
+        },
+        {
+          "cell_key": "batch3-23",
+          "policy": "4.8C(80%)-4.8C-newstructure",
+          "t80_min": 10.0,
+          "ct_med": 11.038,
+          "t80_meas": 11.003,
+          "I_peak": 4.366,
+          "cycle_life": null
+        },
+        {
+          "cell_key": "batch3-32",
+          "policy": "4.8C(80%)-4.8C-newstructure",
+          "t80_min": 10.0,
+          "ct_med": 11.038,
+          "t80_meas": 11.005,
+          "I_peak": 4.368,
+          "cycle_life": null
+        },
+        {
+          "cell_key": "batch3-37",
+          "policy": "4.8C(80%)-4.8C-newstructure",
+          "t80_min": 10.0,
+          "ct_med": 11.038,
+          "t80_meas": 11.004,
+          "I_peak": 4.371,
+          "cycle_life": 1390.0
+        },
+        {
+          "cell_key": "batch3-42",
+          "policy": "4.8C(80%)-4.8C-newstructure",
+          "t80_min": 10.0,
+          "ct_med": 11.038,
+          "t80_meas": 11.003,
+          "I_peak": 4.366,
+          "cycle_life": 1642.0
+        },
+        {
+          "cell_key": "batch3-45",
+          "policy": "4.8C(80%)-4.8C-newstructure",
+          "t80_min": 10.0,
+          "ct_med": 11.038,
+          "t80_meas": 11.004,
+          "I_peak": 4.368,
+          "cycle_life": 1801.0
+        }
+      ],
+      "chargetime_values_removed_gt100_or_le0_fastcharge_newstructure": {
+        "batch1": 52,
+        "batch2": 10,
+        "batch3": 0
+      },
+      "chargetime_values_removed_gt100_or_le0_all_cells": {
+        "batch1": 52,
+        "batch2": 22,
+        "batch3": 0
+      },
+      "chargetime_values_removed_by_batch_group_all_cells": {
+        "batch1-fastcharge": 52,
+        "batch2-fastcharge": 7,
+        "batch2-newstructure": 3,
+        "batch2-slowcycle": 7,
+        "batch2-varcharge": 5,
+        "batch3-newstructure": 0
+      },
+      "spearman_ct_med_vs_t80_meas_all": {
+        "rho": 0.785,
+        "p": 1.17e-28,
+        "n": 131
+      }
+    },
+    "charge_structure_by_group_median": [
+      {
+        "batch": "batch1",
+        "group": "fastcharge",
+        "t_chg": 31.937,
+        "t_rest_chg": 0.937,
+        "t_cv": 10.669,
+        "Q_hi": 0.802,
+        "I_post80": 1.0,
+        "V_hi_end": 3.534
+      },
+      {
+        "batch": "batch2",
+        "group": "fastcharge",
+        "t_chg": 42.058,
+        "t_rest_chg": 4.932,
+        "t_cv": 19.585,
+        "Q_hi": 0.803,
+        "I_post80": 1.074,
+        "V_hi_end": 3.591
+      },
+      {
+        "batch": "batch2",
+        "group": "newstructure",
+        "t_chg": 28.881,
+        "t_rest_chg": 0.163,
+        "t_cv": 9.655,
+        "Q_hi": 0.8,
+        "I_post80": 0.999,
+        "V_hi_end": 3.565
+      },
+      {
+        "batch": "batch3",
+        "group": "newstructure",
+        "t_chg": 27.992,
+        "t_rest_chg": 0.237,
+        "t_cv": 9.101,
+        "Q_hi": 0.801,
+        "I_post80": 0.999,
+        "V_hi_end": 3.566
+      }
+    ],
+    "b2_q_hi_gt_0.85_policies": [
+      "5.6C(26%)-4.5C"
+    ],
+    "post80_protocol_check": {
+      "n_cells_hi_phase_ends_at_80pct": 125,
+      "n_cells_hi_phase_beyond_80pct": 6,
+      "I_post80_median_others": 1.0,
+      "I_post80_range_others": [
+        0.923,
+        1.135
+      ],
+      "beyond80_cells": [
+        {
+          "cell_key": "batch2-01",
+          "policy": "5.6C(26%)-4.5C",
+          "Q_hi": 0.995,
+          "I_post80": 4.27,
+          "V_hi_end": 3.6
+        },
+        {
+          "cell_key": "batch2-17",
+          "policy": "5.6C(26%)-4.5C",
+          "Q_hi": 0.971,
+          "I_post80": 4.136,
+          "V_hi_end": 3.6
+        },
+        {
+          "cell_key": "batch2-26",
+          "policy": "5.6C(26%)-4.5C",
+          "Q_hi": 0.996,
+          "I_post80": 4.255,
+          "V_hi_end": 3.6
+        },
+        {
+          "cell_key": "batch2-30",
+          "policy": "5.6C(26%)-4.5C",
+          "Q_hi": 0.986,
+          "I_post80": 4.13,
+          "V_hi_end": 3.6
+        },
+        {
+          "cell_key": "batch2-31",
+          "policy": "5.6C(26%)-4.5C",
+          "Q_hi": 0.993,
+          "I_post80": 4.233,
+          "V_hi_end": 3.6
+        },
+        {
+          "cell_key": "batch2-41",
+          "policy": "5.6C(26%)-4.5C",
+          "Q_hi": 1.003,
+          "I_post80": 4.294,
+          "V_hi_end": 3.6
+        }
+      ]
+    },
+    "b3_measured_4.36C": {
+      "n_cells": 8,
+      "life_labeled": [
+        1836,
+        1078,
+        1638,
+        1390,
+        1642,
+        1801
+      ],
+      "lower_bounds_unlabeled": [
+        2189,
+        2237
+      ],
+      "others_mean_life": 980.0,
+      "mannwhitney_p": 0.000755
+    }
+  },
+  "d_strategy_link": {
+    "note": "Batch 1 라벨 36셀 기술통계(모델 학습·CV 아님). Qcc_init 관련 값은 Q5-(d) 교차 확인용.",
+    "iqw_vs_dQ_logvar_spearman": {
+      "rho": 0.901,
+      "p": 6.52e-14,
+      "n": 36
+    },
+    "partial_iqw_given_logvar": {
+      "r": -0.241,
+      "p": 0.163,
+      "n": 36,
+      "controls": [
+        "dQ_logvar"
+      ]
+    },
+    "partial_iqw_given_logvar_qcc": {
+      "r": -0.358,
+      "p": 0.0377,
+      "n": 36,
+      "controls": [
+        "dQ_logvar",
+        "Qcc_init"
+      ]
+    },
+    "partial_avgC_given_logvar": {
+      "r": -0.126,
+      "p": 0.472,
+      "n": 36,
+      "controls": [
+        "dQ_logvar"
+      ]
+    },
+    "partial_qcc_given_logvar": {
+      "r": 0.676,
+      "p": 8.42e-06,
+      "n": 36,
+      "controls": [
+        "dQ_logvar"
+      ]
+    },
+    "replicate_pairs": {
+      "n_pairs": 16,
+      "n_cells": 32,
+      "spread_pct_max": 36.8,
+      "spread_pct_median": 7.2,
+      "within_policy_I_qw80_sd_C": 0.0014,
+      "within_policy_r_logvar": -0.103,
+      "within_policy_r_qcc": 0.703,
+      "policy_mean_r_logvar": -0.881,
+      "policy_mean_r_qcc": 0.037,
+      "n_policies": 20,
+      "pairs_expected_direction_qcc": 14,
+      "pairs_expected_direction_logvar": 8,
+      "sign_test_p_qcc": 0.00418,
+      "sign_test_p_logvar": 1.0
+    },
+    "qcc_init_label_free_shift_mAh_vs_b1_median": {
+      "batch2-fastcharge": -5.3,
+      "batch2-newstructure": -8.7,
+      "batch3-newstructure": -14.5
+    },
+    "b1_descriptive_coef_log10_per_Ah": 3.299,
+    "implied_prediction_factor": {
+      "batch2-fastcharge": 0.961,
+      "batch2-newstructure": 0.936,
+      "batch3-newstructure": 0.896
+    }
+  },
+  "figures": [
+    "reports/figures/q4_1_policy_life.png",
+    "reports/figures/q4_2_batch1_crate_vs_life.png",
+    "reports/figures/q4_3_cross_batch_iso_time.png",
+    "reports/figures/q4_4_current_pattern_vs_degradation.png",
+    "reports/figures/q4_pdf_1_batch1_iqw_vs_life.png",
+    "reports/figures/q4_pdf_2_cross_batch.png"
+  ]
+}
